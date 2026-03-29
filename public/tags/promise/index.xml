@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Promise on My Blog</title>
-    <link>http://localhost:1313/tags/promise/</link>
+    <link>http://localhost:45279/tags/promise/</link>
     <description>Recent content in Promise on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/promise/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45279/tags/promise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;2024-05-30&#34;</title>
-      <link>http://localhost:1313/posts/myself/remainder/</link>
+      <link>http://localhost:45279/posts/myself/remainder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/myself/remainder/</guid>
+      <guid>http://localhost:45279/posts/myself/remainder/</guid>
       <description>&lt;h1 id=&#34;chess&#34;&gt;Chess&lt;/h1&gt;&#xA;&lt;p&gt;started:&lt;/p&gt;&#xA;&lt;p&gt;29 may -&amp;gt; Norway chess ,Reason - pragg defeated magnus carlsen.&lt;/p&gt;&#xA;&lt;p&gt;end:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;01&lt;/del&gt; &lt;del&gt;jan&lt;/del&gt; &lt;del&gt;2025&lt;/del&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Restart -&amp;gt; 11Aug&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 01 jan 2025&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;self-harming&#34;&gt;Self Harming&lt;/h1&gt;&#xA;&lt;p&gt;started:&lt;/p&gt;&#xA;&lt;p&gt;14 may -&amp;gt; Reason Weakness&lt;/p&gt;&#xA;&lt;p&gt;end:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 01 jan 2025&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;watching-porn&#34;&gt;Watching porn&lt;/h1&gt;&#xA;&lt;p&gt;started:&lt;/p&gt;&#xA;&lt;p&gt;14 may -&amp;gt; Reason - Mind disturbing stuff&lt;/p&gt;&#xA;&lt;p&gt;end:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ~~01~~~~~ &lt;del&gt;jan&lt;/del&gt; &lt;del&gt;2025&lt;/del&gt;*&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;restart: 11 Aug&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 01 jan 2025&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;&#xA;&lt;p&gt;started:&lt;/p&gt;&#xA;&lt;p&gt;30 may -&amp;gt; Reason -  Wasting too much  time on some non-work related video&lt;/p&gt;</description>
     </item>
   </channel>

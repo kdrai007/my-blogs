@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on My Blog</title>
-    <link>http://localhost:1313/posts/productive/linux/</link>
+    <link>http://localhost:45279/posts/productive/linux/</link>
     <description>Recent content in Linux on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/posts/productive/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45279/posts/productive/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sc_chapter-1</title>
-      <link>http://localhost:1313/posts/productive/linux/sc_chapter-1/</link>
+      <link>http://localhost:45279/posts/productive/linux/sc_chapter-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/linux/sc_chapter-1/</guid>
+      <guid>http://localhost:45279/posts/productive/linux/sc_chapter-1/</guid>
       <description>&lt;h2 id=&#34;chapter-1--shell-something-out&#34;&gt;Chapter 1- Shell something out&lt;/h2&gt;&#xA;&lt;p&gt;#terminal the termianl is interactive tool while user use to interact with shell environment&lt;/p&gt;&#xA;&lt;p&gt;printf  &amp;ldquo;%-5s %-10s %-4.2f\n&amp;rdquo; 1 Sarath 80.3456&#xA;prints:-&#xA;1     Sarath     80.35&lt;/p&gt;&#xA;&lt;h3 id=&#34;how-this-works&#34;&gt;How this works&lt;/h3&gt;&#xA;&lt;p&gt;%s, %c, %d, and %f are format substitution characters for which an argument can be placed&#xA;after the quoted format string.&lt;/p&gt;&#xA;&lt;p&gt;where:-&#xA;s denotes string&#xA;c denotes character&#xA;d denotes number&#xA;f denotes float number&lt;/p&gt;&#xA;&lt;h3 id=&#34;envionment-variables&#34;&gt;Envionment Variables&lt;/h3&gt;&#xA;&lt;p&gt;Envionment variables are variables that are not defined by the current procuess but the parant processes&lt;/p&gt;</description>
     </item>
     <item>
       <title>shell-scripting</title>
-      <link>http://localhost:1313/posts/productive/linux/shell-scripting/</link>
+      <link>http://localhost:45279/posts/productive/linux/shell-scripting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/linux/shell-scripting/</guid>
+      <guid>http://localhost:45279/posts/productive/linux/shell-scripting/</guid>
       <description>&lt;h1 id=&#34;linux-shell-cookbook&#34;&gt;Linux shell cookbook&lt;/h1&gt;&#xA;&lt;p&gt;Currently I&amp;rsquo;am trying to master linux cli so i&amp;rsquo;am reading linux cookbook where&#xA;i&amp;rsquo;ll learn about bash scripting,cli cool tricks and tips etc&lt;/p&gt;&#xA;&lt;h3 id=&#34;debugging-bash-scripts&#34;&gt;Debugging bash scripts&lt;/h3&gt;&#xA;&lt;p&gt;bash -x *.sh&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Running the bash script using -x flag with print each source line with the current status.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We can use debugging technique in bash scripts itslef for ex:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;#!/bin/sh for i in {1..6}; do set -x echo i set +x done &lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accounting Process on My Blog</title>
-    <link>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/</link>
+    <link>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/</link>
     <description>Recent content in Accounting Process on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/posts/productive/finance/study-materials/accounting-process/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45279/posts/productive/finance/study-materials/accounting-process/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cash vs accrual_accounting</title>
-      <link>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</link>
+      <link>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</guid>
+      <guid>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</guid>
       <description>&lt;h1 id=&#34;cash-vs-accrual-accounting&#34;&gt;Cash vs Accrual Accounting&lt;/h1&gt;&#xA;&lt;p&gt;In this chapter, we will discuss the basic elements of cash and accrual accounting and the businesses that are most likely to use each one. Some private company can choose &lt;strong&gt;cash-basis accounting&lt;/strong&gt; over accrual accounting to report financial information.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cash-basis-accounting&#34;&gt;Cash-Basis Accounting&lt;/h3&gt;&#xA;&lt;p&gt;Cash basis accounting is a method of accounting in which transactions are not recorded in statements until there is exchange of cash. Cash basis accounting some time impacts the timing of &lt;strong&gt;revenue&lt;/strong&gt; and &lt;strong&gt;expenses&lt;/strong&gt; reporting until cash receipts or outlays occurs. For example, Chris measured the performance of her landscaping business for the month using cash flows. Cash accounting is far simpler then accrual-basis accounting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>economic_basis for accrual_accounting</title>
-      <link>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</link>
+      <link>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</guid>
+      <guid>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</guid>
       <description>&lt;h1 id=&#34;economic-basis-for-accrual-accounting&#34;&gt;Economic Basis for Accrual Accounting&lt;/h1&gt;&#xA;&lt;p&gt;Simple landscaping example can be used to discuss the elements of the income statement, which are revenues, expanses, gains and losses for a particular period of time(see picture down below).Together, they determine whether business has net income(when expanses and loss are less the revenue and gains) or net loss(when expanses and loss are greater then revenue and gains). Revenues, expanses, gains and losses are further defined in the income statement provided.&lt;/p&gt;</description>
     </item>
     <item>
       <title>sale or revenue</title>
-      <link>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</link>
+      <link>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</guid>
+      <guid>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</guid>
       <description>&lt;h1 id=&#34;recognize-sale-or-expanse&#34;&gt;Recognize Sale or Expanse&lt;/h1&gt;&#xA;&lt;p&gt;Most large companies use accrual accounting because it gives more accurate picture of their real financial performance. The recognition of sale(Revenue) and expanses is governed by two core principals that keep everything organized, regardless of when cash is actually exchanged.&lt;/p&gt;&#xA;&lt;h3 id=&#34;recognizing-the-sale-revenue&#34;&gt;Recognizing the Sale (Revenue)&lt;/h3&gt;&#xA;&lt;p&gt;A sale, or revenue is recognized based on the &lt;strong&gt;Revenue recognition principal&lt;/strong&gt;. The rule is simple: Revenue is &lt;strong&gt;recognized when it is earned, not when the cash is received&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

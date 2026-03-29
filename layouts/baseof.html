@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   {{/* Custom CSS */}}
-  <link rel="stylesheet" href="{{ " css/custom.css" | relURL }}">
+  <link rel="stylesheet" href="{{ relURL "css/custom.css" }}">
 
   {{ if .OutputFormats.Get "RSS" }}
   {{ with .OutputFormats.Get "RSS" }}
@@ -36,7 +36,7 @@
       <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
       <ul class="nav-links">
         <li><a href="{{ .Site.Home.Permalink }}">Home</a></li>
-        <li><a href="{{ " posts/" | relURL }}">All Posts</a></li>
+        <li><a href="{{ relURL "posts/" }}">All Posts</a></li>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}

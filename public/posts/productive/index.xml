@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productive on My Blog</title>
-    <link>http://localhost:1313/posts/productive/</link>
+    <link>http://localhost:45279/posts/productive/</link>
     <description>Recent content in Productive on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/posts/productive/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45279/posts/productive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>habit-tracking</title>
-      <link>http://localhost:1313/posts/productive/habit-tracking/</link>
+      <link>http://localhost:45279/posts/productive/habit-tracking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/habit-tracking/</guid>
+      <guid>http://localhost:45279/posts/productive/habit-tracking/</guid>
       <description>&lt;h1 id=&#34;project-for-myself&#34;&gt;Project for myself&lt;/h1&gt;&#xA;&lt;p&gt;I will build this project with python for writing code and gonna use postgres for storing my data.&#xA;for right now this is just a general idea gonna make a clear structure tomorrow&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Learn basics of python script.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Know how to connect both python and postgres.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;general-concept&#34;&gt;general concept&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Zettelkasten&#39;s method</title>
-      <link>http://localhost:1313/posts/productive/zettelkastens-method/</link>
+      <link>http://localhost:45279/posts/productive/zettelkastens-method/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/zettelkastens-method/</guid>
+      <guid>http://localhost:45279/posts/productive/zettelkastens-method/</guid>
       <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;A Zettelkasten is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;links&lt;/h2&gt;&#xA;&lt;p&gt;[[Being Productive]]&lt;/p&gt;</description>
     </item>
   </channel>

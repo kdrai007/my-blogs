@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thoughts on My Blog</title>
-    <link>http://localhost:1313/posts/thoughts/</link>
+    <link>http://localhost:45279/posts/thoughts/</link>
     <description>Recent content in Thoughts on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/posts/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45279/posts/thoughts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>12 April,25</title>
-      <link>http://localhost:1313/posts/thoughts/12-april25/</link>
+      <link>http://localhost:45279/posts/thoughts/12-april25/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/12-april25/</guid>
+      <guid>http://localhost:45279/posts/thoughts/12-april25/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;While reading manga I thought, why don&amp;rsquo;t I write what I think frequently.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here &amp;rsquo;s overview of what I&amp;rsquo;m gonna write in these sections:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Whenever I think something good or bad.&lt;/li&gt;&#xA;&lt;li&gt;Any event good or bad, Write some bare minimum details about it.&lt;/li&gt;&#xA;&lt;li&gt;Any creative thoughts.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>22 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/22-may24/</link>
+      <link>http://localhost:45279/posts/thoughts/22-may24/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/22-may24/</guid>
+      <guid>http://localhost:45279/posts/thoughts/22-may24/</guid>
       <description>&lt;h2 id=&#34;whats-happening-with-me&#34;&gt;What&amp;rsquo;s happening with me.&lt;/h2&gt;&#xA;&lt;p&gt;Lag rha hai sala mai pagal ho jaunga.&#xA;Apne adato k chalte kabhi kabhi aaisa lagta hai kuch kr lu apne sth just because I can&amp;rsquo;t control my habits&lt;/p&gt;&#xA;&lt;p&gt;Sala jb bhi Naya sikhne ya janne ki tayari krta hu tb tb sala me dimag aur meri adate middle fingure dikha deti hai&#xA;Mai kabhi kuch kr hi paya aur kabhi kabhi aaisa lagta hai me kr hi ni skta apne adato ko control me pata ni kyo pr aaisa hi hai.&lt;/p&gt;</description>
     </item>
     <item>
       <title>23 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/23-may24/</link>
+      <link>http://localhost:45279/posts/thoughts/23-may24/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/23-may24/</guid>
+      <guid>http://localhost:45279/posts/thoughts/23-may24/</guid>
       <description>&lt;h2 id=&#34;life-on-autopilot&#34;&gt;Life on autopilot&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;Ok,promise no more ranting&#xA;Just trying to have fun while I can&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>29 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/29-may24/</link>
+      <link>http://localhost:45279/posts/thoughts/29-may24/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/29-may24/</guid>
+      <guid>http://localhost:45279/posts/thoughts/29-may24/</guid>
       <description>&lt;h1 id=&#34;happiness&#34;&gt;Happiness&lt;/h1&gt;&#xA;&lt;p&gt;Why my happiness is dependent on someone else why i can&amp;rsquo;t celebrate my own success why i can&amp;rsquo;t I do something that I enjoy i feel happy about it why and why i&amp;rsquo;am always complaining.&#xA;I don&amp;rsquo;t know why but  I want to know I want to feel my own success my own goals that provide me happiness I should&amp;rsquo;nt depend on  others to give me happiness I should be the one who create those happiness&lt;/p&gt;</description>
     </item>
   </channel>
