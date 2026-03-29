@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Route-53 - Routing Policy | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Route 53 - Routing Policy
+
+
+Define how route 53 responds to DNS query
+
+
+Don&rsquo;t get confused by the word Routing
+
+It&rsquo;s not same as load Balancer routing which routes the traffic
+DNS does not route any traffic it only responds to the DNS queries
+
+
+
+Route 53 supports the following policies:
+
+Simple
+Weighted
+Failover
+Latency Based
+Geolocation
+Multi-Value Anser
+Geo-promixity ( Using route 53 traffic flow feature)
+
+
+
+Routing Policy - Simple
+
+Typically, route traffic to a single resource
+Can specify multiple values in same record
+If multiple values are returned, a random one will chosen by the client.
+When Alias are enabled, specify only one resource
+Can&rsquo;t be associated with health checks
+
+Routing Policy - Weighted
+
+
+Control the % of the requests that goes to each specific resource.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/route-53---routing-policy/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>Route-53 - Routing Policy</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        707 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="route-53---routing-policy">Route 53 - Routing Policy</h2>
+<ul>
+<li>
+<p>Define how route 53 responds to DNS query</p>
+</li>
+<li>
+<p>Don&rsquo;t get confused by the word Routing</p>
+<ul>
+<li>It&rsquo;s not same as load Balancer routing which routes the traffic</li>
+<li>DNS does not route any traffic it only responds to the DNS queries</li>
+</ul>
+</li>
+<li>
+<p>Route 53 supports the following policies:</p>
+<ol>
+<li>Simple</li>
+<li>Weighted</li>
+<li>Failover</li>
+<li>Latency Based</li>
+<li>Geolocation</li>
+<li>Multi-Value Anser</li>
+<li>Geo-promixity ( Using route 53 traffic flow feature)</li>
+</ol>
+</li>
+</ul>
+<h3 id="routing-policy---simple">Routing Policy - Simple</h3>
+<ul>
+<li>Typically, route traffic to a single resource</li>
+<li>Can specify multiple values in same record</li>
+<li><strong>If multiple values are returned, a random one will chosen by the client.</strong></li>
+<li>When Alias are enabled, specify only one resource</li>
+<li>Can&rsquo;t be associated with health checks</li>
+</ul>
+<h3 id="routing-policy---weighted">Routing Policy - Weighted</h3>
+<ul>
+<li>
+<p>Control the % of the requests that goes to each specific resource.</p>
+</li>
+<li>
+<p>Assign each record a relative weight:
+<code>traffic(%)=Weight for specified resource/sum of all the weights of all resource</code></p>
+<ul>
+<li>Weights don&rsquo;t need to sum up-to 100</li>
+</ul>
+</li>
+<li>
+<p>DNS records must have same name and type</p>
+</li>
+<li>
+<p>Can be associated with health checks</p>
+</li>
+<li>
+<p>Use Cases : load balancing between regions , testing new application versions&hellip;</p>
+</li>
+<li>
+<p><strong>Assign weight 0 to  a record to stop sending traffic to that resource</strong></p>
+</li>
+<li>
+<p>If all the records value is Zero , then all records will be return  equally</p>
+</li>
+</ul>
+<h3 id="routing-policy---latency">Routing Policy - Latency</h3>
+<ul>
+<li>Redirect to the resource that has the least latency closed to us</li>
+<li>Super helpful when latency for uses is priority</li>
+<li><strong>Latency is based on the traffic between users and AWS Regions</strong></li>
+<li>Indian users can be directed to Australia (if that&rsquo;s the lowest latency)</li>
+<li>Can be associated with health-check  ( has a Failover capability)</li>
+</ul>
+<h3 id="routing-policy---failover">Routing Policy - Failover</h3>
+<ul>
+<li>Let you route to a healthy resource</li>
+</ul>
+<h3 id="route-53---health-checks">Route 53 - Health Checks</h3>
+<ul>
+<li>
+<p><strong>HTTP</strong> health checks are only for public resource</p>
+</li>
+<li>
+<p>HealthCheck =&gt; Automated Healthcheck failover :</p>
+<ul>
+<li>HealthCheck that monitor an endpoint ( application,server other aws resources)</li>
+<li>HealthCheck that monitor other health-check ( Calculated health check )</li>
+<li>HealthCheck that monitor CloudWatch alarms</li>
+</ul>
+</li>
+<li>
+<p>HealthCheck are integrated with CloudWatch matrics</p>
+</li>
+</ul>
+<p>![[Pasted image 20240821232914.png]]</p>
+<h4 id="health-checks---monitor-an-endpoint">Health Checks - Monitor an Endpoint</h4>
+<ul>
+<li>
+<p>About 15 global health checkrs will check the endpoint health</p>
+<ul>
+<li>Health / Unhealthy Threshold - 3 (default)</li>
+<li>Interval  - 30 sec ( can be set to 10 sec - high cost)</li>
+<li>Supported Protocols HTTP , HTTPS and TCP</li>
+<li>If &gt; 18%  of health checkers report the endpoint healthy then Route 53 considers it <strong>healthy</strong>, otherwise <strong>unhealthy</strong></li>
+<li>Ability to choose which locations you want route 53 to use</li>
+</ul>
+</li>
+<li>
+<p>Health checks pass only when endpoints responds with <strong>2xx</strong> or <strong>3xx</strong> status code</p>
+</li>
+<li>
+<p>Health checks can be setup to pass / fail based on the text on the first 514 byte of the response</p>
+</li>
+<li>
+<p>Configure your firewall to allow request from route 53 Health Checkers</p>
+<p>![[Pasted image 20240821233856.png]]</p>
+</li>
+</ul>
+<h4 id="route-53--calculated-health-checks">Route 53- Calculated Health Checks</h4>
+<ul>
+<li>
+<p>Combine the result of  multiple health checks into single Health Checks</p>
+</li>
+<li>
+<p>You can use <strong>AND OR</strong> and <strong>NOT</strong></p>
+</li>
+<li>
+<p>Can monitor up to 256 child health checks</p>
+</li>
+<li>
+<p>Specify how many health checks need to pass to make parent pass</p>
+</li>
+<li>
+<p>Usage : perform maintenance to your website without causing all health checks to fail</p>
+<p>![[Pasted image 20240822115014.png]]</p>
+</li>
+</ul>
+<h4 id="health-checks---private-hosted-zones">Health Checks - Private Hosted Zones</h4>
+<ul>
+<li>
+<p>Route 53 health checkers are outside the vpc</p>
+</li>
+<li>
+<p>They can&rsquo;t access private endpoints (private vpc or on-premise resources)</p>
+</li>
+<li>
+<p>You can create a <strong>CloudWatch Metric</strong> and associate <strong>CloudWatch Alarm</strong> , then create a Health Check that check the alarm itself</p>
+<p>jj![[Pasted image 20240822161440.png]]</p>
+</li>
+</ul>
+<h3 id="routing-policy---geolocation">Routing Policy - Geolocation</h3>
+<ul>
+<li>Different from latency based</li>
+<li>This routing is based on user location</li>
+<li>Specify location by Continent , Country or by US state (if there&rsquo;s overlapping,most precise location will be selected )</li>
+<li>Should create <strong>&ldquo;Default&rdquo;</strong> record (In case there&rsquo;s no match for the location )</li>
+<li>Use Cases : website localization , restrict content distribution , load balancing . . .</li>
+<li>Can be associated with Health Checks
+![[Pasted image 20240822194711.png]]</li>
+</ul>
+<h3 id="routing-policy-geopromixity">Routing Policy GeoPromixity</h3>
+<ul>
+<li>
+<p>Route traffic to your resources  based on geographic location of users and resources</p>
+</li>
+<li>
+<p>Ability to shift more traffic to resources  based on the defined bias.</p>
+</li>
+<li>
+<p>To change the size of the geographic regsion , specify <strong>bias</strong> value:</p>
+<ul>
+<li>To exapnd (1 to 99) - more traffic to resource</li>
+<li>To shrink (-1 to -99) - less traffic to resource</li>
+</ul>
+</li>
+<li>
+<p>Resources can be :</p>
+<ul>
+<li>AWS resources ( specify AWS region)</li>
+<li>Non- AWS resources ( specify latitude and longitude)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="link">Link</h2>
+<p>[[aws]]
+[[Route-53]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

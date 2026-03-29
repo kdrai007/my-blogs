@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" {{- if eq site.Language.LanguageDirection "rtl" }} dir="rtl" {{- end }}>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    {{ hugo.Generator }}
+
+    {{/* Google Fonts - Inter */}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    {{/* Custom CSS */}}
+    <link rel="stylesheet" href="/css/custom.css">
+
+    {{ if .OutputFormats.Get "RSS" }}
+    {{ with .OutputFormats.Get "RSS" }}
+      <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{ end }}
+    {{ end }}
+
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body>
+    {{/* Site Header */}}
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
+        <ul class="nav-links">
+          <li><a href="{{ .Site.Home.Permalink }}">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

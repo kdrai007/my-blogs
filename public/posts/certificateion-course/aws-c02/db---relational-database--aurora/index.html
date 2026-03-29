@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DB - Relational Database &amp; Aurora | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RDS - Relational Database Service
+checkout
+&ndash; Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.
+
+it&rsquo;s managed DB service for DB use sql as a query language
+It allows to create database on cloud managed by amazon
+ex -
+
+postgres, Mysql , mariaDB, Oracle , Microsoft Sql Server
+Aurora (AWS proprietary database)
+
+
+
+Advantage of deploying RDS on AWS
+
+RDS is a managed service :
+
+Automated provisioning , OS patching
+Continous backup and restore to specific timestamp (Point in time restore).
+Monitoring dashboards
+Read replica for improved read performance
+Multi AZ setup for DR (Damage Recovery)
+Maintenance  windows for upgrades
+Scaling capablity (both horizontal and vertical)
+Storage backed by EBS
+
+
+You can&rsquo;t ssh into your instances
+
+Amazon RDS Proxy
+
+Fully managed database proxy for RDS
+Allows apps to pool and share DB connections established with the database
+Improving database efficiency by reducing stress from database resources ( e.g, RAM,CPU) and minimize open connnections (and timeouts)
+Serverless , autoscaleing , highly available (multi AZ)
+Reduced failover time by up-to 66% of RDS &amp;  Aurora
+Supports RDS (Mysql,Postgres,MariaDB,MS-SQL server) and Aurora(mySql, Postgres) DB
+No code changes required for most apps
+Enforce IAM Authentication for DB , and securely store credentials in AWS Secrets Manager
+RDS proxy is never publicly avaialble (must be accessed through VPC)
+
+RDS Read Replica  vs Multi-AZ
+&ndash; Amazon RDS Multi-AZ and Read Replicas maintain a copy of database but they are different in nature. Use Multi-AZ deployments for High Availability / Fail-over and Read Replicas for read scalability.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/db---relational-database--aurora/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>DB - Relational Database &amp; Aurora</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        698 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="rds---relational-database-service">RDS - Relational Database Service</h2>
+<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html">checkout</a></p>
+<p>&ndash; Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.</p>
+<ul>
+<li>it&rsquo;s managed DB service for DB use sql as a query language</li>
+<li>It allows to create database on cloud managed by amazon
+ex -
+<ul>
+<li>postgres, Mysql , mariaDB, Oracle , Microsoft Sql Server</li>
+<li>Aurora (AWS proprietary database)</li>
+</ul>
+</li>
+</ul>
+<h4 id="advantage-of-deploying-rds-on-aws">Advantage of deploying RDS on AWS</h4>
+<ul>
+<li>RDS is a managed service :
+<ul>
+<li>Automated provisioning , OS patching</li>
+<li>Continous backup and restore to specific timestamp (Point in time restore).</li>
+<li>Monitoring dashboards</li>
+<li>Read replica for improved read performance</li>
+<li>Multi AZ setup for DR (Damage Recovery)</li>
+<li>Maintenance  windows for upgrades</li>
+<li>Scaling capablity (both horizontal and vertical)</li>
+<li>Storage backed by EBS</li>
+</ul>
+</li>
+<li>You can&rsquo;t ssh into your instances</li>
+</ul>
+<h4 id="amazon-rds-proxy">Amazon RDS Proxy</h4>
+<ul>
+<li>Fully managed database proxy for RDS</li>
+<li>Allows apps to pool and share DB connections established with the database</li>
+<li>Improving database efficiency by reducing stress from database resources ( e.g, RAM,CPU) and minimize open connnections (and timeouts)</li>
+<li>Serverless , autoscaleing , highly available (multi AZ)</li>
+<li>Reduced failover time by up-to 66% of RDS &amp;  Aurora</li>
+<li>Supports RDS (Mysql,Postgres,MariaDB,MS-SQL server) and Aurora(mySql, Postgres) DB</li>
+<li>No code changes required for most apps</li>
+<li>Enforce IAM Authentication for DB , and securely store credentials in AWS Secrets Manager</li>
+<li>RDS proxy is never publicly avaialble (must be accessed through VPC)</li>
+</ul>
+<h3 id="rds-read-replica--vs-multi-az">RDS Read Replica  vs Multi-AZ</h3>
+<p>&ndash; Amazon RDS Multi-AZ and Read Replicas maintain a copy of database but they are different in nature. Use Multi-AZ deployments for High Availability / Fail-over and Read Replicas for read scalability.</p>
+<h4 id="read-replica-for-read-scalibility">Read Replica for Read Scalibility</h4>
+<ul>
+<li>
+<p>Up to 15 Read Replica</p>
+</li>
+<li>
+<p>Within AZ, Cross AZ or Cross Origin</p>
+</li>
+<li>
+<p>Replication is <strong>ASYNC</strong>*, so reads are eventually consistent</p>
+</li>
+<li>
+<p>Replicas can be promoted to their own DB</p>
+</li>
+<li>
+<p>Application must update the connection string to leverage read replicas</p>
+<p>![[Pasted image 20240806222224.png]]</p>
+</li>
+</ul>
+<h3 id="rds---storage-auto-scaling">RDS - Storage Auto Scaling</h3>
+<ul>
+<li>Helps you increase storage on your RDS instance dynamically</li>
+<li>When RDS scans you are running out of database storage , it scales automatically</li>
+<li>Avoid manually scaling your database storage</li>
+<li>You have to set <strong>Maximum Storage Threshold</strong> (maximum limit for DB storage)</li>
+<li>Automatically modify storage if :
+<ol>
+<li>Free storage is less than 10% of allocated storage</li>
+<li>Low-storage lasts at least 5 minutes</li>
+<li>6 hours have passed since last modifications.</li>
+</ol>
+</li>
+<li>Useful for application with unpredictable workloads</li>
+<li>Supports all RDS Database engines</li>
+</ul>
+<p>![[Pasted image 20240806214718.png]][</p>
+<h3 id="amazon-rds--aurora-security">Amazon RDS &amp; Aurora Security</h3>
+<ul>
+<li><strong>At-rest encryption</strong>
+<ul>
+<li>Database master &amp; replicas encryption using AWS KMS - must be defined during launch time</li>
+<li>If the master db is not encrypted , the replicas can&rsquo;t be encrypted</li>
+<li>To encrypt a un-encrypted database  , go through the Db snapshot and re-create as encrypted</li>
+</ul>
+</li>
+<li><strong>In-Flight encryption</strong> : TLS- ready by default , use AWS TLS root certificates client-side</li>
+<li><strong>IAM authentication</strong> : IAM roles to connect to your database (instead of username/pw)</li>
+<li><strong>Security Groups</strong> : Controls Network Access to RDS &amp; Aurora</li>
+<li>No SSH based connection except on RDS custom</li>
+<li><strong>Audit logs</strong> can be enabled and sent to CloudWatch for longer retention</li>
+</ul>
+<h2 id="amazon-aurora">Amazon Aurora</h2>
+<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">checkout</a></p>
+<ul>
+<li>Aurora is a proprietary technology from AWS (not open sources)</li>
+<li>Postgres and Mysql both supported as Aurora DB ( that means your drives works as if Aurora was a postgres or mysql)</li>
+<li>Aurora is &ldquo;Aws cloud optimized &quot; and claims 5x performance improvement over mysql and with with postgres over 3x on RDS</li>
+<li>Aurora storage autmatically increments 10 GB, up to 128 TB</li>
+<li>Aurora can have up to 15 replicas and the replication process is faster than mySQ (sub 10 ms replica lag )</li>
+<li>Aurora costs more than RDS (20% more) - but is more efficient</li>
+</ul>
+<h3 id="aurora-high-availability-and-read-scaling">Aurora High Availability and Read Scaling</h3>
+<ul>
+<li>
+<p>6 copies of your data in 3 AZ</p>
+<ul>
+<li>4 copies out of 6 needed for writes</li>
+<li>3 copies out of 6 needs for reads</li>
+<li>Self-healing and peer to peer replication</li>
+<li>Storage is striped  across of 100s of volumes</li>
+</ul>
+</li>
+<li>
+<p>One instance takes writes (master)</p>
+</li>
+<li>
+<p>Automated failover for master takes 30 seconds</p>
+</li>
+<li>
+<p>Master + up to 15 Aurora read replica  serve reads</p>
+</li>
+<li>
+<p>Supports for cross region replication</p>
+</li>
+<li>
+<p>Backtrack : Restore data at any point of my without using backups</p>
+</li>
+<li>
+<p><strong>Aurora DB Cluster</strong>
+![[Pasted image 20240809132924.png]]</p>
+</li>
+</ul>
+<hr>
+<p>[[aws]]
+[[EC2]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

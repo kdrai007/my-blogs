@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IAM | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="IAM : Users &amp; Groups
+iam - Identity and access management ,Global service
+root create by default shouldn&rsquo;t be shared
+Users are people within your organization and can be grouped
+Groups can only contain user not others groups.
+IAM : Permissions
+. Users or Groups can be assigned Json documents called policies.
+. These policies define the permissions of the users.
+IAM Policies structure
+
+Consists of:
+. Version: policy language versoin.
+. Id: an idetifier for the policy(optional)
+. Statement: One or more individual statement(required)
+Statement Consists of:
+. Sid: an identifer for the statement (opt)
+. Effect: whether the statement allwos of denies access(allow or deny)
+. Principle: account/user/role to which the policy is applied to.
+. Action: list of actions this policies allows or denies
+. Resource: list of resources to which the actions applied for.
+. Condition: conditions for when the policy is in effect(optional)
+
+IAM Roles for Services">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/iam/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>IAM</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        247 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="iam--users--groups">IAM : Users &amp; Groups</h2>
+<p>iam - Identity and access management ,Global service
+root create by default shouldn&rsquo;t be shared
+Users are people within your organization and can be grouped
+Groups can only contain user not others groups.</p>
+<p><strong>IAM : Permissions</strong></p>
+<p>. Users or Groups can be assigned Json documents called policies.
+. These policies define the permissions of the users.</p>
+<p><strong>IAM Policies structure</strong></p>
+<ul>
+<li>Consists of:
+. Version: policy language versoin.
+. Id: an idetifier for the policy(optional)
+. Statement: One or more individual statement(required)</li>
+<li>Statement Consists of:
+. Sid: an identifer for the statement (opt)
+. Effect: whether the statement allwos of denies access(allow or deny)
+. Principle: account/user/role to which the policy is applied to.
+. Action: list of actions this policies allows or denies
+. Resource: list of resources to which the actions applied for.
+. Condition: conditions for when the policy is in effect(optional)</li>
+</ul>
+<p><strong>IAM Roles for Services</strong></p>
+<p>. Some AWS service need to perform actions on your behalf
+. To do so we will assign permissions to aws services with IAM roles.
+. Common Roles:
+. EC2 instance role
+. Lamda function role
+. Roles for cloudformation</p>
+<p><strong>IAM Security tools</strong></p>
+<ul>
+<li>
+<p>Iam credential report (account level)
+. a report that list all account users and the status of their various credentials</p>
+</li>
+<li>
+<p>Iam access advisor(user level)
+. Access advisor shows the service permissions granted to user and when those services were last accessed.
+. You can use this information to revise your policies.</p>
+</li>
+</ul>
+<hr>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+  <div class="article-tags">
+    
+      <a href="/tags/aws/">#aws</a>
+    
+  </div>
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

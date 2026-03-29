@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>vim commands | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Captalize words in vim i
+gUU -&gt; whole line
+gU3w -&gt; first 3 words
+gUG -&gt; from cursor to whole line
+Some random important command
+gf -&gt; jump to the filename
+^ -&gt; move back to original file
+gv -&gt; jump back to previously selected word
+J -&gt; join words downwards.
+Basic Vim Commands
+ZQ -&gt; quite vim without saving any changes
+ZZ -&gt; exit vim with saving changes
+A  -&gt; go directly in last of the  santance  in insert mode.
+I  -&gt; go back to very beginning of the line in insert mode.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/vim-commands/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/">Posts</a>
+    </div>
+    <h1>vim commands</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        272 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="captalize-words-in-vim-i">Captalize words in vim i</h2>
+<p>gUU -&gt; whole line
+gU3w -&gt; first 3 words
+gUG -&gt; from cursor to whole line</p>
+<h2 id="some-random-important-command">Some random important command</h2>
+<p>gf -&gt; jump to the filename
+^ -&gt; move back to original file
+gv -&gt; jump back to previously selected word
+J -&gt; join words downwards.</p>
+<h2 id="basic-vim-commands">Basic Vim Commands</h2>
+<p>ZQ -&gt; quite vim without saving any changes
+ZZ -&gt; exit vim with saving changes
+A  -&gt; go directly in last of the  santance  in insert mode.
+I  -&gt; go back to very beginning of the line in insert mode.</p>
+<h2 id="random-vim-commands">Random Vim Commands</h2>
+<p>:&rsquo;&lt;,&rsquo;&gt;sort -&gt; sort the selected line in alphabetically order.</p>
+<h2 id="comment-out-in-vim">Comment out in Vim</h2>
+<p>:s/^/# -&gt; where # is type of symbol you want to use as Comment
+:1,5s/^/# -&gt; This will comment out first 5 lines, for ex in python
+:&rsquo;&lt;,&rsquo;&gt;s/^/# -&gt; comment out the selected lines.
+Ctrl+j to select multiple line</p>
+<h2 id="deletion-in-vim">Deletion in vim</h2>
+<p>dw -&gt; delete a word,put the cursor beginning of the word that you want you delete.
+d$ -&gt; delete to the end of the line.
+D -&gt; do the same as d$ but in shortcut</p>
+<h2 id="comment-and-uncomment-in-vim">Comment and Uncomment in vim</h2>
+<p>norm I// -&gt; replace &lsquo;//&rsquo; with the comment according to add comment to programming language.
+s^//^ -&gt; replace &lsquo;//&rsquo; with the comment type to remove the comment.</p>
+<h2 id="searching-the-word-under-the-cursor">Searching the word under the cursor</h2>
+<ul>
+<li>-&gt; Place your cursor on the word you want to search then press <code>*</code> or <code>g*</code></li>
+</ul>
+<h1 id="--same-thing-as--but-in-backward">-&gt; Same thing as <code>*</code> but in backward.</h1>
+<h2 id="find-and-replace">Find and replace</h2>
+<p>:%s/foo/bar/gci -&gt; replace <code>foo</code> with the text you want to find and <code>bar</code> to the text you want to change.</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

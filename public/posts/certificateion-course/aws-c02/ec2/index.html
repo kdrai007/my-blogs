@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>EC2 | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Amazon EC2
+
+Amazon elastic compute cloud(Amazon EC2) offers the deepest and boradest compute platform,with over 720 instances and choice over latest processor,storage,os and networking system
+
+Use Cases
+
+Run cloud-native and enterprises applications.
+Train and deploy ML applications.
+
+EC2 sizing and configuration options
+![[Pasted image 20240725105109.png]]
+EC2 User Data
+
+It is possible to bootstrap our instances using user data script.
+Bootstrapping means running some commands when instance start.
+That script only runs once at the instance first start.
+EC2 user data is used to automate boots task such as:
+- Installing Updates
+- Installing software
+- Download common files from internet.
+- Anything you can think off.
+The EC2 user data runs with root user.
+
+EC2 Instance type: Example">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/ec2/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>EC2</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        300 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="amazon-ec2">Amazon EC2</h2>
+<ul>
+<li>Amazon elastic compute cloud(Amazon EC2) offers the deepest and boradest compute platform,with over 720 instances and choice over latest processor,storage,os and networking system</li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li>Run cloud-native and enterprises applications.</li>
+<li>Train and deploy ML applications.</li>
+</ul>
+<p><strong>EC2 sizing and configuration options</strong></p>
+<p>![[Pasted image 20240725105109.png]]</p>
+<p><strong>EC2 User Data</strong></p>
+<ul>
+<li>It is possible to bootstrap our instances using user data script.</li>
+<li><em>Bootstrapping</em> means running some commands when instance start.</li>
+<li>That script only runs once at the instance first start.</li>
+<li>EC2 user data is used to automate boots task such as:
+- Installing Updates
+- Installing software
+- Download common files from internet.
+- Anything you can think off.</li>
+<li>The EC2 user data runs with root user.</li>
+</ul>
+<p><strong>EC2 Instance type: Example</strong></p>
+<p>![[Pasted image 20240725111444.png]]</p>
+<p><strong>EC2 Instance type - Overview</strong></p>
+<p>![[Pasted image 20240725130103.png]]</p>
+<p><strong>EC2 Instance type - General purpose</strong></p>
+<ul>
+<li>Great for a diversity of workloads such as web-server or code repositories.</li>
+<li>Balance between :
+. Compute
+. Memory
+. Networking</li>
+<li>for ex, t2.micro is general purpose ec2 instance.</li>
+</ul>
+<p><strong>EC2 Instance type - Compute Optimized</strong></p>
+<ul>
+<li>
+<p>Great for compute-intensive tasks that require high performance processors:
+. Batch processing workloads
+. Media transcoding
+. High performance web server
+. High performance computing(HPC)
+. Scientific model &amp; machine learning
+. Dedicated gaming server</p>
+<pre><code>  ![[Pasted image 20240725130830.png]]
+</code></pre>
+</li>
+</ul>
+<p><strong>EC2 Instance type - Memory optmized</strong></p>
+<ul>
+<li>Fast performance fore workloads that process large data sets of memory.</li>
+<li>Use Cases:
+. High performance relational/non-relational databases.
+. Distributed web scale cache stores
+. In-memory databases optimized  for BI(Business Intelligence)
+. Applications performing real-time processing on big unstructured data.</li>
+</ul>
+<p><strong>EC2 Instance type - Storage optimized</strong></p>
+<ul>
+<li>Great for storage intensive-tasks that require high, sequential read and write access to large data sets on local storage.</li>
+<li>Use Cases:
+.  High processing online transactions processing(otlp) systems.
+.  Relational &amp; NoSql databases.
+.  Distributed file system.</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]
+[[productive]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

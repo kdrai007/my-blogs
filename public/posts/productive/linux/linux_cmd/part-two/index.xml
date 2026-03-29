@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Part Two on My Blog</title>
+    <link>http://localhost:34481/posts/productive/linux/linux_cmd/part-two/</link>
+    <description>Recent content in Part Two on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:34481/posts/productive/linux/linux_cmd/part-two/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>config_nd_env</title>
+      <link>http://localhost:34481/posts/productive/linux/linux_cmd/part-two/config_nd_env/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/productive/linux/linux_cmd/part-two/config_nd_env/</guid>
+      <description>&lt;p&gt;Tag : #linux #env #alias #commands&lt;/p&gt;&#xA;&lt;h1 id=&#34;configuration--environment&#34;&gt;Configuration &amp;amp; Environment&lt;/h1&gt;&#xA;&lt;p&gt;The shell stores key information during sessions, known as the &lt;em&gt;environment&lt;/em&gt;, Programs  see data stored in the environment to determine facts about system&amp;rsquo; configurations. While most programs use configurations files for specific program settings.&lt;/p&gt;&#xA;&lt;h2 id=&#34;command-used&#34;&gt;Command Used&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;printenv - print part of all environment&lt;/li&gt;&#xA;&lt;li&gt;set - Set shell options&lt;/li&gt;&#xA;&lt;li&gt;export - Export environment to subsequently executed program&lt;/li&gt;&#xA;&lt;li&gt;alias - Create an alias for command&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;examining-the-environment&#34;&gt;Examining The Environment&lt;/h3&gt;&#xA;&lt;p&gt;To see what&amp;rsquo;s stored in Environment, we can use &lt;code&gt;set&lt;/code&gt; builtin in bash or &lt;code&gt;printenv&lt;/code&gt; program.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>customize_prompt</title>
+      <link>http://localhost:34481/posts/productive/linux/linux_cmd/part-two/customize_prompt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/productive/linux/linux_cmd/part-two/customize_prompt/</guid>
+      <description>&lt;p&gt;Tag: #linux #prompt&lt;/p&gt;&#xA;&lt;h1 id=&#34;customizing-the-prompt&#34;&gt;Customizing the Prompt&lt;/h1&gt;&#xA;&lt;p&gt;Like so many in linux, Prompt is highly configurable.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We can configure pretty much, the way we want&lt;/li&gt;&#xA;&lt;li&gt;And it&amp;rsquo;s give some sense of familarity because we can customize it the way we want&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;anatomy-of-a-prompt&#34;&gt;Anatomy of a prompt&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;[user@distro ~]$&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Generally, without any config this is how our prompt look&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Notice, the prompt contain &lt;code&gt;username&lt;/code&gt;, &lt;code&gt;hostname&lt;/code&gt; and our &lt;code&gt;current directory&lt;/code&gt;, You may ask why it look this way?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

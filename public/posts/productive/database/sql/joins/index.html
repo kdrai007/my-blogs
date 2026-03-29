@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>joins | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tags: #sql #queries #joins
+Joins
+Joins are one of the most important feature that SQL offers. Joins allow us to make use of relations between tables, In short joins allows use to query multiple tables at same time.
+Inner Join
+The simplest and most common joins in sql is Inner Join. By default a join command is an Inner Join.
+![[Pasted image 20241219003303.png]]
+
+Here is simple diagram of Inner Join
+
+On
+To perform a table join, we need to tell database how to &ldquo;match up&rdquo; the rows from each table. The ON clause specifies the each colums to compare.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/database/sql/joins/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/database/sql/">Sql</a>
+    </div>
+    <h1>joins</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        320 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tags: #sql #queries #joins</p>
+<h1 id="joins">Joins</h1>
+<p>Joins are one of the most important feature that SQL offers. Joins allow us to make use of relations between tables, In short joins allows use to query multiple tables at same time.</p>
+<h2 id="inner-join">Inner Join</h2>
+<p>The simplest and most common joins in sql is <code>Inner Join</code>. By default a <code>join</code> command is an Inner Join.</p>
+<p>![[Pasted image 20241219003303.png]]</p>
+<ul>
+<li>Here is simple diagram of <code>Inner Join</code></li>
+</ul>
+<h4 id="on">On</h4>
+<p>To perform a table join, we need to tell database how to &ldquo;match up&rdquo; the rows from each table. The <code>ON</code> clause specifies the each colums to compare.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> employees e
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Inner</span> <span style="color:#66d9ef">Join</span> departments d
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">On</span> e.department_id <span style="color:#f92672">=</span> d.id;
+</span></span></code></pre></div><p>This is basic example of join.</p>
+<h3 id="namespacing--on-tables">Namespacing  On Tables.</h3>
+<p>When working with multiple tables, you can specify which table a field exists on using <code>.</code>.</p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> student.name , classes.<span style="color:#66d9ef">class</span> <span style="color:#66d9ef">From</span> student
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Inner</span> <span style="color:#66d9ef">Join</span> classes <span style="color:#66d9ef">ON</span> classes.id <span style="color:#f92672">=</span> students.class_id;
+</span></span></code></pre></div><ul>
+<li>The above query returns <code>name</code> from <code>student</code> table and <code>class</code> from the <code>classes</code> table.</li>
+</ul>
+<h2 id="left-join">Left Join</h2>
+<p>A <code>Left Join</code> will return every record from <code>table_a</code> regardless if there&rsquo;s any record matches from <code>table_b</code>. A left join will also return any matching records from <code>table_b</code></p>
+<p>![[Pasted image 20241219142936.png]]</p>
+<ul>
+<li>Here&rsquo;s a diagram of how <code>left join</code> positioned between two tables.</li>
+</ul>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> e.name,d.name <span style="color:#66d9ef">From</span> employees e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Left</span> <span style="color:#66d9ef">Join</span> departments d
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> e.department_id<span style="color:#f92672">=</span>d.id;
+</span></span></code></pre></div><h3 id="right-join">Right Join</h3>
+<p>A <code>Right Join</code> returns all records from <code>table_b</code> regardless of matches, and all matching records between two tables.</p>
+<ul>
+<li>A <code>Right Join</code> is same as <code>Left Join</code> with the order of tables switched.</li>
+<li>In most cases <code>Left Join</code> is preferred for readability.</li>
+</ul>
+<h3 id="full-join">Full Join</h3>
+<p>A <code>Full Join</code> combines the result set of the <code>Left Join</code> and <code>Right Join</code> commands. It returns all the records from both from <code>table_a</code> and <code>table_b</code> regarless of there&rsquo;s any matches.</p>
+<p>![[Pasted image 20241220095947.png]]</p>
+<h3 id="multiple-join">Multiple Join</h3>
+<p>To incorporate data from more than one table, you can utilize multiple jons to execute more complex queries.</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

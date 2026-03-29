@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Functions | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SQL is a programming language and like nearly all programming language it&rsquo;s supports functions.We can use functions and alias to calculate new columns in a query.
+Between
+We can check if values are Between two numbes using the Where clause in an intuitive way!
+SELECT user,salary FROM employees WHERE salary BETWEEN 2000 And 80000;
+
+This query will return user and salary column from employees table whose salary is between 2k and 80k.
+
+Distinct
+Sometimes we want to retrieve records from a table without any duplicates.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/database/sql/functions/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/database/sql/">Sql</a>
+    </div>
+    <h1>Functions</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        468 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>SQL is a programming language and like nearly all programming language it&rsquo;s supports functions.We can use functions and alias to calculate new columns in a query.</p>
+<h3 id="between">Between</h3>
+<p>We can check if values are <code>Between</code> two numbes using the <code>Where</code> clause in an intuitive way!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">user</span>,salary <span style="color:#66d9ef">FROM</span> employees <span style="color:#66d9ef">WHERE</span> salary <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">2000</span> <span style="color:#66d9ef">And</span> <span style="color:#ae81ff">80000</span>;
+</span></span></code></pre></div><ul>
+<li>This query will return user and salary column from employees table whose salary is between 2k and 80k.</li>
+</ul>
+<h3 id="distinct">Distinct</h3>
+<p>Sometimes we want to retrieve records from a table without any duplicates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> previous_company <span style="color:#66d9ef">FROM</span> employees;
+</span></span></code></pre></div><h3 id="logical-operators---and">Logical Operators - AND</h3>
+<p>We often need to use multiple condtions to retrieve exact information we want.We can begin to structure much more complex queries by using multiple conditions to narrow down the search result.</p>
+<h4 id="and-operator">And operator</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> name,address,contact <span style="color:#66d9ef">from</span> members
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Where</span> city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;New York&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">And</span> age <span style="color:#66d9ef">Between</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">and</span> <span style="color:#ae81ff">40</span>;
+</span></span></code></pre></div><ul>
+<li>This query only retrive a member who are from &ldquo;New York&rdquo; and their age is between 20 to 40.</li>
+</ul>
+<h4 id="equality-operators">Equality operators</h4>
+<p>All of the following operators are supported in SQL. The = is the main one to watch out for, it&rsquo;s not == like in many other languages! SQLite does allow for == but it&rsquo;s not a good habit to get into, as other dialects of SQL will not recognize == as valid syntax.</p>
+<ul>
+<li>=</li>
+<li>&lt;</li>
+<li>
+<blockquote>
+</blockquote>
+</li>
+<li>&lt;=</li>
+<li>
+<blockquote>
+<p>=</p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Where</span> country_code <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CA&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">And</span> age <span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">18</span>;
+</span></span></code></pre></div><h4 id="or">OR</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">From</span> products
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Where</span> shipment_status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;out of stock&#39;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Or</span> Quantity <span style="color:#66d9ef">Between</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">and</span> <span style="color:#ae81ff">80</span>;
+</span></span></code></pre></div><ul>
+<li>This query retrieve every column where shipment status is &lsquo;out of stock&rsquo; or quantity is between 10 and 80.</li>
+</ul>
+<h4 id="in">IN</h4>
+<p>Another variation to the <code>WHERE</code> clause we can utilize is the <code>IN</code> operator. <code>IN</code> operator return <code>True</code> or <code>False</code> if the first operand matches any of the values in second operand.</p>
+<p>exmaple,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">From</span> products
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">WHERE</span> shipment_status <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;out of stock&#39;</span>, <span style="color:#e6db74">&#39;shipped&#39;</span>,<span style="color:#e6db74">&#39;preparing&#39;</span>);
+</span></span></code></pre></div><ul>
+<li>This query fetch all products whose <code>shipment_status</code> is either &lsquo;out of stock&rsquo;,&lsquo;shipped&rsquo; or &lsquo;preparing&rsquo;.</li>
+<li>Compare to <code>AND</code> operator <code>IN</code> operator is easy to compare different fields together.</li>
+</ul>
+<h4 id="like">LIKE</h4>
+<p>Sometimes we don&rsquo;t have the luxery of knowing exactly what we need to query. That&rsquo;s where <code>LIKE</code> comes in</p>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;As%&#39;</span> 
+</span></span></code></pre></div><ul>
+<li>This query will fetch every <code>user</code> whose name starts with &lsquo;As&rsquo; like &lsquo;Ashoka&rsquo; or &lsquo;Ashwin&rsquo;.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%as&#39;</span> 
+</span></span></code></pre></div><ul>
+<li>This query will fetch every <code>user</code> whose name ends with &lsquo;as&rsquo;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%as%&#39;</span> 
+</span></span></code></pre></div><ul>
+<li>This query will fetch every user whose name contain &lsquo;as&rsquo; between their words.</li>
+</ul>
+<h4 id="underscore-operator">Underscore Operator</h4>
+<p>The <code>%</code> wildcard operator matches zero or more characters. Meanwhile <code>_</code> operator only matches a single character.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">From</span> users 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Where</span> name <span style="color:#66d9ef">Like</span> <span style="color:#e6db74">&#39;__un&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>This query will fetch user whose name are exactly 4 char long and their name ends with <code>un</code>.</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

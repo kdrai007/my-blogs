@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>basic | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="#latex
+Latex
+Latex is used for creating complex Notes for subjects like mathmatics( with lots of formulas), research paper or use can it for simple notes. Once done you can convert .tex file to pdf(Portable Document Format).
+Basic Layout
+Creating document with latex is simple. In contrast to word, you start off with the plain text file(tex file) which contains latex code and the actual content. LaTeX uses control statement, which specifies how your content should be formatted. After that you can use latex compiler to compile .tex file to .pdf file.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/programming-language/latex/basic/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/programming-language/latex/">Latex</a>
+    </div>
+    <h1>basic</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        546 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>#latex</p>
+<h1 id="latex">Latex</h1>
+<p>Latex is used for creating complex Notes for subjects like mathmatics( with lots of formulas), research paper or use can it for simple notes. Once done you can convert <code>.tex</code> file to pdf(Portable Document Format).</p>
+<h3 id="basic-layout">Basic Layout</h3>
+<p>Creating document with <code>latex</code> is simple. In contrast to word, you start off with the plain text file(tex file) which contains latex code and the actual content. LaTeX uses control statement, which specifies how your content should be formatted. After that you can use latex compiler to compile .tex file to .pdf file.</p>
+<p>Example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>Hello world
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><ul>
+<li>Once your converted this <code>.tex</code> file into .pdf, you can see in .pdf file a blank white page contains the word <em>Hello world</em>.</li>
+</ul>
+<h3 id="adding-a-title-to-the-page">Adding a title to the page</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\title</span>{My document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\date</span>{2020-06-25}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\author</span>{John Doe}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\maketitle</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newpage</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hello World!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><ul>
+<li>The statements <code>\title</code>,<code>\date</code> and <code>\author</code> are not within the documents environment, so they will not directly not show in our document. The area before our main document called <em>preamble</em>.</li>
+</ul>
+<p>If we compile again, we will see a nicely formatted title page, but we can spot a page number at bottom of the title page. What if we don&rsquo;t want any page number on the title page.We can remove it by telling latex to remove it from the bottom of the page. This can be done by adding <code>pagenumbering{gobble}</code> command then on the next page change it back by using <code>pagenumbering{arebic}</code>.</p>
+<h3 id="sectioning-elements">Sectioning elements</h3>
+<p>Latex offer us commands to generate section heading and number them automatically. The command for creating sections are straightforward.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\section</span>{}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\subsection</span>{}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\subsubsection</span>{}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\paragraph</span>{}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\subparagraph</span>{}
+</span></span></code></pre></div><h3 id="packages">Packages</h3>
+<p>Latex offers us a bunch of functions by default, but in some situation its become handy to use some other <em>package</em>. To import packages in Latex you simply add this command <code>\usepackage</code></p>
+<ul>
+<li>Import the packages in preamble area, otherwise it will through error.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{umsmath}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>Hello World!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{equation}
+</span></span><span style="display:flex;"><span>f(x)=x^2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{equation}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><h3 id="adding-a-picture--or-figure">Adding a picture  or figure</h3>
+<p>Sometimes it&rsquo;s necessary to add pictures in your document.So lets see how we can add them.</p>
+<ul>
+<li>Using Latex all pictures will be indexed automatically and tagged with successive number when using the figure environment and the graphicx packages</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{graphicx}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[width=\linewidth]</span>{figure.png}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\caption</span>{a figure}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\label</span>{fig:figure1}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Figure <span style="color:#66d9ef">\ref</span>{fig:figure1} show a figure.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><ul>
+<li>This syntax is enough to show a captioned figure in latex.</li>
+<li>The <em>Figure</em> environment is enough to handle numbering and positioning of the image within the document.</li>
+</ul>
+<h4 id="image-positioning">Image positioning</h4>
+<p>Sometime you will see the image position within document is not positioned according to your expectation. If your current page contain too much content then try to show image on the same page, this will not work. The image will be viewed on next page and that&rsquo;s probably not what we want.</p>
+<ul>
+<li>To prevent this behaviour,it&rsquo;s necessary to set the <em>float</em> value for the figure environment.</li>
+</ul>
+<p><code>\begin{figure}[h!]</code></p>
+<ul>
+<li>
+<p>Setting the float <code>[h!]</code> behind the figure environment <code>\begin</code> tag will force document to show the figure on current page.</p>
+</li>
+<li>
+<p>Possible values are</p>
+</li>
+<li>
+<p>h(here) - same location</p>
+</li>
+<li>
+<p>t(top) - top of the page</p>
+</li>
+<li>
+<p>b(bottom) - bottom of the page</p>
+</li>
+<li>
+<p>p(page) - on the extra page</p>
+</li>
+<li>
+<p>!(override) - will force the specified location.</p>
+</li>
+</ul>
+<ul>
+<li>use <code>\hfill</code> to show two image side by side.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{figure}[htbp]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\centering</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{subfigure}[b]{0.48<span style="color:#66d9ef">\linewidth</span>}
+</span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[width=\linewidth]</span>{img.png}
+</span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">\caption</span>{risk-return-a}     
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{subfigure}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\hfill</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{subfigure}[b]{0.48<span style="color:#66d9ef">\linewidth</span>}
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[width=\linewidth]</span>{img.png}
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">\caption</span>{risk-return-b}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{subfigure}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\caption</span>{risk-return}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\label</span>{fig:risk}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{figure}
+</span></span></code></pre></div>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

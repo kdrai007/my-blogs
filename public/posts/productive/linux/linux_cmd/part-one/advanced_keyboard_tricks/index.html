@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>advanced_keyboard_tricks | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #keyboard #commands
+Advanced Keyboard Tricks
+Used commands
+
+clear - Clear the screen
+history - Display the contents of th history file
+
+Using history
+bash maintains a history of commands that have been entered. A list of commands are kept in .bash_history in our home directory
+
+The history facility is a useful resource for reducing the amount of typing we have to do, for daily used commands
+
+$ history|less">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/advanced_keyboard_tricks/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>advanced_keyboard_tricks</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        1 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        210 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #keyboard #commands</p>
+<h1 id="advanced-keyboard-tricks">Advanced Keyboard Tricks</h1>
+<h2 id="used-commands">Used commands</h2>
+<ul>
+<li>clear - Clear the screen</li>
+<li>history - Display the contents of th history file</li>
+</ul>
+<h3 id="using-history">Using history</h3>
+<p><code>bash</code> maintains a history of commands that have been entered. A list of commands are kept in <code>.bash_history</code> in our home directory</p>
+<ul>
+<li>The history facility is a useful resource for reducing the amount of typing we have to do, for daily used commands</li>
+</ul>
+<p><code>$ history|less</code></p>
+<ul>
+<li>
+<p>We can see all the saved commands using this <code>command</code> with the help of <code>less</code></p>
+</li>
+<li>
+<p>For example, we can use <code>grep</code> with <code>history</code>  command to grep a command which we used previously</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ history | grep <span style="color:#e6db74">&#34;ls -l &#34;</span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  ls -la
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  ls -la
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">13</span>  ls -la
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">131</span>  ls -la
+</span></span></code></pre></div><ul>
+<li>now we can use <code>5 ls -la</code> the number 5 to take the command as a input in <code>bash</code></li>
+</ul>
+<p><code>$ !5</code></p>
+<ul>
+<li><code>bash</code> will expand <code>!5</code> into the content of the 5th line of history list</li>
+</ul>
+<h4 id="history-expansion">history expansion</h4>
+<p>The shell offers a specilized type of expansion for items in the history list by using <code>!</code> charcter</p>
+<ul>
+<li>History expansion commands</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Sequence</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>!!</td>
+          <td>Repeat the last command</td>
+      </tr>
+      <tr>
+          <td>!number</td>
+          <td>Repeat history list item number</td>
+      </tr>
+      <tr>
+          <td>!string</td>
+          <td>Repeat last history item starting with the string</td>
+      </tr>
+      <tr>
+          <td>!?string</td>
+          <td>Repeat last hisotry list item containing string</td>
+      </tr>
+  </tbody>
+</table>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

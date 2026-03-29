@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>April on My Blog</title>
+    <link>http://localhost:34481/posts/myself/daily-goals/april/</link>
+    <description>Recent content in April on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:34481/posts/myself/daily-goals/april/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>day-60</title>
+      <link>http://localhost:34481/posts/myself/daily-goals/april/day-60/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/daily-goals/april/day-60/</guid>
+      <description>&lt;h1 id=&#34;date03-04-2025&#34;&gt;Date:03-04-2025&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Goal: 3 hours&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;17:30 - 18:00&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;a little break&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>day-61</title>
+      <link>http://localhost:34481/posts/myself/daily-goals/april/day-61/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/daily-goals/april/day-61/</guid>
+      <description>&lt;h1 id=&#34;date-04-04-2025&#34;&gt;Date: 04-04-2025&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Goal: 2 hours&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;20:45 - 21:45&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;dinner break&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>day-62</title>
+      <link>http://localhost:34481/posts/myself/daily-goals/april/day-62/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/daily-goals/april/day-62/</guid>
+      <description>&lt;h1 id=&#34;date-06-04-2025&#34;&gt;Date 06-04-2025&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Goal: 3 hours&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

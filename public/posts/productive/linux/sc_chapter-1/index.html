@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>sc_chapter-1 | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Chapter 1- Shell something out
+#terminal the termianl is interactive tool while user use to interact with shell environment
+printf  &ldquo;%-5s %-10s %-4.2f\n&rdquo; 1 Sarath 80.3456
+prints:-
+1     Sarath     80.35
+How this works
+%s, %c, %d, and %f are format substitution characters for which an argument can be placed
+after the quoted format string.
+where:-
+s denotes string
+c denotes character
+d denotes number
+f denotes float number
+Envionment Variables
+Envionment variables are variables that are not defined by the current procuess but the parant processes">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/sc_chapter-1/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/">Linux</a>
+    </div>
+    <h1>sc_chapter-1</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        1 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        199 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="chapter-1--shell-something-out">Chapter 1- Shell something out</h2>
+<p>#terminal the termianl is interactive tool while user use to interact with shell environment</p>
+<p>printf  &ldquo;%-5s %-10s %-4.2f\n&rdquo; 1 Sarath 80.3456
+prints:-
+1     Sarath     80.35</p>
+<h3 id="how-this-works">How this works</h3>
+<p>%s, %c, %d, and %f are format substitution characters for which an argument can be placed
+after the quoted format string.</p>
+<p>where:-
+s denotes string
+c denotes character
+d denotes number
+f denotes float number</p>
+<h3 id="envionment-variables">Envionment Variables</h3>
+<p>Envionment variables are variables that are not defined by the current procuess but the parant processes</p>
+<p>export PATH=$HOME/.local/bin:$PATH</p>
+<h3 id="playing-with-file-descriptors-and-redirection">Playing with file descriptors and redirection</h3>
+<p>file descriptors are intergers that are associated with file input and output.
+they keep track of open file best known descriptors are stdin, stdout and stderr</p>
+<p>&ndash;File descriptors are integers associated with an opened file or data stream. File descriptors 0,
+1, and 2 are reserved as follows:</p>
+<p>0: stdin (standard input)
+1: stdout (standard output)
+2: stderr (standard error)</p>
+<h3 id="arrays-and-associative-array">Arrays and associative array</h3>
+<p>Arrays are very important component for storing collection of data as seperate entities using indexes.
+generally array can store values on number based index but in associative array we can define our indexes
+like this:-</p>
+<p>declare -A fruits
+fruits=([apple]=&ldquo;100Rs&rdquo;,[orange]=&ldquo;200Rs&rdquo;)
+echo fruits[apple]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

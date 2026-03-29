@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>navigation | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #terminal #navigation
+Navigation in CLI
+
+
+Most basic thing to learn in linux cli is how to navigate between files
+
+
+Some navigation commands
+
+pwd - Print name of current working direcotry
+cd - change directory
+ls - list directory content
+
+
+
+Present Working Directory(PWD)
+At any given time, we are in single directory and see contents in the diectory and the pathway to the directory above us(called the parent dir).">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/navigation/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>navigation</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        253 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #terminal #navigation</p>
+<h1 id="navigation-in-cli">Navigation in CLI</h1>
+<ul>
+<li>
+<p>Most basic thing to learn in linux cli is how to navigate between files</p>
+</li>
+<li>
+<p><strong>Some navigation commands</strong></p>
+<ul>
+<li>pwd - Print name of current working direcotry</li>
+<li>cd - change directory</li>
+<li>ls - list directory content</li>
+</ul>
+</li>
+</ul>
+<h2 id="present-working-directorypwd">Present Working Directory(PWD)</h2>
+<p>At any given time, we are in single directory and see contents in the diectory and the pathway to the directory above us(called the parent dir).</p>
+<ul>
+<li>To display the the working dir we can use use <em>pwd</em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/me
+</span></span></code></pre></div><ul>
+<li>When we first log in to our system our current working dir is to set to <em>home dir</em>, Each user is given their own home directory</li>
+</ul>
+<h2 id="listing-the-content-of-the-folderls">Listing the content of the folder(LS)</h2>
+<p>To list the files and contents of current dir, we use the <em>ls</em> command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>Documents Downloads Videos Images
+</span></span></code></pre></div><ul>
+<li>Actually, we can use the ls command to list content of any dir not just working dir</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls Downloads
+</span></span><span style="display:flex;"><span>a.jpeg go.pdf basic_docker.pdf
+</span></span></code></pre></div><h2 id="changing-the-current-working-directory">Changing the Current Working Directory</h2>
+<p>To change our working dir we use the <em>cd</em> command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cd Downloads
+</span></span><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/me/Downloads
+</span></span></code></pre></div><ul>
+<li><strong>Aboslute Pathname</strong> - An absolute pathname begins with the root directory and follows the tree branch by branch until the path to the desired directory or file is completed</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cd /usr/bin
+</span></span><span style="display:flex;"><span>$ cd /usr
+</span></span><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/usr
+</span></span></code></pre></div><ul>
+<li><strong>Relative Pathname</strong> - Where an absolute pathname starts from the root directory and leads to its destination, a relative pathname starts from the working directory</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cd /usr/bin
+</span></span><span style="display:flex;"><span>$ cd .. 
+</span></span><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/usr
+</span></span></code></pre></div>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

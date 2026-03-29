@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>config_nd_env | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #env #alias #commands
+Configuration &amp; Environment
+The shell stores key information during sessions, known as the environment, Programs  see data stored in the environment to determine facts about system&rsquo; configurations. While most programs use configurations files for specific program settings.
+Command Used
+
+printenv - print part of all environment
+set - Set shell options
+export - Export environment to subsequently executed program
+alias - Create an alias for command
+
+Examining The Environment
+To see what&rsquo;s stored in Environment, we can use set builtin in bash or printenv program.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-two/config_nd_env/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-two/">Part Two</a>
+    </div>
+    <h1>config_nd_env</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        1 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        187 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #env #alias #commands</p>
+<h1 id="configuration--environment">Configuration &amp; Environment</h1>
+<p>The shell stores key information during sessions, known as the <em>environment</em>, Programs  see data stored in the environment to determine facts about system&rsquo; configurations. While most programs use configurations files for specific program settings.</p>
+<h2 id="command-used">Command Used</h2>
+<ol>
+<li>printenv - print part of all environment</li>
+<li>set - Set shell options</li>
+<li>export - Export environment to subsequently executed program</li>
+<li>alias - Create an alias for command</li>
+</ol>
+<h3 id="examining-the-environment">Examining The Environment</h3>
+<p>To see what&rsquo;s stored in Environment, we can use <code>set</code> builtin in bash or <code>printenv</code> program.</p>
+<p>syntax,
+<code>$ printenv |less</code></p>
+<ul>
+<li>The <code>set</code> command while using without any argument will show, both shell variables and environment</li>
+</ul>
+<p>syntax,
+<code>$ set | less</code></p>
+<h3 id="modifying-the-environment">Modifying the Environment</h3>
+<p>Since, we know where startup files are and what they contain, So we can modify env the way we want</p>
+<h4 id="which-files-should-we-modify">Which Files should We Modify?</h4>
+<p>One general rule is that, You should define or update <code>PATH</code> variables or <code>env</code>  in <code>.bash_profile</code> or <code>.zprofile</code> both are shells configurations files, one is for <code>bash</code> and other is for <code>zsh</code></p>
+<ul>
+<li><code>zsh</code> is just updated version of <code>bash</code> just keep this in mind.</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

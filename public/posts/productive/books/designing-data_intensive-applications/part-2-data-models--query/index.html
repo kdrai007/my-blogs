@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>part-2 Data Models &amp; Query | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tags: #data-intensive #data-model
+Data Models &amp; Query languages
+Data models are perhaps the most important part of developing software,because they have such a profound effect not only on how the software is written, but also on how we tackle real world problems.
+Most applications are built by layering one data model on top of another. For each layer, the question is: how it is represented in terms of next lower layer?  for example:">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/books/designing-data_intensive-applications/part-2-data-models--query/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/books/designing-data_intensive-applications/">Designing Data Intensive Applications</a>
+    </div>
+    <h1>part-2 Data Models &amp; Query</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        282 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tags: #data-intensive #data-model</p>
+<h1 id="data-models--query-languages">Data Models &amp; Query languages</h1>
+<p>Data models are perhaps the most important part of developing software,because they have such a profound effect not only on how the software is written, but also on how we tackle <em>real world problems</em>.</p>
+<p>Most applications are built by layering one data model on top of another. For each layer, the question is: how it is represented in terms of next lower layer?  for example:</p>
+<ol>
+<li>As an application developer, you look at the real world (in which there are people, organizations, goods, actions, money flows, etc) and model it in terms of <em>objects</em> or <em>data structures</em>, and <em>APIs</em> that manipulate those data structures.</li>
+<li>When you want to store those data structures, you express them in terms of general-purpose data model, such as Json, XML documents, Database, or a graph model.</li>
+<li>The engineers, who built database software decided on a way of representing the Json/XML/Relational/graph data in terms of bytes in memory, on disk, or in a network. The representation may allow the data to be queries,searched,manipulated and processed in various ways.</li>
+<li>On yet lower levels, hardware engineers figure out how to represent bytes in terms of electrical current, pulse of light, magnetic fields, and more.</li>
+</ol>
+<p>In a complex application there may be more intermediary levels, such as APIs built upon APIs, but the basic idea is still the same: each layer hides the complexity of the layers below it by providing a clean data model.</p>
+<ul>
+<li>There are many kinds of data model, and every data model embodies assumptions about how it is going to be used.</li>
+<li>It can take a lot of effort to master just one data model.</li>
+</ul>
+<h3 id="relational-model-vs-document-model">Relational Model Vs Document Model</h3>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

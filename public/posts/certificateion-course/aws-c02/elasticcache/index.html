@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ElasticCache | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Amazon ElasticCache
+checkout
+AWS ElastiCache is a managed in-memory caching service that supports both Redis and Memcached. It’s used to improve the performance of web applications by retrieving data from a fast, managed in-memory cache, instead of relying entirely on slower disk-based databases.
+
+The same way RDS get maganed Relational Databaseses&hellip;
+ElastiCache  is to get managed Redis or Memcached
+Caches are in-memory databases with really high performance , low latency
+Helps reduce loads of databases for read intensive workloads
+Helps make your application stateless
+AWS takes care of OS maintenance / patching , optimizations , configuration , monitoring , failure recovery and backups
+Using Elasticache can be pain in the a** because you have to do heavy code changes to make your application work
+
+Solution Architecture  - DB Cache
+![[Pasted image 20240810204043.png]]">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/elasticcache/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>ElasticCache</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        282 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="amazon-elasticcache">Amazon ElasticCache</h2>
+<p><a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/elasticache-use-cases.html">checkout</a></p>
+<p><strong>AWS ElastiCache</strong> is a managed in-memory caching service that supports both Redis and Memcached. It’s used to improve the performance of web applications by retrieving data from a fast, managed in-memory cache, instead of relying entirely on slower disk-based databases.</p>
+<ul>
+<li>The same way RDS get maganed Relational Databaseses&hellip;</li>
+<li>ElastiCache  is to get managed Redis or Memcached</li>
+<li>Caches are in-memory databases with really high performance , low latency</li>
+<li>Helps reduce loads of databases for read intensive workloads</li>
+<li>Helps make your application stateless</li>
+<li>AWS takes care of OS maintenance / patching , optimizations , configuration , monitoring , failure recovery and backups</li>
+<li>Using Elasticache can be pain in the a** because you have to do heavy code changes to make your application work</li>
+</ul>
+<h3 id="solution-architecture----db-cache">Solution Architecture  - DB Cache</h3>
+<p>![[Pasted image 20240810204043.png]]</p>
+<ul>
+<li>Applications queries ElasticCache  , if not available , get from RDS and store in ElastiCache</li>
+<li>Helps relive load on RDS</li>
+<li>Cache must have an invalidation strategy  to make sure only the most current data is used  in there</li>
+</ul>
+<p>![[Pasted image 20240810204439.png]]</p>
+<ol>
+<li>User logs into any of  the aplication</li>
+<li>The application writes session data into ElastiCache</li>
+<li>The user hits another instance of our application</li>
+<li>The instance retrives the data and the user is already logged in</li>
+</ol>
+<h3 id="redis-vs-memcached">Redis vs Memcached</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Redis</th>
+          <th>Memcached</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>- <strong>Multi AZ</strong> with auto failover</td>
+          <td>- Multi-node for partitioning of data (sharding)</td>
+      </tr>
+      <tr>
+          <td>- <strong>Read Replicas</strong> to scale reads and has high availability</td>
+          <td>- <strong>No high aviailability</strong> (replication)</td>
+      </tr>
+      <tr>
+          <td>- Data Durability using AOF persistence</td>
+          <td>- Non  Persistent</td>
+      </tr>
+      <tr>
+          <td>- <strong>Backup and restore feature</strong></td>
+          <td>- No backup and restore</td>
+      </tr>
+      <tr>
+          <td>- Supports Sets and sorted Sets</td>
+          <td>- Multi threaded architecture</td>
+      </tr>
+      <tr>
+          <td>![[Pasted image 20240810210121.png]]</td>
+          <td>![[Pasted image 20240810210148.png]]</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p>[[aws]]
+[[DB - Relational Database &amp; Aurora]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ELB - Elastic Load Blancer | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ELB - Elastic Load Balancer
+Scalability
+
+Scaliablity means that an application / system can handle greater loads by adapting
+There are two kinds of scalability :
+1. Vertical Scalability
+2. Horizonal Scalability (= elasticity)
+Scalability is linked but different to high availabilty.
+
+Scalability - Vertical Scalability
+
+Vertical Scalability means scaling the size of the instance.
+For example, your application is running on t2.micro Scaling that machine vertically means upgrading t2.micro into t2.large
+VS is very common for non-distributed system like Database.
+RDS, elastic cache are services that can scale vertically.
+There&rsquo;s usually limit on how much you can vertically scale (hardware limit)
+
+Horizontal Scalability">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>ELB - Elastic Load Blancer</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        607 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="elb---elastic-load-balancer">ELB - Elastic Load Balancer</h1>
+<h3 id="scalability">Scalability</h3>
+<ul>
+<li>Scaliablity means that an application / system can handle greater loads by adapting</li>
+<li>There are two kinds of scalability :
+1. Vertical Scalability
+2. Horizonal Scalability (= elasticity)</li>
+<li>Scalability is linked but different to high availabilty.</li>
+</ul>
+<p><strong>Scalability - Vertical Scalability</strong></p>
+<ul>
+<li>Vertical Scalability means scaling the size of the instance.</li>
+<li>For example, your application is running on t2.micro Scaling that machine vertically means upgrading t2.micro into t2.large</li>
+<li>VS is very common for non-distributed system like Database.</li>
+<li>RDS, elastic cache are services that can scale vertically.</li>
+<li>There&rsquo;s usually limit on how much you can vertically scale (hardware limit)</li>
+</ul>
+<p><strong>Horizontal Scalability</strong></p>
+<ul>
+<li>Horizontal Scalability means increasing the number of instances / systems for your application</li>
+<li>Horizontal scaling implites distributed systems.</li>
+<li>This is very common for web application / modern application</li>
+<li>It&rsquo;s easy to scale thanks fo cloud offering such as Amazon EC2</li>
+</ul>
+<h3 id="high-availability">High Availability</h3>
+<ul>
+<li>High Availability usually goes hand in hand with horizontal scaling</li>
+<li>HA means running your application / system in at least 2 data centers (== Availability zone)</li>
+<li>The goal of HA is to survive a data center loss.</li>
+<li>The HA can be passive (for RDS multi AZ  for example )</li>
+<li>The HA can be active (for horizontal scaling)</li>
+</ul>
+<h3 id="high-availability---scalability-for-ec2">High Availability  &amp; Scalability for EC2</h3>
+<ul>
+<li>Vertical Scaling increase instance size (=scale up / down)
+<ul>
+<li>From t2.nano - 0.5 G of Ram , 1 vCPU</li>
+<li>To: u-12tb 1.metal - 12.3 TB of Ram , 448 vCPUs</li>
+</ul>
+</li>
+<li>Horizontal scaling increase the number of instances (= scale out / in  )
+<ul>
+<li>Auto Scaling group</li>
+<li>Load Balancer</li>
+</ul>
+</li>
+<li>High Availability: Run instances for same application in across multi  different AZ
+<ul>
+<li>Auto Scaling group multi AZ</li>
+<li>Load Balancer multi AZ</li>
+</ul>
+</li>
+</ul>
+<h3 id="load-balancing">Load Balancing</h3>
+<h4 id="what-is-load-blancing">What is load Blancing</h4>
+<ul>
+<li>Load balancer are server that forward traffic to multiple server( eg ,. EC2 instances) downstream<br>
+![[Pasted image 20240731172442.png]]</li>
+</ul>
+<h4 id="why-use-load-balancer">Why use Load Balancer</h4>
+<ul>
+<li>Spread load across multiple downstream instances</li>
+<li>Expose a single point of access (DNS) to your application</li>
+<li>Seamlessly handle failure of your downstream instances</li>
+<li>Do regular health checks of your instances</li>
+<li>Provide ssl termination (https) for your websites.</li>
+<li>Enforce stickiness with cookies</li>
+<li>High availability across AZ</li>
+<li>separate private traffic from public traffic</li>
+</ul>
+<h4 id="why-use-the-elastic-load-balancer">Why use the elastic load balancer</h4>
+<ul>
+<li>An elastic load balancer is <strong>managed load balancer</strong>
+<ul>
+<li>AWS  guarantee that it will be working</li>
+<li>AWS takes care of maintenance, upgrades and high availability.</li>
+<li>AWS provides only few configuration knobs.</li>
+</ul>
+</li>
+<li>It cost less if you setup your own load balancer but you will have to put more effort to keep it working</li>
+<li>It is integrated to various aws offerings
+<ul>
+<li>EC2, EC2 auto scaling Groups, Amazon ECS</li>
+<li>AWS certificate manager (ACM), CloudWatch</li>
+</ul>
+</li>
+</ul>
+<h4 id="health-checks">Health Checks</h4>
+<ul>
+<li>
+<p>Health Checks are crucial for load balancer</p>
+</li>
+<li>
+<p>They enable the load balancer to know if instances it forward traffic to are available to replay to requests</p>
+</li>
+<li>
+<p>The health check is done on a port and a route ( /health is common)</p>
+</li>
+<li>
+<p>If the request is not 200 (Ok) , then the instance is unhealthy.</p>
+<p>![[Pasted image 20240731182304.png]]</p>
+</li>
+</ul>
+<h4 id="types-of-load-balancer-on-aws">Types of load balancer on AWS</h4>
+<ul>
+<li>
+<p>AWS has <strong>4 kinds of managed load Balancer</strong></p>
+</li>
+<li>
+<p>Classic Load Balancer (vl  - old generation ) - 2009 - CLB</p>
+<ul>
+<li>HTTP , HTTPS , TCP , SSL (secure TCP)</li>
+</ul>
+</li>
+<li>
+<p>Application Load Balancer (v2 - new generation) - 2016 - ALB</p>
+<ul>
+<li>HTTP , HTTPS , WebSocket</li>
+</ul>
+</li>
+<li>
+<p>Network Load Balancer (v2- new generation ) - 2017 - NLB</p>
+<ul>
+<li>TCP , TLS (secure TCP ) , UDP</li>
+</ul>
+</li>
+<li>
+<p>GateWay Load Balancer (v2- new generation ) - 2020 - GWLB</p>
+</li>
+<li>
+<p>Some load balancer can be setup as internal(private) or external (public)</p>
+</li>
+</ul>
+<p><strong>&ndash;</strong> Recommended  to use New Generation Load balancer as they provide more features</p>
+<h4 id="load-balancer-security-groups">Load Balancer Security Groups</h4>
+<p>![[Pasted image 20240731184442.png]]</p>
+<h2 id="links">Links</h2>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>goroutines and channels | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag: #go-lang #channels
+Concurrency in Go
+Go&rsquo;s concurrency model is based on the concept of goroutine, lightweight threads that can manage functions cuncurrently. On the other hand , Channels is built-in communication mechnism for safe and efficient data exchange between goroutines.
+Go&rsquo;s concurrency modles enable developers to write program that can:
+
+Handle multiple programs simultenously
+Utilize multi-core processor efficiently
+Write concurrent code that is safe, and easy to maintain.
+
+Go-Routines and channels
+A goroutine is a lightweight thread manage by go runtime.It is a function that run on go runtime.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/programming-language/go-lang/goroutines-and-channels/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/programming-language/go-lang/">Go Lang</a>
+    </div>
+    <h1>goroutines and channels</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        576 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag: #go-lang #channels</p>
+<h1 id="concurrency-in-go">Concurrency in Go</h1>
+<p>Go&rsquo;s concurrency model is based on the concept of <strong>goroutine, lightweight threads</strong> that can manage functions cuncurrently. On the other hand , Channels is built-in communication mechnism for safe and efficient data exchange between goroutines.</p>
+<p>Go&rsquo;s concurrency modles enable developers to write program that can:</p>
+<ul>
+<li>Handle multiple programs simultenously</li>
+<li>Utilize multi-core processor efficiently</li>
+<li>Write concurrent code that is safe, and easy to maintain.</li>
+</ul>
+<h2 id="go-routines-and-channels">Go-Routines and channels</h2>
+<p>A goroutine is a lightweight thread manage by go runtime.It is a function that run on go runtime.</p>
+<p>Goroutine allow you to start up and run another thread of execution concurrently within your program.</p>
+<p>Channels are used to communicate between goroutines. It is typed conduit through which you can send and receive vales fromt the channel operator. <code>&lt;-</code></p>
+<ul>
+<li>implementation of goroutine</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#a6e22e">msg</span> <span style="color:#66d9ef">string</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#ae81ff">1000</span>)<span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">msg</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test&#34;</span>) <span style="color:#75715e">//sync</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test1&#34;</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test2&#34;</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test3&#34;</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;main&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output are random like: </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// test</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// test2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// main</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// test1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// test3</span>
+</span></span></code></pre></div><h3 id="weightgroups">WeightGroups</h3>
+<p>Unlike the <code>time.Sleep(2*time.Second)</code> used in the example above , the <code>WeightGroups</code> are more standard to wait for goroutines to finish executing.</p>
+<p>It is simple way to synchronize multiple goroutines.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;sync&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;math/rand&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sleep</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Intn</span>(<span style="color:#ae81ff">1000</span>))<span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#a6e22e">msg</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">wg</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">sync</span>.<span style="color:#a6e22e">WeightGroup</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Done</span>() <span style="color:#75715e">// run at end of function</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sleep</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">msg</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wg</span> <span style="color:#a6e22e">sync</span>.<span style="color:#a6e22e">WeightGroup</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test&#34;</span>,<span style="color:#a6e22e">wg</span>) <span style="color:#75715e">//sync</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test1&#34;</span>,<span style="color:#a6e22e">wg</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test2&#34;</span>,<span style="color:#a6e22e">wg</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;test3&#34;</span>,<span style="color:#a6e22e">wg</span>) <span style="color:#75715e">//async</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sendMessage</span>(<span style="color:#e6db74">&#34;main&#34;</span>,<span style="color:#a6e22e">wg</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Wait</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output will be random</span>
+</span></span></code></pre></div><p><strong>Channels</strong></p>
+<p>In their simplest form,one goroutine writes messgaes to channels and another goroutines receives the messages out channels.</p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msgChan</span><span style="color:#f92672">:=</span>make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>) <span style="color:#75715e">// make is used to create channels </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Write message into channel</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msgChan</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;hello! world&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Read message out of channel</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msg</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">msgChan</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Above example, create channel <code>msgChan</code> of type	<code>string</code></p>
+<h4 id="implementation-of-channels-with-goroutine">Implementation of channels with goroutine</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> ( <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;math/rand&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msgChan</span><span style="color:#f92672">:=</span>make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>(){
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Intn</span>(<span style="color:#ae81ff">1000</span>))<span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span>)
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">msgChan</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;hello world&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">msgChan</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;hello world 2&#34;</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msg1</span><span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">msgChan</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msg2</span><span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">msgChan</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">msg1</span>,<span style="color:#a6e22e">msg2</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Channels behave as <em>first in first out</em> queue</li>
+</ul>
+<h3 id="channel-buffers">Channel Buffers</h3>
+<p>Channels can be <code>buffered</code> and <code>Unbuffered</code>. Previous examples are of unbuffered channel.</p>
+<p><strong>Unbuffered Channel:</strong> An unbuffered channel causes the sender to block immediatly after send a message into the channel until the receiver receive the message.</p>
+<p><strong>Buffered Channel:</strong> A buffered channel allow users to send messages to channel until the buffer is full.</p>
+<p>example,</p>
+<p><code>msgChan:=make(chan string, 2)</code></p>
+<p>now <code>msgChan</code> can only hold upto 2 messages</p>
+<h4 id="channel-directions">Channel Directions</h4>
+<p>When using channels as function parameters , by default you can send and receive message within the function. To provide additional safety at compile time, channel function can be defined as <code>read-only</code> or <code>write-only</code></p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">reader</span>(<span style="color:#a6e22e">bufChan</span> <span style="color:#f92672">&lt;-</span><span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">msg</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">bufChan</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">writer</span> (<span style="color:#a6e22e">bufChan</span> <span style="color:#66d9ef">chan</span><span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">string</span>,<span style="color:#a6e22e">msg</span> <span style="color:#a6e22e">strring</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">bufChan</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">msg</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So, in above example reader function have <code>read-only</code> channel direction and writer function have <code>write-only</code> channel direction.</p>
+<h4 id="handle-multiple-channel-communication-with-select">Handle multiple channel communication with Select</h4>
+<p>The <code>select</code> statement lets a goroutine wait on multiple communications operation.A <code>select</code>  satement wait while one executues, it execute randomly in case multiple case are ready.</p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// define some functions here for goroutine</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">chan1</span><span style="color:#f92672">:=</span>make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">chan2</span><span style="color:#f92672">:=</span>make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">msg</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">chan1</span>:
+</span></span><span style="display:flex;"><span>			println(<span style="color:#a6e22e">msg</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">msg</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">chan2</span>:
+</span></span><span style="display:flex;"><span>			println(<span style="color:#a6e22e">msg</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The example above shows that, selct will print whenever any channel receive the message</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

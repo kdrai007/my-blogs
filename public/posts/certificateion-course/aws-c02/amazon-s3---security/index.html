@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amazon s3 - Security | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Amazon s3 - Object Encryption
+for more info:-
+
+
+You can encrypt object in s3 using one of the 4 methods
+
+
+Server Side Encryption (SSE)
+
+SSE with Amazon-s3 managed keys (SSE=S3) - Enabled by default
+SSE with KMS keys stored in AWS KMS (SSE-KMS)
+
+Levrage aws key management service to manage encryption keys
+
+
+SSE with customer provided keys (SSE-C)
+
+When you want to manage your encryption keys
+
+
+
+
+
+Client Side Encryption (CSE)">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3---security/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>Amazon s3 - Security</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        555 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="amazon-s3---object-encryption">Amazon s3 - Object Encryption</h2>
+<p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/security.html">for more info:-</a></p>
+<ul>
+<li>
+<p>You can encrypt object in s3 using one of the 4 methods</p>
+</li>
+<li>
+<p>Server Side Encryption (SSE)</p>
+<ul>
+<li>SSE with Amazon-s3 managed keys (SSE=S3) - Enabled by default</li>
+<li>SSE with KMS keys stored in AWS KMS (SSE-KMS)
+<ul>
+<li>Levrage aws key management service to manage encryption keys</li>
+</ul>
+</li>
+<li>SSE with customer provided keys (SSE-C)
+<ul>
+<li>When you want to manage your encryption keys</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Client Side Encryption (CSE)</p>
+<ul>
+<li>To Encrypt your data before you send them on s3 buckets</li>
+</ul>
+</li>
+<li>
+<p>Amazon s3 - Encryption in transit(SSL/TLS)</p>
+<ul>
+<li>Encryptin in flight also called (SSL/TLS)</li>
+<li>Amazon s3 Exposes 2 endpoints:
+<ul>
+<li>HTTP endpoint : non-encryption endpoing</li>
+<li>HTTPS endpoint : encryption in flight</li>
+</ul>
+</li>
+<li>HTTPS is recommended</li>
+<li>HTTPS is mandatory for SSE-C</li>
+</ul>
+</li>
+</ul>
+<h3 id="amazon-s3---default-encryption-vs-bucket-policies">Amazon s3 - Default Encryption vs Bucket Policies</h3>
+<ul>
+<li>
+<p>SSE-S3 encryption is automatically applied to new objects stored in s3 bucket.</p>
+</li>
+<li>
+<p>Optionally you can use &ldquo;Force Encryption&rdquo; using a bucket policy and refuse any API call to PUT an s3 objects without encryption headers (SSE-KMS or SSE-C)
+![[Pasted image 20240905173311.png]]</p>
+</li>
+<li>
+<p>Bucket Policies are evaluated before &ldquo;Default Encryption&rdquo;</p>
+</li>
+</ul>
+<h2 id="cors">CORS</h2>
+<ul>
+<li>Cors is Cross Origin Resouce Sharing</li>
+<li>Origin = Scheme(protocol) + host(domain) + port
+<ul>
+<li>example : <code>https://localhost.com</code> (implied port 443 for HTTPS, 80 for HTTP)</li>
+</ul>
+</li>
+<li><strong>Web Browser</strong> based machanism  to allow request to other origin while visting the main origin	![[Pasted image 20240905175147.png]]</li>
+</ul>
+<h3 id="amazon-s3---cors">Amazon s3 - CORS</h3>
+<ul>
+<li>If a client make a cross-origin request to our s3 bucket, we need to enable correct cors Headers</li>
+<li>You can allow for a specific origin or * (all origin)</li>
+</ul>
+<h2 id="amazon-s3---mfa-delete">Amazon s3 - MFA Delete</h2>
+<ul>
+<li>
+<p>MFA (Multi-Factor Authentication) - Force users to generate code on a device ( usually mobile or hardware ) for  doing important functions on s3</p>
+</li>
+<li>
+<p>MFA required for:</p>
+<ul>
+<li>To Permanentaly delete a s3 bucket</li>
+<li>Suspend versioning on s3 bucket</li>
+</ul>
+</li>
+<li>
+<p>MFA won&rsquo;t be required for:</p>
+<ul>
+<li>To enabling versioning</li>
+<li>List deleted versions</li>
+</ul>
+</li>
+<li>
+<p>To use MFA delete <strong>Versioning must be enabled</strong> on the bucket</p>
+</li>
+<li>
+<p><strong>Only the bucket owner(root account) can enable/disable MFA delete</strong></p>
+</li>
+</ul>
+<h2 id="amazon-s3---access-logs">Amazon s3 - Access Logs</h2>
+<ul>
+<li>For Audit purposes you may  want, to log all your access logs to s3 buckets</li>
+<li>Any request made to s3 bucket, authorize or denied all recored will be log in anohter s3 bucket</li>
+<li>That that can be analyzed  by any data analysis tool</li>
+<li>The target logging bucket should must be in same region</li>
+</ul>
+<h4 id="warning">Warning:</h4>
+<ul>
+<li>Never allow your logging bucket to be monitored bucket</li>
+<li>It will create a logging loop and the bucket size will increase exponentially</li>
+</ul>
+<h2 id="amazon-s3---pre-signed-url">Amazon s3 - Pre Signed URL</h2>
+<ul>
+<li>
+<p>Generate pre-signed url using cli,aws sdk  or aws console</p>
+</li>
+<li>
+<p>URL Expiration:</p>
+<ul>
+<li>AWS console - 1min up to 7200 min (12 hours)</li>
+<li>CLI - default 3600 sec and max up to 168 * 60 sec (168 hours)</li>
+</ul>
+</li>
+<li>
+<p>Users given a pre-signed URL inherit the permissions of the user that generated the URL for GET/PUT</p>
+</li>
+</ul>
+<h2 id="amazon-s3---access-point">Amazon s3 - Access Point</h2>
+<p>![[Pasted image 20240905223855.png]]</p>
+<ul>
+<li>Access Points simplify security management for s3 buckets</li>
+<li>Each Access Point has:
+<ul>
+<li>its own dns name (Internet Origin or VPC origin)</li>
+<li>an access point policy (similar to bucket policy) - manage security at scale
+![[Pasted image 20240905225505.png]]</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-s3---object-lambda">Amazon s3 - Object Lambda</h2>
+<ul>
+<li>Use AWS Lambda function to change the object before it is retrieved by the caller application</li>
+<li>Only one s3 bucket is needed, on top of which we create,s3 Access point and object lambda access point
+![[Pasted image 20240905230409.png]]</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]
+[[Amazon S3]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

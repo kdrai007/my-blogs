@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>permissions | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #permission #commands
+Permissions in linux
+Used Commands
+
+id - Display user identity
+chmod - Change&rsquo;s file mode
+umask - Set the defualt file permission
+su - Run a shell as superuser
+sudo - Execute a command as another user
+chown - Change file&rsquo;s owner
+chgrp - Change file&rsquo;s group ownership
+passwd - Change user&rsquo;s password
+
+Owner,Groups,Members and everybody else
+When we explore system pretty deep, we may encounter problem when trying to examine a file such as /etc/passwd">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/permissions/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>permissions</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        1274 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #permission #commands</p>
+<h1 id="permissions-in-linux">Permissions in linux</h1>
+<h2 id="used-commands">Used Commands</h2>
+<ol>
+<li>id - Display user identity</li>
+<li>chmod - Change&rsquo;s file mode</li>
+<li>umask - Set the defualt file permission</li>
+<li>su - Run a shell as superuser</li>
+<li>sudo - Execute a command as another user</li>
+<li>chown - Change file&rsquo;s owner</li>
+<li>chgrp - Change file&rsquo;s group ownership</li>
+<li>passwd - Change user&rsquo;s password</li>
+</ol>
+<h3 id="ownergroupsmembers-and-everybody-else">Owner,Groups,Members and everybody else</h3>
+<p>When we explore system pretty deep, we may encounter problem when trying to examine a file such as <code>/etc/passwd</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cat /etc/passwd
+</span></span><span style="display:flex;"><span>/etc/passwd: regular file, no read permission
+</span></span><span style="display:flex;"><span>$ less /etc/shadow
+</span></span><span style="display:flex;"><span>/etc/shadow: permission denied
+</span></span></code></pre></div><ul>
+<li>Reason for these error is, as a regular user we do not have permission to read these files</li>
+<li>In the <em>Unix</em> security model, a user may own files and directories, the user have control over its access</li>
+<li>To check user&rsquo;s information about your identity, use the <code>id</code>  command</li>
+</ul>
+<p><code>$ id</code>
+<code>output:uid=500(me) gid=500(me) groups=500(me)</code></p>
+<table>
+  <thead>
+      <tr>
+          <th>Attribute</th>
+          <th>Files</th>
+          <th>Directories</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>r</td>
+          <td>Allows a files to be opened and read</td>
+          <td>Allow&rsquo;s directory&rsquo;s content to be listed</td>
+      </tr>
+      <tr>
+          <td>w</td>
+          <td>Allows a files to be written</td>
+          <td>Allows files within the directory to be created ,deleted and renamed if the exectute attribute is also set</td>
+      </tr>
+      <tr>
+          <td>x</td>
+          <td>Allows a files to be treated as a program.</td>
+          <td>Allows a directory to be entred, for e.g, cd directory</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="chmod---change-file-mode">chmod - Change File Mode</h4>
+<p>To change a  mode(permission) of file or directory, the <code>chmod</code> command is used.</p>
+<ul>
+<li>
+<p>Be aware only file&rsquo;s owner and superuser can change the mode of file or directory</p>
+</li>
+<li>
+<p><code>chmod</code> supports two distinct ways of specifying mode changes: octal number representation,or symbolic representation</p>
+</li>
+<li>
+<p>File modes in binary and octal</p>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Octal</th>
+          <th>Binary</th>
+          <th>File Mode</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>000</td>
+          <td>&mdash;</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>001</td>
+          <td>&ndash;x</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>010</td>
+          <td>-w-</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>100</td>
+          <td>r&ndash;</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>101</td>
+          <td>r-x</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>110</td>
+          <td>rw-</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>111</td>
+          <td>rwx</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>By using three octal digits,we can set the file mode for the owner,group owner and world</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ chmod <span style="color:#ae81ff">600</span> file.txt
+</span></span><span style="display:flex;"><span>$ ls -la file.txt
+</span></span><span style="display:flex;"><span>-rw------- <span style="color:#ae81ff">1</span> me me <span style="color:#ae81ff">0</span> 2016-03-06 14:52 file.txt
+</span></span></code></pre></div><ul>
+<li>
+<p>Ok so, after performing <code>chmod</code> command with argument <code>600</code>,we were able to set permissions of the owner to read and write while removing all permissions from the group owner and the world.</p>
+</li>
+<li>
+<p><code>chmod</code> also supports symbolic notation.</p>
+</li>
+<li>
+<p>Symbolic notaton divided into three parts</p>
+<ul>
+<li>Who the change will affect</li>
+<li>Which operations will be performed</li>
+<li>What permission will be set</li>
+</ul>
+</li>
+<li>
+<p><code>chmod</code> symbolic notation</p>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Symbol</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>u</td>
+          <td>Short for &lsquo;user&rsquo; but means the file or directory owner</td>
+      </tr>
+      <tr>
+          <td>g</td>
+          <td>Group owner.</td>
+      </tr>
+      <tr>
+          <td>o</td>
+          <td>Short for &lsquo;others&rsquo; but means world.</td>
+      </tr>
+      <tr>
+          <td>a</td>
+          <td>Short for &lsquo;all&rsquo;. This is combination of &lsquo;u&rsquo; &lsquo;g&rsquo; and &lsquo;o&rsquo;.</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>
+<p>If no character is specified &ldquo;all&rdquo; will be assumed</p>
+</li>
+<li>
+<p>Some <code>chmod</code> symbolic Notation Examples,</p>
+<ol>
+<li><code>u+x</code>    - Add execute permission for owner</li>
+<li><code>u-x</code>    - Remove execute permission for owner.</li>
+<li><code>+x</code>     - Add execute permission to owner, owner group. This is equivalent to <code>a+x</code></li>
+<li><code>o-rw</code>   - Remove the read the write permission other and owner and group owner.</li>
+<li><code>u+x,go=rx</code> - home work understand on your own, multiple specfications may be seperated by commas</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h5 id="what-is-octal-number">What is octal number?</h5>
+<p>Octal(base 8) and,its cousin, hexadecimal(base 16) are number system often used to express numbers on computers.</p>
+<ul>
+<li>
+<p>In octal, counting is done with the numberal zero through seven, like so;
+0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21&hellip;</p>
+</li>
+<li>
+<p>In hexadecimal counting uses the numerals zero through 9 plus the letters &ldquo;A&rdquo; to &ldquo;F&rdquo;:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, 10, 11, 12, 13&hellip;</p>
+</li>
+</ul>
+<hr>
+<h4 id="umask---set-default-permissions">umask - Set default Permissions</h4>
+<p>The umask commands controls the defult permissions given the file when it is created.</p>
+<ul>
+<li>It uses octal notation to express a mask of bits to be removed from a file&rsquo;s mode attributes</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ rm -f file.txt
+</span></span><span style="display:flex;"><span>$ umask
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0002</span>
+</span></span><span style="display:flex;"><span>$ touch file.txt
+</span></span><span style="display:flex;"><span>$ ls -l file.txt
+</span></span><span style="display:flex;"><span>-rw-rw-r-- <span style="color:#ae81ff">1</span> me me <span style="color:#ae81ff">0</span> 2018-03-06 14:53 file.txt
+</span></span></code></pre></div><ul>
+<li>We removed any copy of <code>file.txt</code> to make sure we are on same page.</li>
+<li>We run the umask command without any argument to see the current value which was <code>0002</code>,which is octal representation of our mask</li>
+<li>Then,we create new <code>file.txt</code> see their permissions,We can see that both owner and group get read and write permission,while everyone else get a read permission</li>
+</ul>
+<p>We can change the value of mask like this,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ rm file.txt
+</span></span><span style="display:flex;"><span>$ umask <span style="color:#ae81ff">0000</span>
+</span></span><span style="display:flex;"><span>$ touch file.txt
+</span></span><span style="display:flex;"><span>$ ls -l file.txt
+</span></span><span style="display:flex;"><span>-rw-rw-rw- <span style="color:#ae81ff">1</span> me me <span style="color:#ae81ff">0</span> 2018-03-06 14:58 file.txt
+</span></span></code></pre></div><ul>
+<li>Now,everyone have read and write permissions</li>
+</ul>
+<h3 id="changing-identities">Changing Identities</h3>
+<p>At various time, we may need to perform some task as another user,Often we want to gain <code>superuser</code> privileges to carry out some adminstrative task, but it is also possible to &ldquo;become&rdquo; another regular  user  for such things as testing an accounting.</p>
+<ul>
+<li>There are three ways to take a alternative identity.
+<ul>
+<li>Log out and log back in as another user</li>
+<li>use <code>su</code> command</li>
+<li>Use the <code>sudo</code> command</li>
+</ul>
+</li>
+</ul>
+<h4 id="su---run-a-shell-with-subsitute-user-and-group-ids">su - Run a shell with subsitute user and Group Ids</h4>
+<p>The <code>su</code> command is used to start the shell as another user.</p>
+<ul>
+<li>syntax look like this,</li>
+</ul>
+<p><code>$ su [[-l]] [user]</code></p>
+<ul>
+<li>if the <code>-l</code> option is included, the result shell session is a login shell for the specified user.</li>
+<li>To start a shell for superuser,we would do this:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ su -
+</span></span><span style="display:flex;"><span>Password:
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># </span>
+</span></span></code></pre></div><ul>
+<li>
+<p>After running <code>su -</code> command shell will ask for password for superuser, after entering correct password we can access root user account(# is sign for superuser)</p>
+</li>
+<li>
+<p>Once, we carry out commands as superuser, then enter <code>exit</code> to log back in your previous shell.</p>
+</li>
+<li>
+<p>It is also possible to execute a single command rahter than starting a interactive shell session</p>
+</li>
+</ul>
+<p><code>$ su -c 'command'</code></p>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ su -c <span style="color:#e6db74">&#39;ls -l /root/*&#39;</span>
+</span></span><span style="display:flex;"><span>password:
+</span></span><span style="display:flex;"><span>-rw------- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">754</span> 2007-08-11 03:19 /root/anaconda-ks.cfg
+</span></span><span style="display:flex;"><span>/root/Mail:
+</span></span><span style="display:flex;"><span>totoal <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>$ 
+</span></span></code></pre></div><h4 id="sudo---execute-the-command-as-another-user">sudo - Execute the command as another user</h4>
+<p>The <code>sudo</code> command is like <code>su</code> in many ways but has some important additional capabilities. The adminstrator can configure <code>sudo</code> to allow a regular user to execute commands as different user(usually as superuser) in a controlled way.</p>
+<ul>
+<li>To perform a sudo command user doesn&rsquo;t need to know superuser&rsquo;s password but he should remember his own.</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade
+</span></span><span style="display:flex;"><span>Password:
+</span></span><span style="display:flex;"><span>programes to upgrades:
+</span></span></code></pre></div><ul>
+<li>In the above example, to perform updates on program a user need superuser privilege</li>
+</ul>
+<h4 id="chown---change-file-owner-and-group">chown - Change file owner and group</h4>
+<p>The chown command is used to change ownership of file and directories. superuser privileage are required to run this command.</p>
+<ul>
+<li>syntax of<code>chown</code> look like this:</li>
+</ul>
+<p><code>$ chown [owner][:[group]] file...</code></p>
+<ul>
+<li>chown argument examples:
+<ul>
+<li>bob       - Changes the ownership of the file to user <code>bob</code></li>
+<li>bob:users - Changes the ownership of the file to user <code>bob</code> and changes the file group owners to group <code>users</code></li>
+<li>:admins   - Changes the group owner to the group <code>admins</code>. The file owner is unchanged</li>
+<li>bob:      - Changes the file owner from the current owner to user <code>bob</code> and ,changes the group owner to the login group of user bob.</li>
+</ul>
+</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -l file.txt
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> me me <span style="color:#ae81ff">85</span> Sep  <span style="color:#ae81ff">8</span> 11:53 file.txt
+</span></span><span style="display:flex;"><span>$ sudo chown root: file.txt
+</span></span><span style="display:flex;"><span>password:
+</span></span><span style="display:flex;"><span>$ ls -l file.txt
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">85</span> Sep  <span style="color:#ae81ff">8</span> 11:53 todo.txt
+</span></span></code></pre></div><h4 id="chgrp---change-group-ownership">chgrp - Change Group Ownership</h4>
+<p>In older version of Unix, the chown command only change file ownership, not group ownership. For that purpose, a seperate command, <code>chgrp</code> was used.</p>
+<ul>
+<li>It work same as chown except for being more limited.</li>
+</ul>
+<h4 id="passwd---change-your-password">passwd - Change your password</h4>
+<p>To set or change password,the <code>passwd</code> command is used</p>
+<p>syntax,</p>
+<p><code>$ password [user]</code></p>
+<ul>
+<li>To change just your password only <code>passwd</code> command is enough, you will be promted for your old password then new password.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ passwd
+</span></span><span style="display:flex;"><span>Changing password <span style="color:#66d9ef">for</span> me.
+</span></span><span style="display:flex;"><span>Current password:
+</span></span><span style="display:flex;"><span>new password:
+</span></span></code></pre></div>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

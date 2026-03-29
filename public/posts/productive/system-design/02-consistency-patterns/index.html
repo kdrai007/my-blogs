@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>02-consistency-patterns | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Consistency patterns
+Consistency patterns refers to the ways in which data is stored and managed in a distributed system, and how the data is made available to the users and application. There are three main components of consistency patterns
+
+Strong consistency
+Weak consistency
+Eventual consistency
+
+Before we Learn more about consistency patterns we need to learn about, Exactly what is distributed system.
+Distributed System
+Distributed systems are those where for every major or important components actions there&rsquo;s different networked system and they cordinate among them using by passing messages to each other.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/system-design/02-consistency-patterns/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/system-design/">System Design</a>
+    </div>
+    <h1>02-consistency-patterns</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        330 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="consistency-patterns">Consistency patterns</h1>
+<p>Consistency patterns refers to the ways in which data is stored and managed in a distributed system, and how the data is made available to the users and application. There are three main components of consistency patterns</p>
+<ol>
+<li>Strong consistency</li>
+<li>Weak consistency</li>
+<li>Eventual consistency</li>
+</ol>
+<p>Before we Learn more about consistency patterns we need to learn about, Exactly what is distributed system.</p>
+<h4 id="distributed-system">Distributed System</h4>
+<p>Distributed systems are those where for every major or important components actions there&rsquo;s different networked system and they cordinate among them using by passing messages to each other.</p>
+<p>for ex, Suppose there&rsquo;s social media website where users can create account,chat and share contents between them. So,to handle these functionalities there&rsquo;s different servers for handling these functions like,  user&rsquo;s account and for storing details  on database</p>
+<h3 id="strong-consistency">Strong Consistency</h3>
+<p>After an update made to the data, it will immediately visible to any subsequent read operations. The data is replicated in synchronous manner, ensuring them all copy of the data is updated at the same time.</p>
+<p>example,For strong consistency based systems are like Financial system where <strong>Data Integrity</strong> is very important. So, systems are designed in a way that all the data is stored in same place and updates to the data is reflected to all other locations. This consitency systems ensures that all components are working on same and accurate data</p>
+<h3 id="weak-consistency">Weak Consistency</h3>
+<p>In a weakly consistent system,Updates to the data may not be immediately  propagated. This can lead to inconsistencies and conflicts between different version of data, but its also allows for <strong>high availability</strong> and <strong>Low latency</strong>.</p>
+<p>Example for Weak consistent system will be like where there&rsquo;s no need for instantly updated data across all servers. Suppose, gaming platform where users can play online multiplayers games</p>
+<h3 id="eventual-consistency">Eventual Consistency</h3>
+<p>Eventual Consistency is a form of weak consistency. After update made to the data, it will eventually visible to any subsequent operations. The data is replicated in asynchronous manner, ensuring that all copies of data will be eventually updated.</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

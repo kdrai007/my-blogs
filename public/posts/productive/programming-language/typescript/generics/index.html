@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>generics | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generic Types
+Tags: #javascript #typescript #type-definitions
+The type of generic functions are just like those of non-generic functions, with the type parameters listed first, similarly to functions declarations:
+
+Generics are defined using &lt;T&gt; angle brackets, here T is just for example.
+
+function identity&lt;Type&gt;(arg:Type):Type{
+	return arg;
+}
+We can also write the generic types as a call signature for an object literal types:-
+function identity&lt;Type&gt;(arg:Type):Type{
+	return arg;
+}
+
+const myIdentity:{&lt;Type&gt;(arg:Type):Type}= identity;
+For ex, suppose if you want to create a function and define its type, we can do it this way:-">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/programming-language/typescript/generics/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/programming-language/typescript/">Typescript</a>
+    </div>
+    <h1>generics</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        575 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h3 id="generic-types">Generic Types</h3>
+<p>Tags: #javascript #typescript #type-definitions</p>
+<p>The type of generic functions are just like those of non-generic functions, with the type parameters listed first, similarly to functions declarations:</p>
+<ul>
+<li>Generics are defined using <code>&lt;T&gt;</code> angle brackets, here <code>T</code> is just for example.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">identity</span>&lt;<span style="color:#f92672">Type</span>&gt;(<span style="color:#a6e22e">arg</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">Type</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>We can also write the generic types as a call signature for an object literal types:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">identity</span>&lt;<span style="color:#f92672">Type</span>&gt;(<span style="color:#a6e22e">arg</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">Type</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myIdentity</span><span style="color:#f92672">:</span>{&lt;<span style="color:#f92672">Type</span>&gt;(<span style="color:#a6e22e">arg</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">Type</span>}<span style="color:#f92672">=</span> <span style="color:#a6e22e">identity</span>;
+</span></span></code></pre></div><p>For ex, suppose if you want to create a function and define its type, we can do it this way:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arrType</span><span style="color:#f92672">=</span>&lt;<span style="color:#f92672">T</span>,<span style="color:#a6e22e">U</span>&gt;(<span style="color:#a6e22e">arr</span>:<span style="color:#66d9ef">T</span>[],<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span>(<span style="color:#a6e22e">val</span>:<span style="color:#66d9ef">T</span>)<span style="color:#f92672">=&gt;</span><span style="color:#a6e22e">U</span>)<span style="color:#f92672">=&gt;</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">fn</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Here, this arrType function take two argument (&#34;arr,fn&#34; with their names they are self-explanatory) 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Generally, it&#39;s little complex for beginners to define types of these type of function.
+</span></span></span></code></pre></div><h4 id="generic-class">Generic Class</h4>
+<p>A generic class has a similar shape to a generic interface. Generic class have a generic type parameter list in angle brackets <code>&lt;&gt;</code> following the name of the class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GenericClass</span>&lt;<span style="color:#f92672">Type</span>&gt;{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">value</span><span style="color:#f92672">:</span>&lt;<span style="color:#f92672">Type</span>&gt;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">print</span><span style="color:#f92672">:</span>(<span style="color:#a6e22e">x</span>:<span style="color:#66d9ef">Type</span>,<span style="color:#a6e22e">y</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">=&gt;</span><span style="color:#66d9ef">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// This is basic class used for an example, it does nothing but take a value then print the value.
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">genericClass</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GenericClass</span>&lt;<span style="color:#f92672">string</span>&gt;();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">genericClass</span>.<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">genericClass</span>.<span style="color:#a6e22e">print</span><span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>)<span style="color:#f92672">=&gt;</span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)
+</span></span></code></pre></div><p>This is pretty literal use of generics in <code>GenericClass</code> class , but as you can see nothing is restricting this class to only use <code>string</code> as a value. We can use <code>number</code> or any complex object.</p>
+<ul>
+<li>Static members can&rsquo;t use the class&rsquo;s generic type parameters.</li>
+</ul>
+<h4 id="generic-type-constraints">Generic type Constraints</h4>
+<p>Generic constraint are way to <strong>limit the types</strong> that can be used with generic type parameter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printLength</span>&lt;<span style="color:#f92672">Type</span>&gt;(<span style="color:#a6e22e">arg</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">T</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">length</span>) <span style="color:#75715e">// 💥 Error: &#39;length&#39; does not exist on type `Type`
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Typescript throws error because it doesn&rsquo;t know that every possible type <code>T</code>(number, boolean, or custom object) contains a &rsquo;length&rsquo; property. It&rsquo;s too generic!.To consolidate this error, we can use generic constraints to fix this by guaranteeing that the type argument will have properties you need.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Length</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">lenght</span>:<span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">printLength</span>&lt;<span style="color:#f92672">Type</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">Length</span>&gt;(<span style="color:#a6e22e">arg</span>:<span style="color:#66d9ef">Type</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">T</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">length</span>) 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>By using <code>extends</code> keyword in the generic declaration <code>&lt;T extends Length&gt;</code> . In simple terms we have make sure every parameter have <code>length</code> type available.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">//           v-----v argument identifier
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">drive</span><span style="color:#f92672">=</span>(<span style="color:#a6e22e">carType</span>:<span style="color:#66d9ef">CarType</span>)<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//					 ^------^ argument type constraint
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// function logic
+</span></span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//		   v-----v type parameter identifier
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Drive</span>&lt;<span style="color:#f92672">CarType</span>&gt; <span style="color:#f92672">=</span> (<span style="color:#a6e22e">carType</span>:<span style="color:#66d9ef">CarType</span>)<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="index-signatures">Index Signatures</h4>
+<p>Index signatures allow you define the shape of objects when you don&rsquo;t know the property name in advance, but do know the type of keys and type of value thye will have.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> Object {
+</span></span><span style="display:flex;"><span>	[<span style="color:#a6e22e">key</span>:<span style="color:#66d9ef">string</span>]<span style="color:#f92672">:</span><span style="color:#66d9ef">number</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myObject</span>:<span style="color:#66d9ef">Object</span><span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">history</span>:<span style="color:#66d9ef">55</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">math</span>:<span style="color:#66d9ef">56</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;social Science&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">88</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅  Works
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">myObject</span>.<span style="color:#a6e22e">english</span><span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ❌ Error value must be a number
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">myOject</span>.<span style="color:#a6e22e">grade</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A+&#34;</span>;
+</span></span></code></pre></div><ul>
+<li>All explicitly declared properties must match the index signature type:-</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> Object{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">value</span>:<span style="color:#66d9ef">string</span> <span style="color:#75715e">// ❌ error: if you use string index with number values.
+</span></span></span><span style="display:flex;"><span>	[<span style="color:#a6e22e">key</span>:<span style="color:#66d9ef">string</span>]<span style="color:#f92672">:</span><span style="color:#66d9ef">number</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// To fix
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> Object{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">value</span>:<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	[<span style="color:#a6e22e">key</span>:<span style="color:#66d9ef">string</span>]<span style="color:#f92672">:</span><span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">string</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="index-types">Index types</h4>
+<p>Index types allow users to look inside other types. They are useful tool when accessing Arrays/Tuple values, Object values , and more!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// For arrays
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Cars</span><span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;Bugatti&#34;</span>,<span style="color:#e6db74">&#34;Ferrari&#34;</span>, <span style="color:#e6db74">&#34;Lambo&#34;</span>, <span style="color:#e6db74">&#34;Porche&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">SecondChar</span><span style="color:#f92672">=</span><span style="color:#a6e22e">Cars</span>[<span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><h4 id="literal-data-types">Literal Data types</h4>
+<p>Javascript, like most programming language has concept like <strong>primitive data types</strong>. Primitive data types are <code>string</code>, <code>number</code> and <code>boolean</code>. But typescript provide <strong>literal data types</strong>, you can think of literal data types as being an infinite set of subsets of their primitive counterparts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Days</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Monday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Tuesday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Thrusday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Friday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Saturday&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">BreakDay</span>(<span style="color:#a6e22e">day</span>:<span style="color:#66d9ef">Days</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">day</span><span style="color:#f92672">===</span><span style="color:#e6db74">&#34;Sunday&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Enjoy! it&#39;s break day&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nope! it&#39;s workday&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

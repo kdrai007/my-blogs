@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>redirection | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #command_line #redirection #bash
+Redirection
+&ldquo;I/0&rdquo; redirection the &ldquo;I/O&rdquo; stands for input/output and with this facility we can redirect the input and output command to and from files, as well as connect multiple commands togehter into powerful command piplines
+Used command in the chapter
+
+cat - Concatenate files
+sort - Sort lines of text
+uniq - Report or omit repeated line
+grep - Print lines matching a pattern
+wc - print newline,words
+head - output the first part of file
+tail  - output the last part of file
+tee - Read from standard input and write to standard output and files
+
+Standard Input, Outpue and Error
+Many of the program that we used already produce some kind of output.This output may often consist of two types:">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/redirection/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>redirection</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        1143 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #command_line #redirection #bash</p>
+<h1 id="redirection">Redirection</h1>
+<p>&ldquo;I/0&rdquo; redirection the &ldquo;I/O&rdquo; stands for input/output and with this facility we can redirect the input and output command to and from files, as well as connect multiple commands togehter into powerful command <em>piplines</em></p>
+<h2 id="used-command-in-the-chapter">Used command in the chapter</h2>
+<ol>
+<li>cat - Concatenate files</li>
+<li>sort - Sort lines of text</li>
+<li>uniq - Report or omit repeated line</li>
+<li>grep - Print lines matching a pattern</li>
+<li>wc - print newline,words</li>
+<li>head - output the first part of file</li>
+<li>tail  - output the last part of file</li>
+<li>tee - Read from standard input and write to standard output and files</li>
+</ol>
+<h2 id="standard-input-outpue-and-error">Standard Input, Outpue and Error</h2>
+<p>Many of the program that we used already produce some kind of output.This output may often consist of two types:</p>
+<ul>
+<li>The program&rsquo;s result,that is, the data program designed to proudce</li>
+<li>Status and eror message that tell us how the program is getting along</li>
+</ul>
+<p>I/O redirection allows us to change where output goes and where input comes from. Normally,output goes to the screen and input comes from keyboard,but with I/O redirection we can change that</p>
+<h3 id="redirecting-standard-output">Redirecting Standard Output</h3>
+<p><code>$ ls -l /usr/bin &gt; ls-output.txt</code></p>
+<ul>
+<li>
+<p>Here, we created a long listing of the <code>/usr/bin</code> directory and sent the result to the file <code>ls-output.txt</code>  now the .txt file contains the output of <code>ls /usr/bin</code> command,we can check the .txt file using  <code>less</code>
+<code>$ less ls-output.tx</code></p>
+</li>
+<li>
+<p><code>&gt;</code> this command will replace old data with new one, so to persist old data with new data we can use <code>&gt;&gt;</code> this double arrow will append the new output to <code>ls-output.txt file</code></p>
+</li>
+</ul>
+<p><code>$ ls -l /usr/bin &gt;&gt;ls-output.txt</code></p>
+<h3 id="redirecting-standard-error">Redirecting Standard Error</h3>
+<p>Redirecting standard error lacks the ease of dedicated redirection operator. To redirect a standard error we must refer ot its <em>file descriptor</em></p>
+<ul>
+<li>
+<p>A program can produce output on any of several numbered file streams</p>
+</li>
+<li>
+<p>The first three of these file streams as <em>standard</em> input ,output and error</p>
+<ul>
+<li>the shell reference them internally as <em>file descriptors</em> 0,1 and 2</li>
+</ul>
+</li>
+<li>
+<p>Since standard error is the same as file descriptor number 2, we can redirect standard error with this notation,
+<code>$ ls -l /usr/user 2&gt; ls-error.txt</code></p>
+</li>
+<li>
+<p><strong>Redirecting standard output and error to same file</strong></p>
+<ul>
+<li>There are cases when we want to catch all types of output to a single file</li>
+<li>to do tis we can run this command,</li>
+</ul>
+</li>
+</ul>
+<p><code>$ ls -l /usr/user &gt;ls-output.txt 2&gt;&amp;1</code></p>
+<blockquote>
+<p>Note:  This is old method which worked with old verisons of shells</p>
+</blockquote>
+<p>Recent version of <em>bash</em> provide a second ,more streamlined method for performing this combined redirection</p>
+<p><code>$ ls -l /usr/user &amp;&gt;ls-output.txt</code></p>
+<h4 id="disposing-of-unwanted-output">Disposing of Unwanted Output</h4>
+<p>Somtimes &lsquo;silence is golden&rsquo; and we don&rsquo;t want output from the command,we just want to throw it away</p>
+<ul>
+<li>This applies particularly to error and status messages</li>
+<li>To suppress error messages from a command, we do this:</li>
+</ul>
+<p><code>$ ls -l /usr/user 2&gt;/dev/null</code></p>
+<ul>
+<li><code>/dev/null</code> file is a system device reffered to as bit bucket, which does accept input and does nothing with it</li>
+</ul>
+<h3 id="redirecting-standard-input">Redirecting standard Input</h3>
+<h4 id="cat---concatenate-files">cat - Concatenate files</h4>
+<p>The cat commands read one ore more lines and copies them to standard output like this:
+<code>$ cat [files..]</code></p>
+<ul>
+<li>for example this command will display the output of <code>out.txt</code> file</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cat out.txt
+</span></span><span style="display:flex;"><span>there nothing to concatenate
+</span></span></code></pre></div><ul>
+<li>
+<p><code>cat</code> is often used to display short text files.</p>
+</li>
+<li>
+<p>Since <code>cat</code> can accept more than one argument, it can be used to join file together</p>
+<ul>
+<li>say we have donwloaded a large file that has been split into multiple parts (multimedia files are often split this way on Usenet) and we want to join them togehter if the wile were named,
+<code>movie.mpeg.001 movie.mpeg.002 movie.mpeg.003 ...movie.mpeg</code></li>
+</ul>
+<p><code>$ cat movie.mpeg.0* &gt;movie.mpeg</code></p>
+<ul>
+<li>Since wildcards always extend in sorted order, the argument will be sorted in correct order</li>
+</ul>
+</li>
+<li>
+<p><code>$ cat &lt; ls-output.txt</code></p>
+</li>
+<li>
+<p>By using <code>&lt;</code> redirection operator, we change the source of standard input from keyboard to the file <code>ls-output.txt</code></p>
+</li>
+</ul>
+<h3 id="pipelines">Pipelines</h3>
+<p>The capablity of commands to read data from standard input and send to standard output is utilized by shell feature called <em>pipeline</em></p>
+<ul>
+<li>Using the <code>|</code> operator (vertical bar), the standard output of one command can be piped into the standard input of another
+<code>command1 | command2</code></li>
+</ul>
+<p>example,</p>
+<p><code>$ ls -l /usr/bin | less</code></p>
+<h3 id="filters">Filters</h3>
+<p>Pipelines are often used to perfrom complex operations. It&rsquo;s possible to put serverl commands togehter to perform some kind of operations, for this we can use various kind of filters like,</p>
+<ul>
+<li>Here we used <code>sort</code> program to sort the output of <code>ls</code> command and then pipe it to <code>less</code> command
+<code>$ ls -l /bin /usr/bin |sort |less</code></li>
+</ul>
+<h4 id="uniq---report-of-omit-repeated-files">uniq - Report of Omit Repeated files</h4>
+<p><code>uniq</code> command if often paired with <code>sort</code> command.<code>uniq</code> accepts sorted list of data from standard output or a single filename argument and, by default remove any duplicate item from list</p>
+<p><code>$ ls -l /bin /usr/bin |sort |uniq |less</code></p>
+<ul>
+<li>
+<p>This whole command wil first list files in <code>/bin</code> and <code>/usr/bin</code> folder and then with <code>sort</code> command it will be sorted then with <code>uniq</code> command all the duplicates file will be removed and then with <code>less</code> command user can see the output</p>
+</li>
+<li>
+<p>and if we only want to see duplicates files we can use <code>uniq -d</code> instead of just <code>uniq</code></p>
+</li>
+</ul>
+<h4 id="wc---print-line-words-and-byte-counts">wc - Print line, words and byte counts</h4>
+<p>The wc(word count) command is used to display the number of lines,words and bytes contained in files</p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -l /usr/bin | wc -l 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2024</span>
+</span></span></code></pre></div><ul>
+<li>This example&rsquo;s output is containling total lines of the standard output of command <code>ls -l /usr/bin</code></li>
+</ul>
+<h4 id="grep---print-lines-matching-the-pattern">grep - print lines matching the pattern</h4>
+<p><code>grep</code> is a powerfull program used fo find pattern within files it&rsquo;s used like this:</p>
+<p><code>$ grep pattern [file...]</code></p>
+<ul>
+<li>When <code>grep</code> encounter pattern in the file it&rsquo;s print out the line containing it.</li>
+</ul>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -l /usr/bin | sort | grep zip
+</span></span><span style="display:flex;"><span>zip
+</span></span><span style="display:flex;"><span>gzip
+</span></span><span style="display:flex;"><span>unzip
+</span></span></code></pre></div><p>There are couple of handy options for grep:</p>
+<ul>
+<li><code>-i</code>, which caused <code>grep</code> to ignore case while searching through files</li>
+<li><code>-v</code> , which tells grep to print those lines where pattern isn&rsquo;t a match</li>
+</ul>
+<h4 id="headtail---print-firstlast-part-of-files">head/tail - Print first/last part of files</h4>
+<p>Sometimes we don&rsquo;t want all output of files,that&rsquo;s when we use these commands <code>head</code> and <code>tail</code></p>
+<ul>
+<li>The <code>head</code> commands prints first few lines of file</li>
+<li>The <code>tail</code> commands prints last few lines of file</li>
+<li>By  default,both commands output can be adjusted by this <code>-n</code> option</li>
+<li>Generally they print first/last 10 lines of file</li>
+</ul>
+<p><code>$ head -n 5 file.txt</code>
+<code>$ tail -n 5 file.txt</code></p>
+<p>or,by using pipelines</p>
+<p><code>$ ls -l /usr/bin | head -n 5</code></p>
+<blockquote>
+<p><code>tail</code> has an option which allows us to view files in real time. This is useful when watching progress of log files by using <code>-f</code> option</p>
+</blockquote>
+<h4 id="tee---read-the-stdin-and-output-to-stdout-of-files">tee - Read the stdin and Output to stdout of files</h4>
+<p>It splits the output so that it can be viewed on the terminal while being saved to a file.</p>
+<p><code>$ command | tee [options] file_name</code></p>
+<p>example,</p>
+<p><code>$ echo &quot;New line&quot; | tee -a output.txt</code></p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

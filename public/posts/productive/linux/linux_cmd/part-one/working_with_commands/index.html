@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>working_with_commands | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #commands
+Workings With Commands
+Used commands in this chapter
+
+type - Indicate how a command name is intepreted
+which - Display which executable program will be executed
+help - Get help for shell builtins
+man  - Display a command&rsquo;s manual page
+apropos - Display a list of appropriate commands
+info - Display a command&rsquo;s info entry
+whatis - Display one line manual page descriptions
+alias - Create an alias for a command
+
+What Exactly are Commands ?
+A command can one of the four different things:">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/working_with_commands/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>working_with_commands</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        936 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #commands</p>
+<h1 id="workings-with-commands">Workings With Commands</h1>
+<h2 id="used-commands-in-this-chapter">Used commands in this chapter</h2>
+<ul>
+<li>type - Indicate how a command name is intepreted</li>
+<li>which - Display which executable program will be executed</li>
+<li>help - Get help for shell builtins</li>
+<li>man  - Display a command&rsquo;s manual page</li>
+<li>apropos - Display a list of appropriate commands</li>
+<li>info - Display a command&rsquo;s info entry</li>
+<li>whatis - Display one line manual page descriptions</li>
+<li>alias - Create an alias for a command</li>
+</ul>
+<h3 id="what-exactly-are-commands-">What Exactly are Commands ?</h3>
+<p>A command can one of the four different things:</p>
+<ol>
+<li>An executable program</li>
+<li>A command built into the shell itself</li>
+<li>A shell function</li>
+<li>An alias</li>
+</ol>
+<h3 id="type---display-a-commands-type">type - Display a Command&rsquo;s type</h3>
+<p>The <code>type</code> command is a shell builtin that display the kind of command the shell will execute, it work like this:</p>
+<p><code>$ type command</code></p>
+<p>here are some example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ type type
+</span></span><span style="display:flex;"><span>type is a shell builtin
+</span></span><span style="display:flex;"><span>$ type ls
+</span></span><span style="display:flex;"><span>ls is aliased to <span style="color:#e6db74">&#39;ls --color=tty&#39;</span>
+</span></span></code></pre></div><h3 id="which---displays-an-executables-location">which - Display&rsquo;s an executables location</h3>
+<p>To determine the exact location of given excutables, the <em>which</em> command is used.</p>
+<p><code>$ which command</code></p>
+<p>here are some example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ which ls
+</span></span><span style="display:flex;"><span>ls: is shell builtin
+</span></span><span style="display:flex;"><span>$ which docker
+</span></span><span style="display:flex;"><span>/usr/bin/docker
+</span></span></code></pre></div><h3 id="help---get-help-from-shell-builtins">help - Get Help from Shell Builtins</h3>
+<p>Bash has the shell builtin help facility available for each of shell builtins, use <em>help</em></p>
+<p><code>$ help command</code></p>
+<p>here are some example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ help cd
+</span></span><span style="display:flex;"><span>cd: cd <span style="color:#f92672">[</span>-L|<span style="color:#f92672">[</span>-P <span style="color:#f92672">[</span>-e<span style="color:#f92672">]]</span> <span style="color:#f92672">[</span>-@<span style="color:#f92672">]]</span> <span style="color:#f92672">[</span>dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Change the shell working directory.
+</span></span><span style="display:flex;"><span>Change the current directory to DIR.
+</span></span><span style="display:flex;"><span>value of the HOME shell variable.
+</span></span><span style="display:flex;"><span>The default DIR is the
+</span></span><span style="display:flex;"><span>The variable CDPATH defines the search path <span style="color:#66d9ef">for</span> the directory
+</span></span><span style="display:flex;"><span>containing DIR. Alternative directory names in CDPATH are
+</span></span><span style="display:flex;"><span>separated by a colon <span style="color:#f92672">(</span>:<span style="color:#f92672">)</span>. A null directory name is the same as
+</span></span><span style="display:flex;"><span>the current directory. If DIR begins with a slash <span style="color:#f92672">(</span>/<span style="color:#f92672">)</span>, <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>CDPATH is not used.
+</span></span><span style="display:flex;"><span>If the directory is not found, and the shell option <span style="color:#e6db74">`</span>cdable_vars<span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">is set, the word is assumed to be a variable name. If that
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">variable has a value, its value is used for DIR.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Options:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-L
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">force symbolic links to be followed: resolve symbolic
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">links in DIR after processing instances of `..&#39;</span>
+</span></span><span style="display:flex;"><span>-P
+</span></span><span style="display:flex;"><span>use the physical directory structure without following
+</span></span><span style="display:flex;"><span>symbolic links: resolve symbolic links in DIR before
+</span></span><span style="display:flex;"><span>processing instances of <span style="color:#e6db74">`</span>..<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>-e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> the -P option is supplied, and the current working
+</span></span><span style="display:flex;"><span>directory cannot be determined successfully, exit with
+</span></span><span style="display:flex;"><span>a non-zero status
+</span></span></code></pre></div><blockquote>
+<p>Note : If you are using some another shell like <em>zsh</em> <em>fish</em> you can&rsquo;t access help command</p>
+</blockquote>
+<h4 id="help---display-usage-information">&ndash;help - Display Usage Information</h4>
+<p>Many executable program supports <code>--help</code> options that displays a description of the command&rsquo;s supported syntax and options</p>
+<p><code>$command --help</code></p>
+<p>here are some example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ mkdir --help
+</span></span><span style="display:flex;"><span>Usage: mkdir <span style="color:#f92672">[</span>OPTION<span style="color:#f92672">]</span>... DIRECTORY...
+</span></span><span style="display:flex;"><span>Create the DIRECTORY<span style="color:#f92672">(</span>ies<span style="color:#f92672">)</span>, <span style="color:#66d9ef">if</span> they <span style="color:#66d9ef">do</span> not already exist.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Mandatory arguments to long options are mandatory <span style="color:#66d9ef">for</span> short options too.
+</span></span><span style="display:flex;"><span>  -m, --mode<span style="color:#f92672">=</span>MODE   set file mode <span style="color:#f92672">(</span>as in chmod<span style="color:#f92672">)</span>, not a<span style="color:#f92672">=</span>rwx - umask
+</span></span><span style="display:flex;"><span>  -p, --parents     no error <span style="color:#66d9ef">if</span> existing, make parent directories as needed,
+</span></span><span style="display:flex;"><span>                    with their file modes unaffected by any -m option.
+</span></span><span style="display:flex;"><span>  -v, --verbose     print a message <span style="color:#66d9ef">for</span> each created directory
+</span></span><span style="display:flex;"><span>  -Z                   set SELinux security context of each created directory
+</span></span><span style="display:flex;"><span>                         to the default type
+</span></span><span style="display:flex;"><span>      --context<span style="color:#f92672">[=</span>CTX<span style="color:#f92672">]</span>  like -Z, or <span style="color:#66d9ef">if</span> CTX is specified <span style="color:#66d9ef">then</span> set the SELinux
+</span></span><span style="display:flex;"><span>                         or SMACK security context to CTX
+</span></span><span style="display:flex;"><span>      --help        display this help and exit
+</span></span><span style="display:flex;"><span>      --version     output version information and exit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+</span></span><span style="display:flex;"><span>Full documentation &lt;https://www.gnu.org/software/coreutils/mkdir&gt;
+</span></span><span style="display:flex;"><span>or available locally via: info <span style="color:#e6db74">&#39;(coreutils) mkdir invocation&#39;</span>
+</span></span></code></pre></div><h3 id="man---displays-a-program-manual-page">man - Display&rsquo;s a program Manual page</h3>
+<p>Most executble program intended for command line use provide a formal piece of documentation called a manual or man page.</p>
+<p><code>$ man command</code></p>
+<ul>
+<li>
+<p>Manual page is very large in size so, I&rsquo;will not show you guys</p>
+</li>
+<li>
+<p>Sometimes we need to refer to a specific section of the man page to find what we are looking for.</p>
+</li>
+</ul>
+<p><code>$ man section search_term</code></p>
+<p>example,</p>
+<p><code>$ man 5 passwd</code></p>
+<ul>
+<li>This will display the man page describing the file format of the /etc/passwd file.</li>
+</ul>
+<h3 id="apropos---display-appropriate-commands">apropos - Display appropriate commands</h3>
+<p>It is also possible to search the list of man pages for possible matches based on a search term</p>
+<p><code>$ apropos command</code></p>
+<p>here a example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ apropos partiton
+</span></span><span style="display:flex;"><span>addpart <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - simple wrapper around the <span style="color:#e6db74">&#34;add partition&#34;</span>...
+</span></span><span style="display:flex;"><span>all-swaps <span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> - event signalling that all swap partitions...
+</span></span><span style="display:flex;"><span>cfdisk <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - display or manipulate disk partition table
+</span></span><span style="display:flex;"><span>cgdisk <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - Curses-based GUID partition table <span style="color:#f92672">(</span>GPT<span style="color:#f92672">)</span>...
+</span></span><span style="display:flex;"><span>delpart <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - simple wrapper around the <span style="color:#e6db74">&#34;del partition&#34;</span>...
+</span></span><span style="display:flex;"><span>fdisk <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - manipulate disk partition table
+</span></span><span style="display:flex;"><span>fixparts <span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> - MBR partition table repair utility
+</span></span></code></pre></div><h3 id="whatis---display-one-line-manual-page-description">whatis - Display one-line manual page description</h3>
+<p>The <em>whatis</em> command display the one page description of the manual page matching specified word.</p>
+<p><code>$ whatis specified_word</code></p>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ whatis ls
+</span></span><span style="display:flex;"><span>ls <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> - list directory contents
+</span></span></code></pre></div><blockquote>
+<p>Dare: read the whole man page of <code>bash</code></p>
+</blockquote>
+<h3 id="info---display-a-programs-info-history">info - Display a program&rsquo;s info history</h3>
+<p>The <em>GNU</em> Project provides an alternatives for man page called <code>info</code></p>
+<ul>
+<li>The info program reads info files, which are tree structured into individual nodes, each contains a single topic.</li>
+</ul>
+<p><code>$ info command</code></p>
+<p>example,</p>
+<p><code>$ info coreutils</code></p>
+<ul>
+<li>This command will show a page with hyperlinks to each program contained in coreutils package.</li>
+</ul>
+<h3 id="alias---creating-our-own-commands-using-alias">alias - Creating our own commands using alias</h3>
+<p>We can create own command using alias</p>
+<p><code>$ alias name='commands'</code></p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ alias ..<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd ..&#39;</span>
+</span></span></code></pre></div><ul>
+<li>now whenever we use <code>..</code> we will get back to one directory back.</li>
+</ul>
+<h4 id="remove-alias">Remove alias</h4>
+<p>For removing previously saved alias use</p>
+<p><code>$ unalias foo</code></p>
+<ul>
+<li>This command will remove your alias from program list</li>
+</ul>
+<blockquote>
+<p>Note: To list our all prev saved alias use <code>$ alias</code> command to list every alias in your shell
+Problem: The only problem is while defining alias in  our shell, it will vanish when our shell restart.</p>
+</blockquote>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

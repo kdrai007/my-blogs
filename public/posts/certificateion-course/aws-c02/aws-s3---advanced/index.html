@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AWS s3 - Advanced | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Amazon s3 - moving between  Storage Classes
+
+You can trnasition object with storage classes.
+For infrequently accessed object move them to Standard IA
+For archieve object that you don&rsquo;t need fast access to move them to Glacier or Glacier deep archieve
+
+Amazon s3 - Lifecycle Rules
+
+
+Transition Actions - configure  objects to transition to another stroage class
+
+Move objects to Standard IA class after 60 day creation
+Move glacier for archiving after 6 months
+
+
+
+Expiration Actions - Confgire objects to expire (delete) after some time.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/aws-s3---advanced/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>AWS s3 - Advanced</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        413 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="amazon-s3---moving-between--storage-classes">Amazon s3 - moving between  Storage Classes</h2>
+<ul>
+<li>You can trnasition object with storage classes.</li>
+<li>For infrequently accessed object move them to Standard IA</li>
+<li>For archieve object that you don&rsquo;t need fast access to move them to <strong>Glacier</strong> or <strong>Glacier deep archieve</strong></li>
+</ul>
+<h3 id="amazon-s3---lifecycle-rules">Amazon s3 - Lifecycle Rules</h3>
+<ul>
+<li>
+<p><strong>Transition Actions</strong> - configure  objects to transition to another stroage class</p>
+<ul>
+<li>Move objects to Standard IA class after 60 day creation</li>
+<li>Move glacier for archiving after 6 months</li>
+</ul>
+</li>
+<li>
+<p><strong>Expiration Actions</strong> - Confgire objects to expire (delete) after some time.</p>
+<ul>
+<li>Access log files can be set to delete after 365 days</li>
+<li>Can be used to delete old versions of file (if versioning is enabled)</li>
+<li>Can be used to delete multip part upload if it&rsquo;s incomplete</li>
+</ul>
+<p>![[Pasted image 20240904105457.png]]</p>
+</li>
+</ul>
+<h3 id="amazon-s3-analytics---storage-class-analysis">Amazon s3 Analytics - Storage Class Analysis</h3>
+<ul>
+<li>
+<p>Help you decide when to transition object to the right storage class</p>
+</li>
+<li>
+<p>Recommendation for Standard and Standard IA :</p>
+<ul>
+<li>Does not work for One zone IA or Glacier</li>
+</ul>
+</li>
+<li>
+<p>Report is updated daily.</p>
+</li>
+<li>
+<p>24 to 48 hours to start seeing data analysis</p>
+</li>
+</ul>
+<h2 id="s3-event-notification">s3 Event Notification</h2>
+<ul>
+<li>
+<p>Currently, Amazon S3 can publish notifications for the following events:</p>
+<ul>
+<li>New object created events</li>
+<li>Object removal events</li>
+<li>Restore object events</li>
+<li>Reduced Redundancy Storage (RRS) object lost events</li>
+<li>Replication events</li>
+<li>S3 Lifecycle expiration events</li>
+<li>S3 Lifecycle transition events</li>
+<li>S3 Intelligent-Tiering automatic archival events</li>
+<li>Object tagging events</li>
+<li>Object ACL PUT events</li>
+</ul>
+</li>
+<li>
+<p>Use Case: generate thumnails of images uploaded to s3</p>
+</li>
+<li>
+<p>Can create as many s3 events as desired</p>
+</li>
+<li>
+<p><em>s3 event notification can be delivered in seconds but sometimes can take 1 to 2 minutes</em></p>
+<p>![[Pasted image 20240904121717.png]]</p>
+</li>
+</ul>
+<h2 id="s3----baseline-performance">s3 -  Baseline Performance</h2>
+<ul>
+<li>
+<p>Amazon s3 automatically scales to high request rates , latency 200-300 ms</p>
+</li>
+<li>
+<p>Your application can acheive at least 3500 put/copy/post/delete or 5,500 get/head request per second per prefix in  a bucket.</p>
+</li>
+<li>
+<p>There are no number of limit of prefixes in bucket</p>
+</li>
+<li>
+<p>Example (object path =&gt;prefix):</p>
+<ul>
+<li>&lsquo;/bucket/f1/file&rsquo; =&gt; &lsquo;/f1/&rsquo;</li>
+<li>&lsquo;/bucket/f2/file&rsquo; =&gt; &lsquo;/f2/&rsquo;</li>
+</ul>
+</li>
+<li>
+<p>If you spread reads across these 2 prefixes evenly, you can increase get/head request up to 11000 per second</p>
+</li>
+</ul>
+<h3 id="s3-performance">s3 Performance</h3>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html">read this</a></p>
+</li>
+<li>
+<p><strong>Multi Part Upload:</strong></p>
+<ul>
+<li>Recommendation for file &gt; 100MB
+must use for files &gt; 5GB</li>
+<li>can help prallelize upload (speed up transfers)</li>
+</ul>
+</li>
+<li>
+<p><strong>s3 transfer Acceleration</strong> :</p>
+<ul>
+<li>Increase transfer speed by transferring file to an aws Edge location which will forward the data to the s3 bucket in the target location</li>
+<li>Compatible  with multi-part upload</li>
+</ul>
+</li>
+</ul>
+<h3 id="s3-performance---s3-byte-range-fetches">s3 Performance - s3 byte-Range Fetches</h3>
+<ul>
+<li>prallelize GETs by requesting specific byte size</li>
+<li>Better resilience in case of failures</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]
+[[Amazon S3]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

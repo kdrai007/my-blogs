@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>06-CDN | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tags: #system-design #cdn
+CDN - Content Delivery Networks
+A cdn is a globally distributed of proxies servers, serving content to users from nearest data center. Generally static files like html/css/js,photos and videos are serverd  from CDNs.
+Serving content from CDN, improve website performace two ways:-
+
+Users receive content from data center nearest to them.
+Your servers do not have to serve requests that the CDN fulfills.
+
+Pull CDN
+Pull CDNs grab new content from your server when the first user requests for content.You leave the server and rewrite url to point to the CDNs. This results  are slower until the contents are cached on the CDNs">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/system-design/06-cdn/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/system-design/">System Design</a>
+    </div>
+    <h1>06-CDN</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        228 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tags: #system-design #cdn</p>
+<h1 id="cdn---content-delivery-networks">CDN - Content Delivery Networks</h1>
+<p>A cdn is a globally distributed of proxies servers, serving content to users from nearest data center. Generally static files like html/css/js,photos and videos are serverd  from CDNs.</p>
+<p>Serving content from CDN, improve website performace two ways:-</p>
+<ul>
+<li>Users receive content from data center nearest to them.</li>
+<li>Your servers do not have to serve requests that the CDN fulfills.</li>
+</ul>
+<h3 id="pull-cdn">Pull CDN</h3>
+<p>Pull CDNs grab new content from your server when the first user requests for content.You leave the server and rewrite url to point to the CDNs. This results  are slower until the contents are cached on the CDNs</p>
+<ul>
+<li>
+<p>A TTL(time to live) determines how long the content is cached.</p>
+</li>
+<li>
+<p>Pull CDN minimize storage space on the CDN, but can create redandent if files expire and pull before they have actually changed.</p>
+</li>
+<li>
+<p>Sites with heavy trafic works well with Pull CDN.</p>
+</li>
+<li>
+<p>Example, Site with dynamic content(news sites, blogs)</p>
+</li>
+<li>
+<p>First time content fetching can be slow(cache miss).</p>
+</li>
+</ul>
+<h3 id="push-cdn">Push CDN</h3>
+<p>Push CDNs receive new content whenever changes occurs on your server. You take full responsbility  for providing content, uploading directly to the cdn and rewriting url&rsquo;s point to the CDN.</p>
+<ul>
+<li>
+<p>You can configure when content expires, and when it is updated.</p>
+</li>
+<li>
+<p>The CDN serves content directly without fetching from the origin.</p>
+</li>
+<li>
+<p>Ensures instant availbility of content.</p>
+</li>
+<li>
+<p>Wastes storage if unused content is pushed.</p>
+</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  {{/* Hero Section */}}
+  <section class="hero">
+    <div class="hero-content">
+      <h1>{{ .Site.Title }}</h1>
+      {{ with .Site.Params.description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* Post Listing */}}
+  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "posts") }}
+  {{ $allPosts := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
+
+  {{ if (gt (len $allPosts) 0) }}
+    <div class="post-grid">
+      {{ $paginator := .Paginate $allPosts }}
+      {{ range $paginator.Pages }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </div>
+
+    {{ partial "pagination.html" . }}
+  {{ end }}
+
+{{ end }}

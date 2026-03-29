@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>vim tips_tricks | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vim Tips and Tricks
+Tags: #vim #motion
+
+
+Press x to delete word under the cursor.
+
+
+Press gu to lowercase words, press gU to uppercase words
+
+
+Press vit to select the text in the tag, in this case &ldquo;Practical Vim&rdquo; will be selected after running vit.
+&lt;a href=&quot;http://pragprog.com/dnvim/&quot;&gt;Practical Vim&lt;/a&gt;
+
+
+&gt;G command increase the indent.
+
+
+I start editing on fist char of the line.
+
+
+A start editing on last char of the line.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/vim/vim-tips_tricks/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/vim/">Vim</a>
+    </div>
+    <h1>vim tips_tricks</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        359 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="vim-tips-and-tricks">Vim Tips and Tricks</h1>
+<p>Tags: #vim #motion</p>
+<ul>
+<li>
+<p>Press <code>x</code> to delete word under the cursor.</p>
+</li>
+<li>
+<p>Press <code>gu</code> to lowercase words, press <code>gU</code> to uppercase words</p>
+</li>
+<li>
+<p>Press <code>vit</code> to select the text in the tag, in this case &ldquo;Practical Vim&rdquo; will be selected after running <code>vit</code>.</p>
+<p><code>&lt;a href=&quot;http://pragprog.com/dnvim/&quot;&gt;Practical Vim&lt;/a&gt;</code></p>
+</li>
+<li>
+<p><code>&gt;G</code> command increase the indent.</p>
+</li>
+<li>
+<p><code>I</code> start editing on fist char of the line.</p>
+</li>
+<li>
+<p><code>A</code> start editing on last char of the line.</p>
+</li>
+<li>
+<p><code>s</code> deletes character under cursor then put into insert mode.</p>
+</li>
+<li>
+<p><code>S</code> deletes whole line then put into insert mode.</p>
+</li>
+<li>
+<p><code>;</code> this command will repeat the last search that the <code>f{char}</code> command performed.</p>
+</li>
+<li>
+<p><code>,</code> this command will reverse the <code>f{char}</code> performed.</p>
+</li>
+<li>
+<p><code>daw</code> Deletes the whole word and the white space where cursor is.</p>
+</li>
+<li>
+<p><code>cw</code> Deletes a word then insert mode.</p>
+</li>
+<li>
+<p><code>gcap</code> Comments the paragraph.</p>
+</li>
+<li>
+<p><code>gcc</code> Comments the current line.</p>
+</li>
+</ul>
+<p><code>Operator+Motion=Action</code></p>
+<ul>
+<li>The <code>d{motion}</code> command can operate on a single character <code>dl</code>, a complete world <code>daw</code>, or an entire paragraph <code>dap</code></li>
+<li>same goes for <code>c{motion}</code> , <code>y{motion}</code>. for more info look <code>:help operator</code></li>
+</ul>
+<h3 id="dictionary">Dictionary</h3>
+<ul>
+<li><code>[s</code>  Search for previous incorrect words in paragraph or whole file.</li>
+<li><code>]s</code>  Search for next incorrect words in paragraph or whole file.</li>
+<li><code>z=</code>  List the options for incorrect words and choose the correct one by number.</li>
+<li><code>zg</code>  Add the words in the dictionary, if you think your word is correct.</li>
+</ul>
+<h4 id="the-dot-command">The Dot Command</h4>
+<ul>
+<li>for more info read <code>:h .</code> docs in vim.</li>
+<li><code>.</code> means &ldquo;repeat last change&rdquo;</li>
+<li>The dot command is micro Macro</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foobar</span><span style="color:#f92672">=</span><span style="color:#a6e22e">foo</span><span style="color:#f92672">+</span><span style="color:#a6e22e">bar</span>
+</span></span></code></pre></div><p>Consider this JavaScript file example, if want semicolon at end of each line then you have to manually do it ,but using <code>.</code> operator you can easily do it.</p>
+<ul>
+<li>First on first line, type <code>A</code> then <code>;</code> and then <code>&lt;ESC&gt;</code> combine them its <code>A;&lt;ESC&gt;</code>.
+<ul>
+<li>After using this combination <code>.</code> will register it in buffer, then after pressing <code>.</code> you can replicate it by pressing <code>j.</code>.</li>
+<li>It&rsquo;s a pretty neat solution for all that manual work.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>The ideal: One keystroke to move, One Keystroke to execute.</p>
+</blockquote>
+<h3 id="insert-mode">Insert Mode.</h3>
+<p>Most&rsquo;s vim commands are provoked in <code>normal mode</code> but some commands can be run in <code>insert mode</code>. Let&rsquo;s learn about them.</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

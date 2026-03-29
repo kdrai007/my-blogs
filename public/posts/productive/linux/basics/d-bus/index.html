@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>d-bus | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="D-Bus (Desktop Bus)
+At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard Inter-Process Communication (IPC) mechnism used in linux and unix based systems.
+Why do we need D-Bus.
+Before D-Bus, if a music player wanted to pause when you receive VoIP call, the developers of the music player and VoIP app would have to agree on a specific, custom way to talk with each other. This way messy and unscaleable.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/basics/d-bus/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/basics/">Basics</a>
+    </div>
+    <h1>d-bus</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        295 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="d-bus-desktop-bus">D-Bus (Desktop Bus)</h1>
+<p>At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard <strong>Inter-Process Communication (IPC)</strong> mechnism used in linux and unix based systems.</p>
+<h3 id="why-do-we-need-d-bus">Why do we need D-Bus.</h3>
+<p>Before D-Bus, if a music player wanted to pause when you receive VoIP call, the developers of the music player and VoIP app would have to agree on a specific, custom way to talk with each other. This way messy and unscaleable.</p>
+<ul>
+<li>D-Bus solves this by providing standardized channel.</li>
+</ul>
+<h4 id="the-architecture">The architecture.</h4>
+<p>D-Bus is three layer system.</p>
+<ol>
+<li><strong>libdbus</strong> : A library that allows two application to connect with each other and share messages.</li>
+<li><strong>dbus-daemon</strong> : An executable (background process) build on top of <code>libdbus</code>. It acts as a traffic router, passing messages from one processes to another.</li>
+<li><strong>Wrapper libraries</strong> :  High level libraries (like GDBus for GNOME/GTK or QTDBus for KDE/QT) that make using d-bus easier for programmers.</li>
+</ol>
+<h3 id="the-two-buses">The Two Buses</h3>
+<p>In typical linux setup, there isn&rsquo;t just one bus running around, but usually two distinct types running simultaneously.</p>
+<h4 id="1-the-system-bus">1. The system bus</h4>
+<p>Runs at the OS level. There is usually one System bus per computer dedicated to system-wide events and hardware abstraction.</p>
+<p>Examples,</p>
+<ul>
+<li>NetworkManager : Tells the system when you are connected to WiFi.</li>
+<li>Udev : Notify other apps, when new hardware are connected to your device.</li>
+<li>Systemd : Uses it to manage system and shut-down the system.</li>
+</ul>
+<h3 id="2-the-session-bus">2. The Session Bus</h3>
+<p>Runs at the user level. Ther is one session Bus for user <em>logged</em> in, dedicated to desktop applications and user-specific data.</p>
+<p>Examples,</p>
+<ul>
+<li>Clipboard : Mangaing copy/paste between apps.</li>
+<li>Notifications : An app sending &ldquo;Task Completed&rdquo; toaster popup.</li>
+<li>Media Players: MPRIS uses D-Bus so your keyboard &ldquo;play/pause&rdquo; buttons work on spotify,VLC or youtube.</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

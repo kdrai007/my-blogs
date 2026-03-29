@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>01-intro | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="System Design
+System design is the process of defining the architecture,interface and data for system that satisfies
+specific requirement.
+A good system design requires us to think about everything, from infrastructure all the way to how we store data.
+How to: System Design
+There are several step that can be taken while system design:
+
+Understand the problem - Gather information of the problem you are solving and the requirement of the system.
+Identify the scope of the system - According to accumulated data on the problem, create scope of the system for ex, for whom the system you are designing, what system will do and what not.
+Research and analyze the existing system. - Research all or some available system and analyze, what kind of system or resources you will need.
+Create a high level design. - Don&rsquo;t leave anything unresearched,
+Refine the design - Don&rsquo;t run away to recheck your created design.
+Document the design. - Create well detailed document for future reference.
+Continuously monitor and improve the system - If you find anything missing improve and keep updating system until you get satisfactory  result.
+
+Why system design is important?
+System  design help us define a solution that  meets the business requirement.
+Often it is essential to think from high level as these decisions are very difficult to correct later.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/system-design/01-intro/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/system-design/">System Design</a>
+    </div>
+    <h1>01-intro</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        525 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="system-design">System Design</h2>
+<p>System design is the process of defining the architecture,interface and data for system that satisfies
+specific requirement.
+A good system design requires us to think about everything, from infrastructure all the way to how we store data.</p>
+<h2 id="how-to-system-design">How to: System Design</h2>
+<p>There are several step that can be taken while system design:</p>
+<ul>
+<li><strong>Understand the problem</strong> - Gather information of the problem you are solving and the requirement of the system.</li>
+<li><strong>Identify the scope of the system</strong> - According to accumulated data on the problem, create scope of the system for ex, for whom the system you are designing, what system will do and what not.</li>
+<li><strong>Research and analyze the existing system.</strong> - Research all or some available system and analyze, what kind of system or resources you will need.</li>
+<li><strong>Create a high level design.</strong> - Don&rsquo;t leave anything unresearched,</li>
+<li><strong>Refine the design</strong> - Don&rsquo;t run away to recheck your created design.</li>
+<li><strong>Document the design</strong>. - Create well detailed document for future reference.</li>
+<li><strong>Continuously monitor and improve the system</strong> - If you find anything missing improve and keep updating system until you get satisfactory  result.</li>
+</ul>
+<h3 id="why-system-design-is-important">Why system design is important?</h3>
+<p>System  design help us define a solution that  meets the business requirement.
+Often it is essential to think from high level as these decisions are very difficult to correct later.</p>
+<h2 id="latency-and-throughput">Latency and throughput</h2>
+<p><strong>Latency</strong>  - Latency refers to the amount of time a system take time to respond to request.
+<strong>Throughput</strong>  -  Throughput refers to the amount of request a system can handle at the same time.</p>
+<p>Generally, We should aim for maximal throughput with acceptable latency.</p>
+<h2 id="performance-vs--scalability">Performance vs  Scalability</h2>
+<p>A service is <strong>scalable</strong> if it results in increased <strong>performance</strong> in a manner  proportional  to resources added.</p>
+<ul>
+<li>If you have a performance problem ,Your system is slow for single user.</li>
+<li>if you have a scalability  problem , your system is fast for single user but slow under heavy load.</li>
+</ul>
+<h2 id="cap-theorem">Cap Theorem</h2>
+<h3 id="availability-vs-consistency">Availability vs Consistency</h3>
+<ul>
+<li>
+<p><strong>Availability</strong> - Means that a system is always ready to respond to requests. If you ask the system for information or to perform a task, it will respond quickly even if some of the parts is not working .</p>
+</li>
+<li>
+<p><strong>Consistency</strong> - Means that every time you read data from the system, you get the most  recent and correct version of data.</p>
+</li>
+<li>
+<p><strong>Cap Theorem</strong> - According to cap theorem , in a distributed system you can support only two of them following:-</p>
+</li>
+<li>
+<p>Consistency</p>
+</li>
+<li>
+<p>Availability</p>
+</li>
+<li>
+<p>Partition tolerance - The system continue to operate despite arbitery partitioning  due to network failures.</p>
+</li>
+</ul>
+<h4 id="ap---availability-and-partition-tolerance">AP - Availability and Partition tolerance</h4>
+<p>Waiting for a response from the partitioned node might result in a timeout error. CP is a good choice if your business needs require atomic reads and writes.</p>
+<h4 id="cp---consistency-and-partition-tolerance">CP - Consistency and Partition tolerance</h4>
+<p>Responses return the most readily available version of the data available on any node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.
+AP is a good choice if the business needs to allow for eventual consistency or when the system needs to continue working despite external errors.</p>
+<h2 id="links">Links</h2>
+<p>[[tags/system-design]]
+[[tags/Being Productive|Being Productive]]</p>
+
+  </div>
+
+  
+  <div class="article-tags">
+    
+      <a href="/tags//">#</a>
+    
+      <a href="/tags/excalidraw/">#excalidraw</a>
+    
+      <a href="/tags/productive/">#productive</a>
+    
+  </div>
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

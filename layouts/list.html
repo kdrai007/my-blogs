@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+  <h1 class="section-heading">{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <div class="post-grid">
+    {{ $paginator := .Paginate .RegularPagesRecursive }}
+    {{ range $paginator.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+
+{{ end }}

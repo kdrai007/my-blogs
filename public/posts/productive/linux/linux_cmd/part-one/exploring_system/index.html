@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>exploring_system | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="tag : #linux #navigation
+Exploring the system
+Commands
+
+ls - List direcotory content
+file - Determine file type
+less - View file content
+
+Having more fun with ls
+The ls command is probably the most used command, and for a good reason
+
+
+We can ast ll types of contents in director using ls command
+
+
+for example:
+$ ls Downloads/
+music.mp4 file1.png file2.jpeg
+
+$ ls Downloads/ Documents/
+Downloads:
+music.mp4 file1.png file2.jpeg 
+Documents:
+file1.pdf file2.pdf
+
+
+We can change format of the output to reveal more details">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/exploring_system/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>exploring_system</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        427 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>tag : #linux #navigation</p>
+<h1 id="exploring-the-system">Exploring the system</h1>
+<h2 id="commands">Commands</h2>
+<ul>
+<li>ls - List direcotory content</li>
+<li>file - Determine file type</li>
+<li>less - View file content</li>
+</ul>
+<h3 id="having-more-fun-with-ls">Having more fun with ls</h3>
+<p>The ls command is probably the most used command, and for a good reason</p>
+<ul>
+<li>
+<p>We can ast ll types of contents in director using ls command</p>
+</li>
+<li>
+<p>for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls Downloads/
+</span></span><span style="display:flex;"><span>music.mp4 file1.png file2.jpeg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ ls Downloads/ Documents/
+</span></span><span style="display:flex;"><span>Downloads:
+</span></span><span style="display:flex;"><span>music.mp4 file1.png file2.jpeg 
+</span></span><span style="display:flex;"><span>Documents:
+</span></span><span style="display:flex;"><span>file1.pdf file2.pdf
+</span></span></code></pre></div></li>
+<li>
+<p>We can change format of the output to reveal more details</p>
+<ul>
+<li>By adding &ldquo;-l&rdquo; to the command, we changed the output to the long format</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">56</span>
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Desktop
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Documents
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Music
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Pictures
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Public
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Templates
+</span></span><span style="display:flex;"><span>drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2017-10-26 17:20 Videos
+</span></span></code></pre></div><h4 id="options-are-arguments">Options are Arguments</h4>
+<p>This is very important point aobut how commands work, commands are often followed by one or more options that modeify  their behavior.</p>
+<p>command -options arguments</p>
+<ul>
+<li>Most commands use option which consist of a single character preceded by dash like &ldquo;-l&rdquo;</li>
+<li>Some common example:
+<ul>
+<li><code>ls -lt --reverse</code> list the content of directory <em>-l</em> for long format and <em>-t</em> for sort file according to time and <em>&ndash;reverse</em> reverse the output of command</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Command options like filename in Linux, are case-sensitive</p>
+</blockquote>
+<h3 id="determining-a-files-type-with-file">Determining a File&rsquo;s type with file</h3>
+<p>As we explore the system it will be useful to know what file contains</p>
+<ul>
+<li>Filenames in linux are not required to reflect a file&rsquo;s content.</li>
+<li>A Filename &ldquo;photo.jpg&rdquo; would normally be expect to contain jpeg compressed image , it is not required in linux</li>
+<li>So, to determine type of file we use <code>file filename</code> command</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ file picture.jpg
+</span></span><span style="display:flex;"><span>picture.jpg: JPEG image data, JFIF standard 1.01
+</span></span></code></pre></div><h3 id="viewing-file-contents-with-less">Viewing file contents with less</h3>
+<p>The less command is a program to view text files.</p>
+<ul>
+<li>
+<p>In Linux system there&rsquo;s are various human readable files, which we can read with <em>less</em> command</p>
+</li>
+<li>
+<p>for example:</p>
+<ul>
+<li>if the file is longer than one page,we can scroll up and down to exit <em>less</em>  press the &ldquo;q&rdquo; key</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"></code></pre></div></li>
+</ul>
+<p>$ less /etc/passwd</p>
+<pre tabindex="0"><code>
+### Symbolic Links
+
+A symbolic link contains a text string that is automatically interpreted and followed by the operating system as a path to another file or directory.
+
+`lrwxrwxrwx 1 root root 11 2007-08-11 07:34 libc.so.6 -&gt; libc-2.6.so`
+
+- Notice how first letter of listing &#34;l&#34; seems to have two filenames  this is special kind of files called Symbolic Link
+</code></pre>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

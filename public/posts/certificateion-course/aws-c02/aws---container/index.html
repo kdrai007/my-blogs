@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AWS - Container | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Containers
+checkout
+Docker
+
+
+Docker is software development platform to deploy apps
+
+
+Apps are packaged in containers that can be run on any OS
+
+
+Apps run the same regardless of where they run
+
+Any Machine
+No compatibility issue
+Predictable behavior
+Less work
+Easier to maintain and deploy
+Work with any language, any OS, any technology
+
+
+
+Use cases : Microservices architecture , lift and shift apps from on-premises to aws cloud &hellip;">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/aws---container/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>AWS - Container</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        1 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        173 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="containers">Containers</h1>
+<p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html">checkout</a></p>
+<h2 id="docker">Docker</h2>
+<ul>
+<li>
+<p>Docker is software development platform to deploy apps</p>
+</li>
+<li>
+<p>Apps are packaged in <strong>containers</strong> that can be run on any OS</p>
+</li>
+<li>
+<p>Apps run the same regardless of where they run</p>
+<ul>
+<li>Any Machine</li>
+<li>No compatibility issue</li>
+<li>Predictable behavior</li>
+<li>Less work</li>
+<li>Easier to maintain and deploy</li>
+<li>Work with any language, any OS, any technology</li>
+</ul>
+</li>
+<li>
+<p>Use cases : Microservices architecture , lift and shift apps from on-premises to aws cloud &hellip;</p>
+</li>
+</ul>
+<h3 id="where-are-docker-images-stored">Where are Docker images stored?</h3>
+<ul>
+<li>Docker images are stored in docker repositories</li>
+</ul>
+<ol>
+<li>Docker Hub <code>https://hub.docker.com</code></li>
+<li>Amazon ECR (Amazon Elastic container repository)
+<ul>
+<li>Private Repo</li>
+<li>Public Repo</li>
+</ul>
+</li>
+</ol>
+<h3 id="docker--vs-virtual-machines">Docker  vs Virtual Machines</h3>
+<ul>
+<li>
+<p>Docker is &ldquo;sort of &quot; Virtualization technology , but not exactly</p>
+</li>
+<li>
+<p>Resources are shared with the host =&gt; many container on one server</p>
+</li>
+<li>
+<p>process :-
+![[Pasted image 20240912095410.png]]</p>
+</li>
+</ul>
+<h2 id="docker-containers-management-on-aws">Docker Containers Management on AWS</h2>
+<ul>
+<li>
+<p>Amazon Elastic Container Service (Amazon ECS)</p>
+<ul>
+<li>Amazon&rsquo;s own container platform</li>
+</ul>
+</li>
+<li>
+<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>
+<ul>
+<li>Amazon&rsquo;s managed kubernetes ( open source)</li>
+</ul>
+</li>
+<li>
+<p>AWS Fargate</p>
+<ul>
+<li>Amazon&rsquo;s own serverless container platform</li>
+<li>Works with ECS and EKS</li>
+</ul>
+</li>
+<li>
+<p>Amazon ECS</p>
+<ul>
+<li>Store container images</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

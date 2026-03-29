@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>05-background-jobs | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tags: #system-design #background-jobs #bj
+Background jobs
+Background jobs in system refers to the jobs that are being executed in background, Independently of the main execution flow of the system. These tasks are initiated by system itself, rather than the user or another external agent.
+Background jobs can be used for variety of purposes like:-
+
+Performing maintenance tasks: such as cleaning old data, generating reports, or backing up to the database.
+Processing large amount of data: such as, data import, data export or data transformation
+Sending notifications: sending push messages to users, or sending emails
+Performing long-running computations: like machine learning or data analysis.
+
+Types of background jobs:-">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/system-design/05-background-jobs/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/system-design/">System Design</a>
+    </div>
+    <h1>05-background-jobs</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        393 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tags: #system-design #background-jobs #bj</p>
+<h1 id="background-jobs">Background jobs</h1>
+<p>Background jobs in system refers to the jobs that are being executed in background, Independently of the main execution flow of the system. These tasks are initiated by system itself, rather than the user or another external agent.</p>
+<p>Background jobs can be used for variety of purposes like:-</p>
+<ul>
+<li>Performing maintenance tasks: such as cleaning old data, generating reports, or backing up to the database.</li>
+<li>Processing large amount of data: such as, data import, data export or data transformation</li>
+<li>Sending notifications: sending push messages to users, or sending emails</li>
+<li>Performing long-running computations: like machine learning or data analysis.</li>
+</ul>
+<p>Types of background jobs:-</p>
+<ol>
+<li>Event driven</li>
+<li>Schedule driven</li>
+</ol>
+<h2 id="event-driven">Event driven</h2>
+<p>Event driven tasks are intitiated by triggering  an event, examples :-</p>
+<ul>
+<li>A Ui or another job places message in a queue. The message contains data about an action that has taken place, such as the user subscribe for pro plan. The background task listen for queue and detacts arrival of new message. It reads the messages and uses the data as an input to the background jobs. This pattern is known as asynchronous message-based communication.</li>
+<li>A Ui or any another jobs saves or updates the a value in storage. The background jobs inspect or read the message and use it as the input in the background job.</li>
+<li>A UI or another job make request to an endpoint, such as an API URIs, or an API exposed as a web service. It passes the data that is required to complete the backgrond jobs as part of the request. The endpoint or webservice invokes the background task, which uses the data as its input.</li>
+</ul>
+<h2 id="schedule-driven">Schedule driven</h2>
+<p>Schedule driven invocation uses a timer to start the background task. example,</p>
+<ul>
+<li>A timer that is running locally within the application or as a part of the application&rsquo;s operating system invokes a background task on a regular basis.</li>
+<li>A timer that is running in a differnt application, such as Azure logic Apps, sends a requests to API or webservice on a regular basis . The Api or web-service invokes the background task.</li>
+<li>A seperate process or timer is causes to invoke application&rsquo;s background task once after specific time deley, or at a specific time.</li>
+</ul>
+<p>Typical example of schedule driven  background jobs include batch processing routines(such as updating product list for users based on their recent behaviour).</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

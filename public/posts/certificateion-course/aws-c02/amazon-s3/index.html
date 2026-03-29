@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amazon S3 | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Amazon s3
+checkout
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance.
+
+Amazon s3 is one of the main building blocks of AWS
+It&rsquo;s advertised &lsquo;infinitly scaling&rsquo; storage
+Many website use s3 as there&rsquo;s backbone
+Uses Cases
+
+Backup and stroage
+Diaster recovery
+Archieve
+Hybrid Cloud hosting
+Application hosting
+Media hosting
+Data lakes &amp; big data analytics
+Software delivery
+
+
+
+Amazon s3 - Buckets
+
+Amazon s3 allows people to store objects (files) in &ldquo;buckets&rdquo; (directories)
+Buckets must have globally unique name (across all regions all accounts)
+Buckets are defined at region level
+s3 looks like global service but buckets are created in a region.
+Naming convention
+
+No underscore, No uppercase
+3-63 characters long
+Not an IP
+Must start with lowercase letter or number
+Must not start with prefix xn&ndash;
+Must not end with suffix &ndash;alias
+
+
+
+Amazon s3 - Objects
+
+
+Objects (files) have a key">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>Amazon S3</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        694 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="amazon-s3">Amazon s3</h1>
+<p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">checkout</a></p>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance.</p>
+<ul>
+<li>Amazon s3 is one of the main building blocks of AWS</li>
+<li>It&rsquo;s advertised &lsquo;infinitly scaling&rsquo; storage</li>
+<li>Many website use s3 as there&rsquo;s backbone</li>
+<li><strong>Uses Cases</strong>
+<ul>
+<li>Backup and stroage</li>
+<li>Diaster recovery</li>
+<li>Archieve</li>
+<li>Hybrid Cloud hosting</li>
+<li>Application hosting</li>
+<li>Media hosting</li>
+<li>Data lakes &amp; big data analytics</li>
+<li>Software delivery</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-s3---buckets">Amazon s3 - Buckets</h2>
+<ul>
+<li>Amazon s3 allows people to store objects (files) in &ldquo;buckets&rdquo; (directories)</li>
+<li>Buckets must have globally unique name (across all regions all accounts)</li>
+<li>Buckets are defined at region level</li>
+<li>s3 looks like global service but buckets are created in a region.</li>
+<li>Naming convention
+<ul>
+<li>No underscore, No uppercase</li>
+<li>3-63 characters long</li>
+<li>Not an IP</li>
+<li>Must start with lowercase letter or number</li>
+<li>Must not start with prefix xn&ndash;</li>
+<li>Must not end with suffix &ndash;alias</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-s3---objects">Amazon s3 - Objects</h2>
+<ul>
+<li>
+<p>Objects (files) have a key</p>
+</li>
+<li>
+<p>The <em>Key</em> is the <strong>full</strong> Path:</p>
+<ul>
+<li>s3://my-bucket/<strong>file.txt</strong></li>
+<li>s3://my-bucket/<strong>my_folder/some_folder/file.txt</strong></li>
+</ul>
+</li>
+<li>
+<p>The key is composed with <em>prefix</em> + <strong>object name</strong></p>
+<ul>
+<li>s3://my-bucket/<em>my_folder/some_folder</em>/<strong>file.txt</strong></li>
+</ul>
+</li>
+<li>
+<p>There&rsquo;s no concept of &ldquo;directories&rdquo; in s3 buckets</p>
+</li>
+<li>
+<p>Keys are very long name that contain &ldquo;/&rdquo;</p>
+</li>
+</ul>
+<h3 id="objects-content">Objects (Content.)</h3>
+<ul>
+<li>
+<p>Objects values are the content of the body.</p>
+<ul>
+<li>Max. object size is 5TB (500GB)</li>
+<li>if uploading more than 5GB size of file, must use &ldquo;multi-part upload&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Metadata ( list of text keys / value pairs - system or user metadata)</p>
+</li>
+<li>
+<p>Tags (Unicode key / value pair - up to 10) - useful of security / lifecycle</p>
+</li>
+<li>
+<p>Version Id (If &ldquo;versioning&rdquo; is enabled)</p>
+</li>
+</ul>
+<h2 id="amazon-s3---security">Amazon s3 - Security</h2>
+<ul>
+<li>
+<p><strong>User-Based</strong></p>
+<ul>
+<li><strong>IAM policies</strong> - which API calls should be allowed for a specific user from IAM</li>
+</ul>
+</li>
+<li>
+<p><strong>Resource Based</strong></p>
+<ul>
+<li><strong>Bucket Policies -</strong> bucket wide rules from the s3 console - allow cross account</li>
+<li><strong>Object Access control List (ACL) -</strong> finer grain (can be disabled)</li>
+<li><strong>Bucket Access Control List (ACL) -</strong> less common (can be disabled)</li>
+</ul>
+</li>
+<li>
+<p><strong>Encryption -</strong> encrypt objects in Amazon s3 using encryptions keys</p>
+</li>
+</ul>
+<h2 id="amazon-s3---static-website-hosting">Amazon s3 - Static Website Hosting</h2>
+<ul>
+<li>
+<p>s3 can host static websites and have them accessible on the Internet</p>
+</li>
+<li>
+<p>The website url will be (depending on the region)
+![[Pasted image 20240830123242.png]]</p>
+</li>
+<li>
+<p>If you get <strong>403 forbidden</strong> error , make sure the bucket have public access</p>
+</li>
+</ul>
+<h2 id="amazon-s3---versioning">Amazon s3 - Versioning</h2>
+<ul>
+<li>
+<p>You can version your file in amazon s3</p>
+</li>
+<li>
+<p>It is enabled at the <strong>bucket level</strong></p>
+</li>
+<li>
+<p>Same key overwrite will change the &ldquo;version&rdquo;:1,2,3&hellip;</p>
+</li>
+<li>
+<p>It is best practice to version your bucket</p>
+<ul>
+<li>Protect against unintended delete (ability to restore a version)</li>
+<li>Easy roll back to prev version</li>
+</ul>
+</li>
+<li>
+<p>Note:</p>
+<ul>
+<li>Any file that is not versioned prior before enabling versioning will have version &ldquo;null&rdquo;</li>
+<li>Suspending versioning does not delete prev versions</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-s3---replication">Amazon s3 - Replication</h2>
+<ul>
+<li>
+<p><strong>Cross-Region Replication (CRR):</strong> Replicates objects to a bucket in a different AWS region. This helps improve data durability, availability, and compliance with geographical regulations.</p>
+</li>
+<li>
+<p><strong>Same-Region Replication (SRR):</strong> Replicates objects within the same AWS region, useful for data duplication, backups, or to comply with regulatory requirements.</p>
+</li>
+<li>
+<p><strong>Replicate Existing Objects:</strong> Allows you to replicate existing objects in a bucket (using S3 Batch Replication), not just newly added objects.</p>
+</li>
+<li>
+<p><strong>Replicate Specific Objects:</strong> You can configure replication rules to replicate all objects or filter based on prefixes, tags, or object metadata.</p>
+</li>
+<li>
+<p><strong>Automatic Handling of Object Changes:</strong> Handles changes to objects, such as updates or deletions, based on the replication configuration set for the bucket.</p>
+</li>
+<li>
+<p><strong>Supports Encrypted Objects:</strong> Works with objects encrypted with AWS Key Management Service (KMS) or server-side encryption with Amazon S3-managed keys.</p>
+</li>
+</ul>
+<h3 id="replication---notes">Replication - Notes</h3>
+<ul>
+<li>
+<p>After you enable replication only new objects are replicated</p>
+</li>
+<li>
+<p>Optionally, you can replicate existing object using , <strong>s3 Batch Replication</strong></p>
+</li>
+<li>
+<p>For Delete Operations:</p>
+<ul>
+<li>Can replicate Delete Markers from source to target ( optional setting)</li>
+<li>Deletions with a version ID are not replicated ( to avoid malicious deletes)</li>
+</ul>
+</li>
+<li>
+<p>There is &ldquo;no&rdquo; chaining of replication</p>
+<ul>
+<li>If bucket 1 has replication into bucket 2, which replication into bucket 3</li>
+<li>The objects that are created in bucket 1 are not replicated into bucket 3</li>
+</ul>
+</li>
+</ul>
+<h2 id="amazon-s3---storage-classes">Amazon s3 - Storage Classes</h2>
+<ol>
+<li>Amazon s3 standard - General purpose</li>
+<li>Standard-Infrequent Access</li>
+<li>One Zone Infrequent Access</li>
+<li>Glacier Instant Retrieval</li>
+<li>Glacier Flexible Retrival</li>
+<li>Glacier Deep Archieve</li>
+<li>Intelligent Tiering</li>
+</ol>
+<ul>
+<li>
+<p>Can move between classes manually or using s3 lifecycle configurations</p>
+<p>![[Pasted image 20240901100221.png]]</p>
+</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

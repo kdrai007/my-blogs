@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>04-availablity_patterns | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tags: #system-design #AP
+Availability Patterns
+Availability is measured as a percentage of uptime,and defines the propertion of time that a system is functional and working.
+
+AP help design systems that remain operational even if there&rsquo;s failover, Here are some patterns:-
+
+
+Failover - Switch to standby system when primary system fails
+Replication  - Maintain multiple copies of data in case of failure or any unexpected loss of data.
+Load balancing
+Auto-scaling
+Circuit breaker - Prevent Cascading failtures by stoping calls to failing services.
+Chaos engineering - Intentionally introduce failures to check if everything working correctly
+
+Availability in numbers
+Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/system-design/04-availablity_patterns/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/system-design/">System Design</a>
+    </div>
+    <h1>04-availablity_patterns</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        272 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tags: #system-design #AP</p>
+<h1 id="availability-patterns">Availability Patterns</h1>
+<p>Availability is measured as a percentage of uptime,and defines the propertion of time that a system is functional and working.</p>
+<ul>
+<li>AP help design systems that remain operational even if there&rsquo;s failover, Here are some patterns:-</li>
+</ul>
+<ul>
+<li>Failover - Switch to standby system when primary system fails</li>
+<li>Replication  - Maintain multiple copies of data in case of failure or any unexpected loss of data.</li>
+<li>Load balancing</li>
+<li>Auto-scaling</li>
+<li>Circuit breaker - Prevent Cascading failtures by stoping calls to failing services.</li>
+<li>Chaos engineering - Intentionally introduce failures to check if everything working correctly</li>
+</ul>
+<h2 id="availability-in-numbers">Availability in numbers</h2>
+<p>Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.</p>
+<ul>
+<li>Availability is generally measures in numbers of <code>9s</code></li>
+<li>A service have <code>99.99%</code> availability is described as haveing fours 9s.</li>
+</ul>
+<p><strong>99.99% Availability - Four 9s</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Duration           | Acceptable downtime
+</span></span><span style="display:flex;"><span>-------------      | -------------
+</span></span><span style="display:flex;"><span>Downtime per year  | 52min 9.8s
+</span></span><span style="display:flex;"><span>Downtime per month | 4m 21s
+</span></span><span style="display:flex;"><span>Downtime per week  | 1m 0.5s
+</span></span><span style="display:flex;"><span>Downtime per day   | 8.6s
+</span></span></code></pre></div><h3 id="availability-in-parallel-vs-in-sequence">Availability in parallel vs in sequence</h3>
+<p>The service consists of multiple components prone to failure, A system overall availability depends on whether the components are in sequence or in parallel.</p>
+<h4 id="in-sequence">In Sequence</h4>
+<p>Overall availability  decreases when two components with availability &lt; 100% are in sequence</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Availability(total)= availability(foo) * availability(bar)
+</span></span></code></pre></div><p>If both <code>foo</code> and <code>bar</code> avaiability is <code>99.9%</code> there total availability will be <code>99.8%</code> in sequence.</p>
+<h4 id="in-parallelredundent-systems">In Parallel(Redundent Systems)</h4>
+<p>Overall availability increases when two components with availability &lt; 100% are in parallel.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Availability(total) = 1- ( 1- availability(foo)) * ( 1-availability(bar))
+</span></span></code></pre></div><p><strong>Sequence</strong> -&gt; Decreases availability due to dependence.
+<strong>Parallel</strong> -&gt; Increases availability due to redudency.</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

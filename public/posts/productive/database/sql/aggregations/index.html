@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>aggregations | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aggregations
+aggregations is &lsquo;single value&rsquo; that&rsquo;s derived by combining several other value. Like when we use COUNT to count the total rows of particular column or whole table we basically perform aggregation.
+Why aggregations?
+Data stored in database generally stored in raw form. When we need to calculate additional data from that raw data we use an aggregation.
+for ex,
+Select COUNT(*) from users;
+
+This query will fetch count of total rows in table users.
+
+SUM
+The SUM aggregation function returns the sum of set of values.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/database/sql/aggregations/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/database/sql/">Sql</a>
+    </div>
+    <h1>aggregations</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        471 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="aggregations">Aggregations</h1>
+<p>aggregations is &lsquo;single value&rsquo; that&rsquo;s derived by combining several other value. Like when we use <code>COUNT</code> to count the total rows of particular column or whole table we basically perform aggregation.</p>
+<h4 id="why-aggregations">Why aggregations?</h4>
+<p>Data stored in database generally stored in raw form. When we need to calculate additional data from that raw data we use an aggregation.</p>
+<p>for ex,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">from</span> users;
+</span></span></code></pre></div><ul>
+<li>This query will fetch count of total rows in table <code>users</code>.</li>
+</ul>
+<h3 id="sum">SUM</h3>
+<p>The <code>SUM</code> aggregation function returns the sum of set of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">SUM</span>(salary) <span style="color:#66d9ef">from</span> employees;
+</span></span></code></pre></div><ul>
+<li>This query fetch total <code>SUM</code> of <code>salary</code> column from the table <code>employees</code>.</li>
+</ul>
+<h3 id="max">MAX</h3>
+<p>The <code>MAX</code> as the name suggest, this aggregate function returns max number in set of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">MAX</span>(amount) <span style="color:#66d9ef">from</span> transactions;
+</span></span></code></pre></div><ul>
+<li>This query fetch <code>MAX</code> amount from the column <code>amount</code>.</li>
+</ul>
+<h4 id="min">MIN</h4>
+<p>The <code>MIN</code> function return the minimum number in set of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">min</span>(amount) <span style="color:#66d9ef">Where</span> transactions;
+</span></span></code></pre></div><ul>
+<li></li>
+</ul>
+<h4 id="group-by">GROUP BY</h4>
+<ul>
+<li>There are times when we need to group data based on specific values.</li>
+</ul>
+<p>SQL offers <code>GROUP BY</code> clause that can group rows that have similar values to &ldquo;summary&rdquo; rows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span>  user_id,<span style="color:#66d9ef">sum</span>(amount) <span style="color:#66d9ef">as</span> Balance <span style="color:#66d9ef">from</span> transactions <span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">By</span> use_id;
+</span></span></code></pre></div><ul>
+<li></li>
+</ul>
+<h4 id="avg---average">AVG - Average</h4>
+<p>By using <code>AVG</code> clause of SQL we can fin Average of set of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">AVG</span>(amount) <span style="color:#66d9ef">From</span> Transactions;
+</span></span></code></pre></div><ul>
+<li>This query will return average on all rows of <code>amount</code>.</li>
+</ul>
+<h4 id="having">Having</h4>
+<p>When we need to filter the result of <code>Group By</code> even further, we can use the <code>HAVING</code> clause. The <code>Having</code> Clause specifies a search condition for a group.</p>
+<p>The <code>Having</code> clause is similar to <code>Where</code> cluase, but the difference is that <code>Having</code> clause works on colums that are created using <code>Group By</code>.</p>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> album_id,<span style="color:#66d9ef">Count</span>(id) <span style="color:#66d9ef">AS</span> <span style="color:#66d9ef">count</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">From</span> songs
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">By</span> album_id
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Having</span> <span style="color:#66d9ef">count</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span> ;
+</span></span></code></pre></div><ul>
+<li>This query returns the count of all distinct ids where count is more than 5.</li>
+</ul>
+<details open>
+<summary>Having vs Where in SQL</summary>
+<p>Developers can get confused between <code>Having</code> & <code>Where</code> clause - they're pretty similiar after all.</p>
+<p>The difference is fairly simple:-</p>
+<ul>
+<li>A <code>WHERE</code> condition is applied to all the data in a query before it's grouped by <code>GROUP BY</code> clause.</li>
+<li>A <code>HAVING</code> condition is only applied to the grouped rows that returned after a <code>GROUP BY</code> applied.</li>
+</ul>
+<p>This means that if you want to filter based on the result of using aggregation function. you need to use <code>HAVING</code> clause and vice-versa.</p>
+</details>
+<h4 id="round">ROUND</h4>
+<p>Sometimes we need to round up some numbers, particularly when working with aggregation,so we can use <code>ROUND()</code> clause
+The SQL round function allows you to specify both the value you wish to round and the precision to which you wish to round it.</p>
+<p><code>ROUND(value,precision)</code></p>
+<ul>
+<li>If no precision is given, SQL will round the value to it&rsquo;s nearest whole value:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span> <span style="color:#66d9ef">SELECT</span> song_name,ROUND(<span style="color:#66d9ef">avg</span>(song_length),<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">From</span> songs
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">By</span> song_name
+</span></span><span style="display:flex;"><span>;	 
+</span></span></code></pre></div><ul>
+<li>This query return avg of <code>song_length</code> from the <code>songs</code> table, rounded to single decimal point.</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Route-53 | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Route 53
+checkout
+
+A highly scalable , fully managed authoriative  DNS
+
+Authoriative = the customer (you) can update the DNS records
+
+
+Route 53 is also a domain registrar
+Ability to check health of your resources
+The only AWS service which provides 100% availablity SLA
+53 is reference to traditional DNS port
+
+Route 53 - Records
+
+
+How you want to route traffic to a domain
+
+
+Each records contain :
+
+Domain/sub-domain name - e.g , example.com
+Record Type - e.g , A or AAAA
+Value - e.g, 12.74.23.198
+Routing policy - how route 53 responds to queries
+TTl - amout of time the records cached in DNS Resolvers
+
+
+
+Route 53 supports the following DNS record types :">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/route-53/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>Route-53</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        544 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="route-53">Route 53</h2>
+<p><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html">checkout</a></p>
+<ul>
+<li>A highly scalable , fully managed authoriative  DNS
+<ul>
+<li>Authoriative = the customer (you) can update the DNS records</li>
+</ul>
+</li>
+<li>Route 53 is also a domain registrar</li>
+<li>Ability to check health of your resources</li>
+<li>The only AWS service which provides 100% availablity SLA</li>
+<li>53 is reference to traditional DNS port</li>
+</ul>
+<h3 id="route-53---records">Route 53 - Records</h3>
+<ul>
+<li>
+<p>How you want to route traffic to a domain</p>
+</li>
+<li>
+<p>Each records contain :</p>
+<ul>
+<li><strong>Domain/sub-domain</strong> name - e.g , example.com</li>
+<li><strong>Record Type -</strong> e.g , A or AAAA</li>
+<li><strong>Value -</strong> e.g, 12.74.23.198</li>
+<li><strong>Routing policy -</strong> how route 53 responds to queries</li>
+<li><strong>TTl</strong> - amout of time the records cached in DNS Resolvers</li>
+</ul>
+</li>
+<li>
+<p>Route 53 supports the following DNS record types :</p>
+<ul>
+<li>(Must know) A / AAAA / CNAME / NS</li>
+<li>(Advanced) CAA / DS / MX / NAPTR / PTR / SOA / TXT / SPF / SRV</li>
+</ul>
+</li>
+</ul>
+<h4 id="route--53---records-types">Route  53 - Records types</h4>
+<ul>
+<li>
+<p><strong>A -</strong> Maps a hostname to ipv4</p>
+</li>
+<li>
+<p><strong>AAAA -</strong> Maps a hostname to ipv6</p>
+</li>
+<li>
+<p><strong>CNAME -</strong> Maps a hostname to another hostname</p>
+<ul>
+<li>The target is the domain name whch have A  or AAAA record</li>
+<li>Can&rsquo;t create a CNAME record for the top node of a DNS namespace ( Zone Apex)</li>
+<li>Example : you can&rsquo;t create for example.com ,but you can create for <a href="https://www.example.com">www.example.com</a></li>
+</ul>
+</li>
+<li>
+<p><strong>NS -</strong> Name Servers for the Hosted Zone</p>
+<ul>
+<li>Control how traffic is routed for a domain</li>
+</ul>
+</li>
+</ul>
+<h4 id="route-53---records-ttl--time-to-live">Route 53 - Records TTL ( Time To Live)</h4>
+<ul>
+<li>
+<p><strong>High TTL</strong> e.g, 24 Hour</p>
+<ul>
+<li>Less traffic on route 53</li>
+<li>possibly outdated records</li>
+</ul>
+</li>
+<li>
+<p><strong>Low TTl</strong> e,g, 60 sec</p>
+<ul>
+<li>High traffic on route 53</li>
+<li>updated records</li>
+<li>Easy to change records</li>
+</ul>
+</li>
+<li>
+<p>Expect for alias records, TTL is mandatory for all each DNS record</p>
+</li>
+</ul>
+<h4 id="cname-vs-alias">CNAME vs Alias</h4>
+<ul>
+<li>
+<p>AWS resources (Load balancer, cloudFront . . .) expose an AWS hostname :</p>
+<ul>
+<li><em>&hellip;aws.amazon418.com</em> and you want <em>app.example.com</em></li>
+</ul>
+</li>
+<li>
+<p>CNAME :</p>
+<ul>
+<li>Points a hostname to any other hostname (app.domain.com =&gt; app.example.com)</li>
+<li><strong>Only for Non Root Domain</strong> ( aka app.domain.com)</li>
+</ul>
+</li>
+<li>
+<p>Alias :</p>
+<ul>
+<li>Points a hostname to aws resource (app.domain.com =&gt; app.example.com)</li>
+<li><strong>Works for Root and None Root Domain</strong> (aka domain.com)</li>
+<li>Free of charge</li>
+<li>Native health check</li>
+</ul>
+</li>
+</ul>
+<h4 id="route-53---alias-records">Route 53 - Alias Records</h4>
+<ul>
+<li>Maps a hostname to aws resource</li>
+<li>An extension to Dns functionality</li>
+<li>Automatically recognizes chagnes in the resource &rsquo;s Ip Address</li>
+<li>Unlike CNAME , it can be used for the top node of a DNS namespace (Zone Apex) e.g example.com</li>
+<li>Alias record is always type A/ AAAA for aws resources (ipv4 / ipv6)</li>
+<li><em>Can&rsquo;t set TTL</em></li>
+</ul>
+<h4 id="route-53---alias-records-target">Route 53 - Alias Records Target</h4>
+<ul>
+<li><em>You can not set as Alias record for an EC2 DNS name</em></li>
+</ul>
+<p>![[Pasted image 20240814170034.png]]</p>
+<h3 id="route-53---hosted-zone">Route 53 - Hosted Zone</h3>
+<ul>
+<li>
+<p>A container for record that route traffic to domain and their subdomain</p>
+</li>
+<li>
+<p><strong>Public Hosted Zones -</strong> contains records that specify how to route traffic on the internet (public domain names)
+application1.publicDomain.com
+![[Pasted image 20240813170418.png]]</p>
+</li>
+<li>
+<p><strong>Private Hosted Zones -</strong> contains records that specify how to route traffic within one or more VPC (private domain name)
+application.privateDomain.internal
+![[Pasted image 20240813170520.png]]</p>
+</li>
+</ul>
+<h3 id="dns-terminologies">DNS Terminologies</h3>
+<ul>
+<li>
+<p><strong>Domain Registrar</strong> : Amazon route 53 , goDaddy&hellip;.</p>
+</li>
+<li>
+<p><strong>DNS Records</strong> : A, AAAA, CNAME, NS, &hellip;</p>
+</li>
+<li>
+<p><strong>Zone File :</strong> contains DNS records</p>
+</li>
+<li>
+<p><strong>Name Server</strong> : resolves Dns Query ( Authoritative or Non-Authoritative)</p>
+</li>
+<li>
+<p><strong>Top Level Domain (TLD)</strong> : .com , .in , .org , .dev &hellip;</p>
+<p>![[Pasted image 20240812205339.png]]</p>
+</li>
+</ul>
+<h3 id="how-dns-works">How DNS Works</h3>
+<p>![[Pasted image 20240813114314.png]]</p>
+<hr>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

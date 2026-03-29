@@ -1,0 +1,34 @@
+{{ $pag := .Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination" aria-label="Pagination">
+  {{/* Previous */}}
+  {{ if $pag.HasPrev }}
+    <a href="{{ $pag.Prev.URL }}" aria-label="Previous page">← Prev</a>
+  {{ else }}
+    <span class="disabled">← Prev</span>
+  {{ end }}
+
+  {{/* Page Numbers */}}
+  {{ $adjacentPages := 2 }}
+  {{ $lowerLimit := math.Add $adjacentPages 1 }}
+  {{ $upperLimit := math.Sub $pag.TotalPages $adjacentPages }}
+
+  {{ range $pag.Pagers }}
+    {{ $currentPage := . }}
+    {{ if eq $currentPage.PageNumber $pag.PageNumber }}
+      <span class="active">{{ $currentPage.PageNumber }}</span>
+    {{ else if or (le $currentPage.PageNumber $lowerLimit) (ge $currentPage.PageNumber $upperLimit) }}
+      <a href="{{ $currentPage.URL }}">{{ $currentPage.PageNumber }}</a>
+    {{ else if or (eq $currentPage.PageNumber (math.Add $lowerLimit 1)) (eq $currentPage.PageNumber (math.Sub $upperLimit 1)) }}
+      <span class="disabled">…</span>
+    {{ end }}
+  {{ end }}
+
+  {{/* Next */}}
+  {{ if $pag.HasNext }}
+    <a href="{{ $pag.Next.URL }}" aria-label="Next page">Next →</a>
+  {{ else }}
+    <span class="disabled">Next →</span>
+  {{ end }}
+</nav>
+{{ end }}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>processes | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #commands #processes #crash
+Processes
+The OS manages processes through scheduling, memory allocation, and communication. Processes have unique IDs (PIDs) and can be parent or child processes. They run in user space, and system calls interact with the kernel. Concurrency is handled via multitasking, with processes either running, waiting, or stopped. Processes can be controlled using commands like ps, top, and  kill.
+Command used
+
+ps - Report a snapshot of current processes
+top - Displays tasks
+jobs  - List active jobs
+bg - Place a job in background
+fg - Place a job in foreground
+kill - Send a signal to a process
+killall - kill process by name
+shutdown - shutdown or reboot the system
+
+How Proccess works
+When a system starts up, the kernal initiates a few of its own activities as processes and launches a program called init.">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/processes/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>processes</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        1042 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #commands #processes #crash</p>
+<h1 id="processes">Processes</h1>
+<p>The OS manages processes through scheduling, memory allocation, and communication. Processes have unique IDs (PIDs) and can be parent or child processes. They run in user space, and system calls interact with the kernel. Concurrency is handled via multitasking, with processes either running, waiting, or stopped. Processes can be controlled using commands like <code>ps</code>, <code>top</code>, and  <code>kill</code>.</p>
+<h2 id="command-used">Command used</h2>
+<ol>
+<li>ps - Report a snapshot of current processes</li>
+<li>top - Displays tasks</li>
+<li>jobs  - List active jobs</li>
+<li>bg - Place a job in background</li>
+<li>fg - Place a job in foreground</li>
+<li>kill - Send a signal to a process</li>
+<li>killall - kill process by name</li>
+<li>shutdown - shutdown or reboot the system</li>
+</ol>
+<h3 id="how-proccess-works">How Proccess works</h3>
+<p>When a system starts up, the kernal initiates a few of its own activities as processes and launches a program called <code>init</code>.</p>
+<ul>
+<li><code>init</code> runs a series of shell scripts(located in <code>/etc</code>) called init scripts, which starts all the system services.</li>
+<li>The fact the a program can launch another program is expressed in the process scheme as a <em>parent process</em> producing <em>child process</em></li>
+<li>The kernal maintain information about each process to hlep keep things organized.
+<ul>
+<li>Each process is assigned with process ID(PID).</li>
+<li>Pid is assigned in acending order,with <code>init</code> always getting PID(1)</li>
+</ul>
+</li>
+</ul>
+<h4 id="viewing-processes-command-used-ps">Viewing Processes (command used <code>ps</code>)</h4>
+<p>The most common command to view process is <code>ps</code>.</p>
+<ul>
+<li>The <code>ps</code> command have serveral options but simplest form is used like this:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ps
+</span></span><span style="display:flex;"><span>PID TTY TIME CMD
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5198</span> pts/1 00:00:00 bash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10129</span> pts/1 00:00:00 ps
+</span></span></code></pre></div><ul>
+<li>The result in this example, output of <code>ps</code> command is list of two processes <code>bash</code> and <code>ps</code> with their PID number</li>
+<li>By default ps command doesn&rsquo;t give much info on processes, To see more we have to give more arguments</li>
+<li>To see every process you own, you can use this comand:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ps x
+</span></span><span style="display:flex;"><span> PID TTY      STAT   TIME COMMAND
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">818</span> tty1     Ssl+  21:15 sway
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">857</span> tty1     S+     0:00 swaybg -o eDP-1 -i /home/kdrai/Downloads/bg.jpg -m fit -o HDMI-A-1 -i /home/kdrai/Downloads/bg.jpg -m fit -o * -i /home/kdrai/Downloads/bg.jpg -m fit
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">874</span> tty1     Sl+    1:11 waybar -b bar-0
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">876</span> ?        S      0:00 mako
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">878</span> ?        S      0:00 wl-paste -t text --watch clipman store --no-persist
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">895</span> ?        Ssl    0:00 /usr/lib/at-spi-bus-launcher
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">901</span> ?        S      0:00 /usr/bin/dbus-broker-launch --config-file<span style="color:#f92672">=</span>/usr/share/defaults/at-spi2/accessibility.conf --scope user
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">902</span> ?        S      0:00 dbus-broker --log <span style="color:#ae81ff">4</span> --controller <span style="color:#ae81ff">9</span> --machine-id 23cd258233c646a893b5daa1e9d21502 --max-bytes <span style="color:#ae81ff">100000000000000</span> --max-fds <span style="color:#ae81ff">6400000</span> --max-matches <span style="color:#ae81ff">5000000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">903</span> ?        Ssl    0:00 /usr/lib/xdg-desktop-portal
+</span></span><span style="display:flex;"><span>and many more...
+</span></span></code></pre></div><ul>
+<li>Adding <code>x</code> argument tells <code>ps</code> to show all our proceses regardless of what terminal they are controlled by.</li>
+<li>The presence of <code>?</code> in the TTy column indicates there&rsquo;s no controlling terminal.</li>
+</ul>
+<h5 id="viewing-processes-dynamically-with-top">Viewing Processes dynamically with <code>top</code></h5>
+<p>The <code>top</code> command displays a continously updating(by default every 5 seconds) display of the system process listed in order of process activity.</p>
+<ul>
+<li>The fact that <code>top</code> commands come from the top program is used to &ldquo;top&rdquo; process on the system.</li>
+</ul>
+<h3 id="controlling-processes">Controlling Processes</h3>
+<p>Let&rsquo;s observe what will happen when we run <code>kwrite</code> command in terminal</p>
+<ul>
+<li>first enter the <code>kwrite</code> command and verify that the program is running</li>
+<li>Next, return to the terminal window then press <code>ctrl+c</code></li>
+<li>In a terminal, pressing <code>ctrl+c</code>, <em>interrupts</em> a program</li>
+<li>After the <code>ctrl+c</code> key is pressed <code>kwrite</code> program will closed and shell prompt returned.</li>
+</ul>
+<h4 id="putting-a-process-in-the-background">Putting a Process in the Background</h4>
+<p>Let&rsquo;s say we want shell prompt without terminating or interrupting a program</p>
+<ul>
+<li>We can do this by putting <code>&amp;</code> after the program.</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ kwrite &amp;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">28236</span>
+</span></span></code></pre></div><ul>
+<li>the shell will return PID number means Program ID</li>
+<li>We can use this PID for various purpose like, <code>kill</code> this program with,</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>kill <span style="color:#ae81ff">28236</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>  + <span style="color:#ae81ff">113380</span> <span style="color:#66d9ef">done</span>       kwrite
+</span></span></code></pre></div><h4 id="rreturning-a-process-in-the-foreground">Rreturning a Process in the Foreground</h4>
+<p>A proccess in background is immune from terminal keyboard intput,including any try to interrupts with <code>ctrl+c</code></p>
+<ul>
+<li>To return a program in foreground use,</li>
+</ul>
+<p><code>$ fg %1</code></p>
+<ul>
+<li>and we can put it back to background using</li>
+</ul>
+<p><code>$ bg %1</code></p>
+<h4 id="stopping-pausing-a-process">Stopping (Pausing) a Process</h4>
+<p>Sometimes we&rsquo;ll want to stop a process without terminating it.</p>
+<ul>
+<li>To stop a foreground process use <code>ctrl+z</code>  to put the process in background.</li>
+<li>use <code>fg</code> to put it back in foreground</li>
+</ul>
+<h3 id="signals">Signals</h3>
+<p>The <code>kill</code> command is used to &ldquo;kill&rdquo; processes.</p>
+<ul>
+<li>This allows us to terminate program that need killing</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ xlogo &amp;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">28401</span>
+</span></span><span style="display:flex;"><span>$ kill <span style="color:#ae81ff">28401</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>+ Terminated xlogo
+</span></span></code></pre></div><p>While this is all very straightforward, there is more to it than that. the <code>kill</code> command doesn&rsquo;t exactly kill processes: rather it sends them a <em>signals</em></p>
+<ul>
+<li>
+<p>Signals are one of the serveral ways a os(operating system) communicates with programs</p>
+</li>
+<li>
+<p>We have already seen signals in action with the use of <code>ctrl+c</code>, <code>ctrl+z</code></p>
+<ul>
+<li>When terminal receive one of these keystrokes, It sends a signal to the program in foreground</li>
+<li>In the case of <code>ctrl+c</code>,a signal called INT(interrupt) is sent.</li>
+<li>with <code>ctlr+z</code>, a signal called TSTP (terminal stop) is sent.</li>
+</ul>
+</li>
+<li>
+<p>Programs, in turn, &ldquo;listen&rdquo; for signals and may act upon them as they are received.</p>
+</li>
+<li>
+<p><strong>Comman Signals</strong> :-</p>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>HUP</td>
+          <td>HangUP</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>QUIT</td>
+          <td>quite</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>INT</td>
+          <td>Interrupt</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>KILL</td>
+          <td>Kill, this signal is special directly goes to kernal, use it as a last resort</td>
+      </tr>
+      <tr>
+          <td>15</td>
+          <td>TERM</td>
+          <td>Terminate</td>
+      </tr>
+      <tr>
+          <td>18</td>
+          <td>CONT</td>
+          <td>Continue</td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>STOP</td>
+          <td>stop</td>
+      </tr>
+      <tr>
+          <td>20</td>
+          <td>TSTP</td>
+          <td>Terminal Stop</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>This, command will show all available signals</li>
+</ul>
+<p><code>$ kill -l</code></p>
+<p>let&rsquo;s use the kill command with signals,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ xlogo &amp;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">13546</span>
+</span></span><span style="display:flex;"><span>$ kill -1 <span style="color:#ae81ff">13546</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>+ Hangup xlogo
+</span></span></code></pre></div><h4 id="sending-signals-to-multiple-processes-with-killall">Sending signals to multiple processes with <code>killall</code></h4>
+<p>It&rsquo;s also possible to send signals to multiple processes with <code>killall</code> command.</p>
+<p>Here&rsquo;s the syntax,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ kwrite &amp;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">18801</span>
+</span></span><span style="display:flex;"><span>$ kwrite &amp;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">18802</span>
+</span></span><span style="display:flex;"><span>$ killall kwrite
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>- Terminated xlogo
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>+ Terminated xlogo
+</span></span></code></pre></div><h3 id="shutting-down-the-system">Shutting Down the System.</h3>
+<p>The process of shutting down the system require to first kill or close all running proccess, as well as performing some housekeeping chores(like syncing all of the mounted file systems) before system poweroff.</p>
+<ul>
+<li>
+<p>There are four commands that can perform these operations like,</p>
+<ul>
+<li><code>halt</code>,<code>reboot</code>,<code>poweroff</code> and <code>shutdown</code></li>
+<li>here&rsquo;s an example,</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ sudo poweroff
+</span></span><span style="display:flex;"><span>$ sudo reboot
+</span></span><span style="display:flex;"><span>$ sudo shutdown -h now
+</span></span></code></pre></div></li>
+<li>
+<p>More Process related commands</p>
+</li>
+<li>
+<p><code>pstree</code> -&gt; Outputs a process list arranged in a tree-like pattern showing the parent-child relationships between processes.</p>
+</li>
+<li>
+<p><code>vmstat</code> -&gt; Outputs a snapshot of system resource usage including, memory, swap, and disk I/O. To see a continuous display, follow the command with a time delay (in seconds) for updates.</p>
+</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

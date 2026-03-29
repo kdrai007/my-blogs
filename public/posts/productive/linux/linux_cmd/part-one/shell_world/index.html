@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>shell_world | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #commands #echo
+Seeing the world as Shell Sees it
+Used Commands
+
+echo - Display a line of text
+
+Expansion
+Each time when we type command and press Enter key, bash performs a several subsitution on out text before it carries out our command, for instance when we use * character some commands work something else because * or wildcards sequence can have lot of meaning to the shell. The process to make this happen is called expansion">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/shell_world/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>shell_world</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        785 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #commands #echo</p>
+<h1 id="seeing-the-world-as-shell-sees-it">Seeing the world as Shell Sees it</h1>
+<h2 id="used-commands">Used Commands</h2>
+<ul>
+<li>echo - Display a line of text</li>
+</ul>
+<h3 id="expansion">Expansion</h3>
+<p>Each time when we type command and press Enter key, <code>bash</code> performs a several subsitution on out text before it carries out our command, for instance when we use * character some commands work something else because * or wildcards sequence can have lot of meaning to the shell. The process to make this happen is called expansion</p>
+<ul>
+<li><code>echo</code> is very simple command it prints it&rsquo;s text argument on standard output</li>
+</ul>
+<p><code>$ echo this is a test</code>
+<code>output: this is a test</code></p>
+<p>let&rsquo;s try another example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>echo *
+</span></span><span style="display:flex;"><span>Desktop Downloads Documents user notes codes
+</span></span></code></pre></div><h4 id="pathname-expansion">pathname expansion</h4>
+<p>The mechnism by which wildcards work is called <strong>pathname expansion</strong></p>
+<p>for example,</p>
+<p><code>$ echo d*</code></p>
+<ul>
+<li>This command will through all the directory with  small case <code>d</code>  letter</li>
+</ul>
+<p>and this,</p>
+<p><code>$ echo *s</code></p>
+<ul>
+<li>This command will through all directory that&rsquo;s end with small case <code>s</code></li>
+</ul>
+<p>or even this:</p>
+<p><code>$ echo [[:upper:]]*</code></p>
+<ul>
+<li>This command will through all direcotry with upper case</li>
+</ul>
+<h4 id="pathname-expansion-with-hidden-files">pathname expansion with hidden files</h4>
+<p>As we know files with period <code>.</code> is hidden in linux pathname expansion also respects that</p>
+<p>for example,</p>
+<p><code>$ echo .[!.]*</code></p>
+<ul>
+<li>This command will through every directory with <code>.</code> as a first character</li>
+</ul>
+<h4 id="arithmetic--expansion">Arithmetic  expansion</h4>
+<p>The shell allows us to be performed by <em>expansion</em></p>
+<p>for example,</p>
+<p><code>$ echo $((2+2))</code>
+<code>output: 4</code></p>
+<h4 id="brace-expansion">Brace Expansion</h4>
+<p>Perhpas the strangest expression is called brace expression.With it we can create multiple text strings from a pattern containing braces</p>
+<p>for example,</p>
+<p><code>$ echo Front-{A,B,C}-Back</code>
+<code>output: Front-A-Back Front-B-Back Front-C-Back</code></p>
+<ul>
+<li>Patterns to be braces extended may contain leader portion called <em>preamble</em>, and a trailing portion called <em>postscript</em></li>
+<li>The braces expression may contain either a comma seperated list of strings or a range of integers or single characters</li>
+</ul>
+<p>example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ echo <span style="color:#f92672">{</span>1..15<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">11</span> <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">13</span> <span style="color:#ae81ff">14</span> <span style="color:#ae81ff">15</span>
+</span></span></code></pre></div><ul>
+<li>Here is a range of letters in reverse order:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ echo <span style="color:#f92672">{</span>Z..A<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+</span></span></code></pre></div><ul>
+<li>Brace expansion can be nested</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>echo a<span style="color:#f92672">{</span>A<span style="color:#f92672">{</span>1,2<span style="color:#f92672">}</span>,B<span style="color:#f92672">{</span>3,4<span style="color:#f92672">}}</span>b
+</span></span><span style="display:flex;"><span>aA1b aA2b aB3b aB4b
+</span></span></code></pre></div><ul>
+<li>In practical case we can use brace expansion in multiple ways</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ mkdir <span style="color:#f92672">{</span>2009..2010<span style="color:#f92672">}</span>-<span style="color:#f92672">{</span>1..12<span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>This command will create directory for year 2009 to 2010 december</li>
+</ul>
+<h4 id="parameter-expansion">Parameter expansion</h4>
+<p>Parameter expansion is featurs which manupulate string and variables using special character and operators</p>
+<ul>
+<li>It&rsquo;s a feature that is more useful in creating scripts than directly on command line</li>
+<li>Some common examples of parameter expansion include:
+<ul>
+<li><code>${var}</code> expands the value of the variable <code>var</code>.</li>
+<li><code>${var:-default}</code> expands the value of <code>var</code>, but if it is unset or empty, it expands to default.</li>
+<li><code>${var:=default}</code> expands the value of <code>var</code>, but if it is unset or empty, it expands to default and assigns default to var</li>
+<li><code>${var:+value}</code> expands to value if <code>var</code> is set and not empty, otherwise it expands to nothing</li>
+</ul>
+</li>
+<li>These are just some examples</li>
+</ul>
+<p>for example,</p>
+<p><code>$ echo $USER</code>
+<code>output: userName</code></p>
+<ul>
+<li>These <code>$USER</code> are variables which saved in system in chucks these are called <em>environment variables</em></li>
+<li>We can list of vars using this:</li>
+</ul>
+<p><code>$ printenv|less</code></p>
+<h4 id="command-subsitution">Command subsitution</h4>
+<p>Command subsitution allows us to use output of a command as an expansion.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -l <span style="color:#66d9ef">$(</span>which docker<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>-rwxr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">27136560</span> Sep <span style="color:#ae81ff">14</span> 02:48 /usr/bin/docker
+</span></span></code></pre></div><ul>
+<li>A little advance example can be:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ file <span style="color:#66d9ef">$(</span>ls -l /usr/bin/* | grep zip<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>/usr/bin/bunzip2: symbolic link to <span style="color:#e6db74">&#39;bzip2&#39;</span> 
+</span></span><span style="display:flex;"><span>/usr/bin/bzip2: ELF 32-bit LSB executable, Intel 80386,
+</span></span><span style="display:flex;"><span>version <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>SYSV<span style="color:#f92672">)</span>, dynamically linked <span style="color:#f92672">(</span>uses shared libs<span style="color:#f92672">)</span>, <span style="color:#66d9ef">for</span>
+</span></span><span style="display:flex;"><span>GNU/Linux 2.6.9, stripped
+</span></span><span style="display:flex;"><span>/usr/bin/bzip2recover: ELF 32-bit LSB executable, Intel 80386,
+</span></span><span style="display:flex;"><span>version <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>SYSV<span style="color:#f92672">)</span>, dynamically linked <span style="color:#f92672">(</span>uses shared libs<span style="color:#f92672">)</span>, <span style="color:#66d9ef">for</span>
+</span></span><span style="display:flex;"><span>GNU/Linux 2.6.9, stripped
+</span></span><span style="display:flex;"><span>/usr/bin/funzip:ELF 32-bit LSB executable, Intel <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><ul>
+<li>output is just partial, it&rsquo;s originally very long</li>
+<li>In this example output of pipeline become argument list for <code>file</code> command</li>
+</ul>
+<h3 id="quotes">Quotes</h3>
+<p>quotes are used in command expansion to control how the shell interprets special characters and spaces.</p>
+<ul>
+<li>Single quotes <code>(')</code> preserve the literal value of each character within the quotes.</li>
+<li>Double quotes <code>(&quot;)</code> allow for variable expansion and command substitution while preserving spaces.</li>
+<li>Backticks <code>(</code>)` are used for command substitution, replacing the command with its output.</li>
+<li>Double quotes with a leading <code>$</code> (&quot;$&quot;) are used for parameter expansion, expanding variables or special parameters.</li>
+<li>Double quotes with a leading <code>@</code> (&quot;@&hellip;&quot;) are used for array expansion, expanding each element of an array.</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ echo text ~/*.txt <span style="color:#f92672">{</span>a,b<span style="color:#f92672">}</span> <span style="color:#66d9ef">$(</span>echo foo<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$((</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span> $USER
+</span></span><span style="display:flex;"><span>text /home/me/ls-output.txt a b foo <span style="color:#ae81ff">4</span> me
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;text ~/*.txt {a,b} </span><span style="color:#66d9ef">$(</span>echo foo<span style="color:#66d9ef">)</span><span style="color:#e6db74"> </span><span style="color:#66d9ef">$((</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span><span style="color:#e6db74"> </span>$USER<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>text ~/*.txt <span style="color:#f92672">{</span>a,b<span style="color:#f92672">}</span> foo <span style="color:#ae81ff">4</span> me
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#39;text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER&#39;</span>
+</span></span><span style="display:flex;"><span>text ~/*.txt <span style="color:#f92672">{</span>a,b<span style="color:#f92672">}</span> <span style="color:#66d9ef">$(</span>echo foo<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$((</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span> $USER
+</span></span></code></pre></div>
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

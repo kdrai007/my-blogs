@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on My Blog</title>
+    <link>http://localhost:34481/posts/myself/projects/</link>
+    <description>Recent content in Projects on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:34481/posts/myself/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manage backup</title>
+      <link>http://localhost:34481/posts/myself/projects/manage-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/projects/manage-backup/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Basic idea is this I will use rclone to backup my folder onto cloud and automate it with bash&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>personal_blog</title>
+      <link>http://localhost:34481/posts/myself/projects/personal_blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/projects/personal_blog/</guid>
+      <description>&lt;h1 id=&#34;personal-blog&#34;&gt;Personal Blog&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;day-1 : Created minimal backend for blog curd operations&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technology used: Gin for manages routes, Gorm for managing database operations&lt;/li&gt;&#xA;&lt;li&gt;Researched about gin and gorm for their basic usage&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;day-2 : Started Creating Frontend for managing UI of blogs&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technology used: Vite@React framework for UI with typescript&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;day-3 : Started Creating routes for frontend&#xA;Technology used: react-router-dom for managing routes in frontend side&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;day-4 : Created minimal responsive looking site&#xA;Technology used: juse normal css&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>poll-app</title>
+      <link>http://localhost:34481/posts/myself/projects/poll-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/projects/poll-app/</guid>
+      <description>&lt;h2 id=&#34;plan&#34;&gt;Plan&lt;/h2&gt;&#xA;&lt;p&gt;A simple polling app where user can create poll and add different different users and ejoy polls in &lt;em&gt;realtime&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;date---18-1-2025&#34;&gt;Date - 18-1-2025&lt;/h3&gt;&#xA;&lt;p&gt;Day-1 Already there&amp;rsquo;s setup initial setup  for frontend  and for backend i&amp;rsquo;am gonna use &lt;strong&gt;Go-lang&lt;/strong&gt; with &lt;strong&gt;gorilla/websocket&lt;/strong&gt;&#xA;- [x] Setup backend and frontend&#xA;- [ ] Creating module of weboscket in golang-backend.&lt;/p&gt;&#xA;&lt;p&gt;Day-2 setup are ready first I&amp;rsquo;am going to work on backend creating modules for websocket and stuff&#xA;day-3 Learned about basics of goroutine for managing multiple rooms in backend.&#xA;day-4 Did nothing&#xA;day-5&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>url-shortning</title>
+      <link>http://localhost:34481/posts/myself/projects/url-shortning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:34481/posts/myself/projects/url-shortning/</guid>
+      <description>&lt;h1 id=&#34;url-shortning-service&#34;&gt;Url Shortning Service&lt;/h1&gt;&#xA;&lt;p&gt;&amp;ndash;Database-password: y8%PqpEg96krYc4N&lt;/p&gt;&#xA;&lt;h3 id=&#34;date-31-dec2024&#34;&gt;Date: 31 dec,2024&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Day-1&lt;/li&gt;&#xA;&lt;li&gt;Day-2&lt;/li&gt;&#xA;&lt;li&gt;Day-3&lt;/li&gt;&#xA;&lt;li&gt;Day-4&lt;/li&gt;&#xA;&lt;li&gt;Day-5&lt;/li&gt;&#xA;&lt;li&gt;Day-6&lt;/li&gt;&#xA;&lt;li&gt;Day-7&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

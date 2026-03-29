@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AWS- Beanstalk | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Date  : 2024-09-21
+Links :
+Beanstalk
+Overview
+
+Elastic Beanstalk is a developer centric view of deploying an application on AWS
+It uses all the component&rsquo;s we&rsquo;ve seen before: EC2,ASG,ELB,RDS&hellip;
+Managed Service
+
+Automatically handles capacity provisioning ,load balanceing, scaling, application health monitoring, instance configuration&hellip;
+Just the application code is the responsbility of developer
+
+
+You still have full control over configuration
+Beanstalk is free but you pay for underlying instances
+
+AWS Beanstalk - Components
+
+
+Application : collection of Elastic Beanstalk components (enviroments, versions, configurations&hellip;)">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/aws--beanstalk/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>AWS- Beanstalk</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        482 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p><strong>Date</strong>  : 2024-09-21
+<strong>Links</strong> :</p>
+<h1 id="beanstalk">Beanstalk</h1>
+<h4 id="overview">Overview</h4>
+<ul>
+<li>Elastic Beanstalk is a developer centric view of deploying an application on AWS</li>
+<li>It uses all the component&rsquo;s we&rsquo;ve seen before: EC2,ASG,ELB,RDS&hellip;</li>
+<li>Managed Service
+<ul>
+<li>Automatically handles capacity provisioning ,load balanceing, scaling, application health monitoring, instance configuration&hellip;</li>
+<li>Just the application code is the responsbility of developer</li>
+</ul>
+</li>
+<li>You still have full control over configuration</li>
+<li>Beanstalk is free but you pay for underlying instances</li>
+</ul>
+<h3 id="aws-beanstalk---components">AWS Beanstalk - Components</h3>
+<ul>
+<li>
+<p><strong>Application</strong> : collection of Elastic Beanstalk components (enviroments, versions, configurations&hellip;)</p>
+</li>
+<li>
+<p><strong>Application version</strong> : an iteration of your application code</p>
+</li>
+<li>
+<p><strong>Environment</strong> :</p>
+<ul>
+<li>Collection of aws resources running on application version(only one application version at a time)</li>
+<li>Tiers : Web Server Environment Tier &amp; Worker Environment Tier</li>
+<li>You can create multiple environments(dev,test,prodction&hellip;)
+![[Pasted image 20240921174632.png]]</li>
+</ul>
+<p>![[Pasted image 20240921174751.png]]</p>
+</li>
+</ul>
+<h3 id="aws-beanstalk---web-server--worker-tier">AWS Beanstalk - Web Server &amp; Worker Tier</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Web service Tier</th>
+          <th>Worker Tier</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Handles</td>
+          <td>http/https requests(web traffic)</td>
+          <td>Background tasks (async jobs)</td>
+      </tr>
+      <tr>
+          <td>Purpose</td>
+          <td>Serving web application and apis</td>
+          <td>processing jobs from Queue</td>
+      </tr>
+      <tr>
+          <td>Scaling</td>
+          <td>Based on traffic (incoming requests)</td>
+          <td>Based on SQS queue length ( number of jobs)</td>
+      </tr>
+      <tr>
+          <td>Example<br></td>
+          <td>E-commerce site, api service</td>
+          <td>Image resizing, report generations</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="beanstalk-deployment-options-for-updates">Beanstalk Deployment Options for Updates</h3>
+<ul>
+<li><strong>All at once( deply all in one go) -</strong> fastest, but instances aren&rsquo;t available to serve for a bit(downtime)</li>
+<li><strong>Rolling -</strong> update a few instances at a time(bucket), and then move onto the next bucket once the first bucket is healthy</li>
+<li><strong>Rolling with additional batches -</strong> like rolling, but spins up new instances to move the batch(so that old application is still available)</li>
+<li><strong>Immutable -</strong> spins up new instances in a new ASG, deploys version to these instances, and then swaps all the instances when everything is healthy.</li>
+<li><strong>Blue Green -</strong> Create a new environment and switch over when ready</li>
+<li><strong>Traffic splitting -</strong> canary testing - send small amount % of traffic to new deployment</li>
+</ul>
+<h3 id="elastic-beanstalk-deployment-process">Elastic Beanstalk Deployment process</h3>
+<ul>
+<li>Describe dependencies (requirement.txt for python, package.json for nodejs)</li>
+<li>Package code with zip, and describe dependencies
+<ul>
+<li>python:<em>requirement.txt</em></li>
+<li>nodejs:<em>package.json</em></li>
+</ul>
+</li>
+<li><strong>Console -</strong> Upload zip files (creates new app version),and then deploy</li>
+<li>Elastic beanstalk will deply the zip on each ec2 intances , resolve dependencies and start the appliationc</li>
+</ul>
+<h3 id="beanstalk-lifecycle-policy">Beanstalk Lifecycle policy</h3>
+<ul>
+<li>Elastic beanstalk and store upto 1000 applicatoins versions</li>
+<li>If you don&rsquo;t remove old version you can&rsquo;t deploy any new version</li>
+<li>To phase out old application versions, use <strong>lifecycle policy</strong>
+<ul>
+<li>Based on time (old versions are removed)</li>
+<li>Based on space (when you have to many versions)</li>
+</ul>
+</li>
+<li>Versions that is already in use won&rsquo;t be deleted</li>
+</ul>
+<h3 id="elastic-beanstalk-extentions">Elastic Beanstalk Extentions</h3>
+<ul>
+<li>
+<p>A zip file containing out code must be deployed to Elastic Beanstalk</p>
+</li>
+<li>
+<p>All the paremeters set in the UI can be configured with code using files</p>
+</li>
+<li>
+<p>Requirements:</p>
+<ul>
+<li>in the .ebextensions/ directory in the root of source code</li>
+<li>Yaml/Json format</li>
+<li>.config extension (ex json.config)</li>
+<li>Able to modify some default setting using: option_settings</li>
+<li>Ability to add resources such as RDS,ElasticCache, DynamoDB,etc&hellip;</li>
+</ul>
+</li>
+<li>
+<p>Resources managed by .ebextensions get deleted if environment goes awa</p>
+</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

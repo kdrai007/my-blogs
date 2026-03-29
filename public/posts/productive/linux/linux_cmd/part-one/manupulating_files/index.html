@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>manupulating_files | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag : #linux #commands
+Manupulating Files and Directories
+Used commands in this chapter
+
+
+cp - copy file and folder
+
+
+mv - move file and folder
+
+
+mkdir - create a directory
+
+
+rm - remove file and directory
+
+
+ln - create symbolic links
+
+
+These five and mostly used commands and used for manupulating files and directories
+
+
+To show how powerfull these commands are for ex:
+$ cp -u *.html ~/location
+
+This command will copy all hmtl files to location folder
+But there&rsquo;s a catch it will only copy those files that&rsquo;s not in location folder and update old version of those files with new one
+
+
+
+WildCards
+
+  
+      
+          wildCards
+          Meaning
+      
+  
+  
+      
+          *
+          matches any character
+      
+      
+          ?
+          matches any single character
+      
+      
+          [characters]
+          matches any character that is member of the set character
+      
+      
+          [!characters]
+          opposite of previous one
+      
+      
+          [[:class:]]
+          matches any character that is memmeber of specified class
+      
+  
+
+
+WildCard Examples
+
+
+  
+      
+          Pattern
+          Matches
+      
+  
+  
+      
+          *
+          All files
+      
+      
+          g*
+          Any file beginning with “g”
+      
+      
+          b*.txt
+          Any file beginning with “b” followed by any characters and ending with “.txt”
+      
+      
+          Data??
+          Any file beginning with &ldquo;Data&rdquo; followed by exactly three characters
+      
+      
+          [abc]*
+          Any file beginning with either an “a”, a “b”, or a “c”
+      
+      
+          BACKUP.[0-9][0-9][0-9]
+          Any file beginning with “BACKUP.” followed by exactly three numerals
+      
+      
+          [[:upper:]]*
+          Any file beginning with an uppercase letter
+      
+      
+          [![:digit:]]*
+          Any file not beginning with a numeral
+      
+      
+          *[[:lower:]123]
+          Any file ending with a lowercase letter or the numerals “1”, “2”, or “3”
+      
+  
+
+
+Wildcards can be used anything which accepts filename as arguments
+
+mkdir - Create Directories
+The mkdir used for createing directories. for ex:">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-one/manupulating_files/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-one/">Part One</a>
+    </div>
+    <h1>manupulating_files</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        794 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag : #linux #commands</p>
+<h1 id="manupulating-files-and-directories">Manupulating Files and Directories</h1>
+<h2 id="used-commands-in-this-chapter">Used commands in this chapter</h2>
+<ul>
+<li>
+<p>cp - copy file and folder</p>
+</li>
+<li>
+<p>mv - move file and folder</p>
+</li>
+<li>
+<p>mkdir - create a directory</p>
+</li>
+<li>
+<p>rm - remove file and directory</p>
+</li>
+<li>
+<p>ln - create symbolic links</p>
+</li>
+<li>
+<p>These five and mostly used commands and used for manupulating files and directories</p>
+</li>
+<li>
+<p>To show how powerfull these commands are for ex:
+<code>$ cp -u *.html ~/location</code></p>
+<ul>
+<li>This command will copy all hmtl files to location folder</li>
+<li>But there&rsquo;s a catch it will only copy those files that&rsquo;s not in location folder and update old version of those files with new one</li>
+</ul>
+</li>
+</ul>
+<h3 id="wildcards">WildCards</h3>
+<table>
+  <thead>
+      <tr>
+          <th>wildCards</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>*</td>
+          <td>matches any character</td>
+      </tr>
+      <tr>
+          <td>?</td>
+          <td>matches any single character</td>
+      </tr>
+      <tr>
+          <td>[characters]</td>
+          <td>matches any character that is member of the set character</td>
+      </tr>
+      <tr>
+          <td>[!characters]</td>
+          <td>opposite of previous one</td>
+      </tr>
+      <tr>
+          <td>[[:class:]]</td>
+          <td>matches any character that is memmeber of specified class</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li><strong>WildCard Examples</strong></li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Pattern</th>
+          <th>Matches</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>*</td>
+          <td>All files</td>
+      </tr>
+      <tr>
+          <td>g*</td>
+          <td>Any file beginning with “g”</td>
+      </tr>
+      <tr>
+          <td>b*.txt</td>
+          <td>Any file beginning with “b” followed by any characters and ending with “.txt”</td>
+      </tr>
+      <tr>
+          <td>Data??</td>
+          <td>Any file beginning with &ldquo;Data&rdquo; followed by exactly three characters</td>
+      </tr>
+      <tr>
+          <td>[abc]*</td>
+          <td>Any file beginning with either an “a”, a “b”, or a “c”</td>
+      </tr>
+      <tr>
+          <td>BACKUP.[0-9][0-9][0-9]</td>
+          <td>Any file beginning with “BACKUP.” followed by exactly three numerals</td>
+      </tr>
+      <tr>
+          <td>[[:upper:]]*</td>
+          <td>Any file beginning with an uppercase letter</td>
+      </tr>
+      <tr>
+          <td>[![:digit:]]*</td>
+          <td>Any file not beginning with a numeral</td>
+      </tr>
+      <tr>
+          <td>*[[:lower:]123]</td>
+          <td>Any file ending with a lowercase letter or the numerals “1”, “2”, or “3”</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>Wildcards can be used anything which accepts filename as arguments</li>
+</ul>
+<h3 id="mkdir---create-directories">mkdir - Create Directories</h3>
+<p>The mkdir used for createing directories. for ex:</p>
+<p><code>$ mkdir dir1 dir2</code></p>
+<ul>
+<li>this command will create two diretories named &ldquo;dir1&rdquo; and &ldquo;dir2&rdquo;</li>
+</ul>
+<h3 id="cp---copy-files-and-directories">cp - copy files and Directories</h3>
+<p>The cp command used for copying files to another location</p>
+<p><code>$ cp file1 ~/location</code>
+<code>$ cp file1 file2 file3 ~/location</code>
+<code>$ cp *.txt ~/location</code></p>
+<ul>
+<li>
+<p>cp commands can work for single or multiple files</p>
+</li>
+<li>
+<p>&ldquo;*.txt&rdquo; this wildcard will allow copy of all txt files to location folder</p>
+</li>
+<li>
+<p>use <code>$ man cp</code> for more info on cp</p>
+</li>
+<li>
+<p>or use <code>$ cp --help</code> this command will provide short and simple help descriptions</p>
+</li>
+</ul>
+<h3 id="mv---move-or-rename-files-and-directories">mv - move or rename files and directories</h3>
+<p>This mv command is used for moving or renaming files and folder</p>
+<p><code>$ mv file1 ~/location</code></p>
+<ul>
+<li>this command will move file1 to location folder</li>
+</ul>
+<p><code>$ mv file1 renamedfile</code></p>
+<ul>
+<li>This command will rename this file named &ldquo;file1&rdquo; to &ldquo;renamedFile&rdquo;</li>
+<li>for further instruction either use <code>$ man mv</code> or <code>$ mv --help</code> in your command line</li>
+</ul>
+<h3 id="rm---remove-files-and-directories">rm - remove files and directories</h3>
+<p><code>$ rm file1</code></p>
+<ul>
+<li>This command will remove file1 for your system</li>
+</ul>
+<blockquote>
+<p>Be carefull, with rm you can&rsquo;t undone anything after using this command</p>
+</blockquote>
+<h3 id="ln---create-links">ln - Create Links</h3>
+<p>The ln command is used for creating either hard link or symbolic link</p>
+<h4 id="hard-links">Hard Links</h4>
+<p>Hard links are original way of unix for creating links,compare to symbolic links which are more modern</p>
+<ul>
+<li>By default, every file have a single hard link that gives the file its name.</li>
+<li>A hard link can&rsquo;t reference a file outside of its own filesystem</li>
+<li>A hard link may not reference a directory</li>
+</ul>
+<p><code>$ ln file link</code></p>
+<ul>
+<li>This command will create hard link</li>
+</ul>
+<h5 id="way-to-recognize-hard-link-">way to recognize hard link:-</h5>
+<ul>
+<li>With the help of <code>ls -li</code> command we can see some important info</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ls -li
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12353539</span> drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2018-01-14 16:17 dir1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12353540</span> drwxrwxr-x <span style="color:#ae81ff">2</span> me me <span style="color:#ae81ff">4096</span> 2018-01-14 16:17 dir2
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12353538</span> -rw-r--r-- <span style="color:#ae81ff">4</span> me me <span style="color:#ae81ff">1650</span> 2018-01-10 16:33 fun
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12353538</span> -rw-r--r-- <span style="color:#ae81ff">4</span> me me <span style="color:#ae81ff">1650</span> 2018-01-10 16:33 fun-hard
+</span></span></code></pre></div><ul>
+<li>
+<p>If you notice both file <em>fun</em> and <em>fun-hard</em> have same <strong>inode</strong> number <code>12353538</code> ,it&rsquo;s showing they are both hard links</p>
+</li>
+<li>
+<p>After finding the <em>inode</em> number we can use this command to find all the files with same inode num.</p>
+</li>
+</ul>
+<p><code>$ find / -inum 12353538</code></p>
+<h4 id="symbolic-links">Symbolic Links</h4>
+<p>Symbolic links were created to overcome the limitations of hard links like:</p>
+<ul>
+<li>
+<p>Hard links can&rsquo;t span physical devices</p>
+</li>
+<li>
+<p>Hard links can&rsquo;t reference directories, only files</p>
+</li>
+<li>
+<p>Symbolic links work by creating a special kind of file that contains a text pointer to the referenced file or directory</p>
+</li>
+<li>
+<p>If original file is deleted, then link will not work because it&rsquo;s pointing nothing.</p>
+</li>
+</ul>
+<p><code>$ ln -s item link</code></p>
+<ul>
+<li>This command will create symbolic link</li>
+</ul>
+<h5 id="way-to-recognize-symbolic-links-">Way to recognize Symbolic links:-</h5>
+<ul>
+<li>it&rsquo;s way easier to recognize symbolic links compare to hard links</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ln -s fun ./dir1/fun-sym
+</span></span><span style="display:flex;"><span>$ ls -l dir1
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">4</span> me me <span style="color:#ae81ff">1650</span> 2018-01-10 16:33 fun-hard
+</span></span><span style="display:flex;"><span>lrwxrwxrwx <span style="color:#ae81ff">1</span> me me <span style="color:#ae81ff">6</span> 2018-01-15 15:17 fun-sym -&gt; ../fun
+</span></span></code></pre></div><ul>
+<li>
+<p>In the given shell example, there is something out of the blue which is <em>-&gt;</em> this arrow which is refrencing to original file</p>
+</li>
+<li>
+<p>So, it&rsquo;s pretty easy to find which file is original and which is symbolic link</p>
+</li>
+<li>
+<p>Just like we create symbolic link for file we can create for directories.</p>
+</li>
+</ul>
+<p><code>$ ln -s dir link</code></p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+title: "day-35"
+draft: false
+---
+
+# Date: 25-02-2025
+
+- [ ] Goal: 5 hours
+
+10:00 - 11:00am
+
+

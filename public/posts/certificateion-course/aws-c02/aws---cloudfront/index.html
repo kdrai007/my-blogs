@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AWS - CloudFront | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CloudFront
+checkout
+
+CloudFront is a Content Delivery Network(CDN)
+Improved read performance, content is cached at the edge
+Improves User Experience
+216 points of presence globally ( edge locations)
+DDos protection, integration with shield, Aws Web Application Firewall
+
+Cloudfront - Origin
+
+
+S3 Bucket :
+
+For distrubuting files and caching them at the edge
+Enhanced security with CloudFront Origin Access Control(OAC)
+OAC is replacing Origin Access Identity (OAI)
+Cloudfont can be used as Ingress ( to upload files to s3)
+
+
+
+Custom Origin (HTTP) :">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/aws---cloudfront/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>AWS - CloudFront</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        953 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h2 id="cloudfront">CloudFront</h2>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.htmlhttps://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">checkout</a></p>
+<ul>
+<li>CloudFront is a Content Delivery Network(CDN)</li>
+<li>Improved read performance, content is cached at the edge</li>
+<li>Improves User Experience</li>
+<li>216 points of presence globally ( edge locations)</li>
+<li>DDos protection, integration with shield, Aws Web Application Firewall</li>
+</ul>
+<h3 id="cloudfront---origin">Cloudfront - Origin</h3>
+<ul>
+<li>
+<p>S3 Bucket :</p>
+<ul>
+<li>For distrubuting files and caching them at the edge</li>
+<li>Enhanced security with CloudFront Origin Access Control(OAC)</li>
+<li>OAC is replacing Origin Access Identity (OAI)</li>
+<li>Cloudfont can be used as Ingress ( to upload files to s3)</li>
+</ul>
+</li>
+<li>
+<p>Custom Origin (HTTP) :</p>
+<ul>
+<li>ALB</li>
+<li>EC2</li>
+<li>S3 Static Site</li>
+<li>Any backend your choice</li>
+</ul>
+</li>
+</ul>
+<h3 id="cloudfront-vs-s3-cross-region-replication">CloudFront vs s3 Cross Region Replication</h3>
+<ul>
+<li>
+<p>CloudFront :</p>
+<ul>
+<li>Global Edge Network</li>
+<li>Files are cached for a TTL ( for a day)</li>
+<li>Greate for static content that must be available everywhere</li>
+</ul>
+</li>
+<li>
+<p>S3 Cross Region Replication  :</p>
+<ul>
+<li>Must be setup for each region you want Replication to happen</li>
+<li>Files are updated in Real-time</li>
+<li>Read-only</li>
+<li>Great for dynamic content that&rsquo;s needto available at low-latency in few regions</li>
+</ul>
+</li>
+</ul>
+<h2 id="cloudfront-caching">CloudFront Caching</h2>
+<ul>
+<li>The cache lives at each cloudfront edge location</li>
+<li>Cloudfront identifies each object in the cache using <strong>Cache key</strong></li>
+<li>You want to maximize the ratio of Cache Hit for minimizing requests to the origin</li>
+<li>You can invalidate part of the cache using <strong>CreateInvalidation API</strong></li>
+</ul>
+<h3 id="what-is-cloudfront-cache-key">What is Cloudfront Cache Key</h3>
+<ul>
+<li>A unique identifier for every object in the cache</li>
+<li>By default , consists of hostname + Resource portion of the URL</li>
+<li>If you have an application that serves the content varies on user&rsquo;s location,language&hellip;</li>
+<li>You can add others things like (HTTP Headers, cookies, query string ) to the cache key using <strong>CloufFront Caching policy</strong>
+![[Pasted image 20240909003144.png]]</li>
+</ul>
+<h4 id="cloudfront-policy---cache-policy">Cloudfront policy - Cache Policy</h4>
+<ul>
+<li>
+<p>Cache based on:</p>
+<ul>
+<li>HTTP headers :  None - Whitelist</li>
+<li>Cookies: None  - Whitelist - Include all-Except - All</li>
+<li>Query String: None  - Whitelist - Include all-Except - All</li>
+</ul>
+</li>
+<li>
+<p>Control the TTL ( 0 seconds to 1 year) , can be set the origin using <strong>Cache-Control</strong> header, and <strong>Expires</strong>  header..</p>
+</li>
+<li>
+<p>Create your own policy or use predefined Managed policy</p>
+</li>
+<li>
+<p><strong>All HTTP Headers, cookies, Query String that you include in the cache key are autmatically included in origin request</strong></p>
+</li>
+</ul>
+<h4 id="cloudfront-policies---origin-request-policy">CloudFront Policies - Origin Request Policy</h4>
+<ul>
+<li>
+<p>Specify values that you want to include in origin  request without  including them in the cache key (no duplicated cache content)</p>
+</li>
+<li>
+<p>You can include :</p>
+<ul>
+<li><strong>HTTP Headers :</strong>  None - Whitelist - All viewer header options</li>
+<li><strong>Cookies:</strong> None - Whitelist - All</li>
+<li><strong>Query String :</strong> None - Whitelist - All</li>
+</ul>
+</li>
+<li>
+<p>Ability to add Cloudfront Http Headers  and Custom Headers to an origin requests that were not included in the viewer request</p>
+</li>
+<li>
+<p>Create  your own policy or use predefined Managed policy</p>
+</li>
+</ul>
+<h3 id="cloudfront---cache-invalidations">CloudFront - Cache Invalidations</h3>
+<ul>
+<li>In Case you update the back-end origin , cloudFront doesn&rsquo;t know about it and only users get refreshed content after TTL has expired</li>
+<li>However, you can force entire or partial cache refresh ( bypass TTL) by performing <strong>CloudFront Invalidation</strong></li>
+<li>You can invalidate entire files (* ) or special part of it ( /files/* )</li>
+</ul>
+<h3 id="cloudfront-cache-behaviors">CloudFront Cache Behaviors</h3>
+<ul>
+<li>Configure different setting for  given URL Path pattern</li>
+<li>For ex, One specific cache behavior for path images/* .jpg files on your origin web server</li>
+<li>Route to different kind of origins/origin based on the content type or path pattern
+<ul>
+<li>/images/*</li>
+<li>/api/*</li>
+<li>/* (default cache behavior)</li>
+</ul>
+</li>
+<li>Default cache behavior always last to be <strong>processed and is always /</strong>*
+![[Pasted image 20240910143557.png]]</li>
+</ul>
+<h3 id="cloudfront---alb-or-ec2-as-an-origin">CloudFront - ALB or EC2 as an Origin</h3>
+<p>![[Pasted image 20240910234113.png]]</p>
+<h3 id="cloudfront---geo-restriction">CloudFront - Geo Restriction</h3>
+<ul>
+<li>You can restrict who can access your distribution :
+<ul>
+<li>AllowList - Allow user&rsquo; s access of your content based on their countries approval status</li>
+<li>BlackList - Block user&rsquo; s access of your content based on their countries  approval status</li>
+</ul>
+</li>
+<li>The &ldquo;country&rdquo; is dicided using a 3rd party Geo ip-database</li>
+<li>Use Case : Copyright laws to control access to content</li>
+</ul>
+<h3 id="cloudfront---signed-url--signed-cookies">CloudFront - Signed Url / Signed cookies</h3>
+<ul>
+<li>
+<p>You want distribute paid content to premium users around the world</p>
+</li>
+<li>
+<p>We can use Cloudfront signed url/signed cookies : we attach policy with :-</p>
+<ul>
+<li>Included URL expiration</li>
+<li>Included IP ranges to access the data from</li>
+<li>Trusted Signers (choose which aws account can create signed urls)</li>
+</ul>
+</li>
+<li>
+<p>How long a url should be valid for?</p>
+<ul>
+<li>Shared Content (movie,music) - make it short (few minutes)</li>
+<li>Private Content (private to the user) - you can make it last for years</li>
+</ul>
+</li>
+<li>
+<p>Signed Url = access to one file</p>
+</li>
+<li>
+<p>Signed Cookie = access to multiple files</p>
+</li>
+</ul>
+<h4 id="cloudfront---signed-url-process">CloudFront - Signed Url Process</h4>
+<ul>
+<li>
+<p>Two types of signers :</p>
+<ul>
+<li>Either a trusted key group(recommended)
+<ul>
+<li>Can leverages APIS to create and rotate keys (and IAM for API Security)</li>
+</ul>
+</li>
+<li>An Aws account that contains a cloudfront key pair
+<ul>
+<li>Need to manage keys <strong>using root account and AWS console</strong> (Not Recommended)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In your cloudFront distribution you can create more and one <strong>Trust Key Groups</strong></p>
+</li>
+<li>
+<p>You generate your own public / private key</p>
+<ul>
+<li>The private key is used by your applications (e,g. EC2) to sign urls</li>
+<li>The public key is used by cloudfront to verify URLs</li>
+</ul>
+</li>
+</ul>
+<h3 id="cloudfront---origin-groups">CloudFront - Origin Groups</h3>
+<ul>
+<li>To increase high-availability and do failover</li>
+<li>Origin group : one primary and one secondary origin</li>
+<li>if primary origin failed , the second one is used</li>
+</ul>
+<h3 id="cloudfront---field-level-encryption">CloudFront - Field Level Encryption</h3>
+<ul>
+<li>Protect user&rsquo;s sensitive information through application stack</li>
+<li>Adds an extra layer of security along with HTTPS</li>
+<li>Sensitive information is encrypted at the edge close to user</li>
+<li>Uses asymmetric encryption</li>
+<li>Usage :
+<ul>
+<li>Specify set of fields in POST request that you want to be encrypted (up to 10 fields)</li>
+</ul>
+</li>
+</ul>
+<h3 id="cloudfront---real-time-logs">CloudFront - Real Time Logs</h3>
+<ul>
+<li>
+<p>Get real-time requests received by cloudFront sent to <strong>Kinesis Data streams</strong></p>
+</li>
+<li>
+<p>Monitor , analyze and take action based on content delivery performance</p>
+</li>
+<li>
+<p>Allow you to choose :</p>
+<ul>
+<li><strong>Sampling Rate -</strong>  Percentage of request for which you want to receive</li>
+<li>Specific fields and specific cache behavior (path patterns)</li>
+</ul>
+<p>![[Pasted image 20240912023808.png]]</p>
+</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

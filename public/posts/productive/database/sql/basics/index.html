@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>basics | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SQL
+Structured Query language or sql is database which is used to collect data and store it.
+Select Statment
+A Select statment is most common operation in Sql -often called  a &ldquo;query&rdquo;. Select retrives data from one or more table.
+
+Standard Select statement does not alter the state of the database.
+
+Select a single field
+A Select statement starts with Select followed by the fields you want to retrive
+Select name from users;
+Select a Multiple field
+If you want to select multiple fileds specify those fields using commas">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/database/sql/basics/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/database/sql/">Sql</a>
+    </div>
+    <h1>basics</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        1 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        168 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <h1 id="sql">SQL</h1>
+<p>Structured Query language or sql is database which is used to collect data and store it.</p>
+<h3 id="select-statment">Select Statment</h3>
+<p>A <code>Select</code> statment is most common operation in Sql -often called  a &ldquo;query&rdquo;. Select retrives data from one or more table.</p>
+<ul>
+<li>Standard <code>Select</code> statement does not alter the state of the database.</li>
+</ul>
+<h4 id="select-a-single-field">Select a single field</h4>
+<p>A Select statement starts with <code>Select</code> followed by the fields you want to retrive</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> name <span style="color:#66d9ef">from</span> users;
+</span></span></code></pre></div><h4 id="select-a-multiple-field">Select a Multiple field</h4>
+<p>If you want to select multiple fileds specify those fields using commas</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> id,name <span style="color:#66d9ef">from</span> users;
+</span></span></code></pre></div><h4 id="select-all-field">Select All field</h4>
+<p>To select all fields in table use the shorthand <code>*</code> syntax.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users;
+</span></span></code></pre></div><h2 id="sql-vs-nosql">SQL vs NoSQL</h2>
+<p>A NoSql database is a database which does not use SQL(Structured Query Language). Each NoSql database has its own way to write it&rsquo;s queries.</p>
+<ul>
+<li>NoSql database are generally non-relational</li>
+<li>Sql database are relational databases.</li>
+</ul>
+<p>ex sql database:- Postgres, Sql , SQlite, Oracle etc
+ex NoSql database:- Mongodb , Cassandra , CouchDB , redis etc</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

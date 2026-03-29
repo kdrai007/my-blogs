@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amzon - ECS | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="tag: #aws #aws-copilot  #aws-ECR
+ECS - Elastic Container Service
+checkout
+
+Amazon Elastic Container Service (ECS) is a fully managed container orchestration service that helps you to more efficiently deploy, manage, and scale containerized applications.
+
+ECS  - Launch Type
+EC2 Launch Type
+
+Launch docker container on AWS = Launch ECS tasks on ECS clusters
+Ec2 Launch Type : you must provision and maintain the  infrastructure ( the EC2 Instances)
+Each EC2 instance must run the ECS agent to register in the ECS cluster
+Aws takes care of starting / stopping containers
+
+Fargate Launch Type
+
+Launch docker container in AWS
+You do not provision the infrastructure (no EC2 instance to manage)
+It&rsquo;s all serverless
+You just create task definitions
+To scale , juse increase number of tasks . Simple - no more ec2 instance
+
+ECS - Iam Roles
+
+
+EC2 Instance profile ( EC2 launch type only):">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/certificateion-course/aws-c02/amzon---ecs/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/certificateion-course/aws-c02/">Aws C02</a>
+    </div>
+    <h1>Amzon - ECS</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        998 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>tag: #aws #aws-copilot  #aws-ECR</p>
+<h1 id="ecs---elastic-container-service">ECS - Elastic Container Service</h1>
+<p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html">checkout</a></p>
+<ul>
+<li>Amazon Elastic Container Service (ECS) is a fully managed container orchestration service that helps you to more efficiently deploy, manage, and scale containerized applications.</li>
+</ul>
+<h2 id="ecs----launch-type">ECS  - Launch Type</h2>
+<h3 id="ec2-launch-type">EC2 Launch Type</h3>
+<ul>
+<li>Launch docker container on AWS = Launch <strong>ECS tasks</strong> on ECS clusters</li>
+<li>Ec2 Launch Type : you must provision and maintain the  infrastructure ( the EC2 Instances)</li>
+<li>Each EC2 instance must run the ECS agent to register in the ECS cluster</li>
+<li>Aws takes care of starting / stopping containers</li>
+</ul>
+<h3 id="fargate-launch-type">Fargate Launch Type</h3>
+<ul>
+<li>Launch docker container in AWS</li>
+<li>You do not provision the infrastructure (no EC2 instance to manage)</li>
+<li>It&rsquo;s all serverless</li>
+<li>You just create task definitions</li>
+<li>To scale , juse increase number of tasks . Simple - no more ec2 instance</li>
+</ul>
+<h2 id="ecs---iam-roles">ECS - Iam Roles</h2>
+<ul>
+<li>
+<p>EC2 Instance profile ( EC2 launch type only):</p>
+<ul>
+<li>Used by the ECS agent</li>
+<li>Makes API call to ECS service</li>
+<li>Send container logs to CloudWatch logs</li>
+<li>Pull docker images from ECR</li>
+<li>Reference sensitive data in Secrets Manager or SSM Parameter Store</li>
+</ul>
+</li>
+<li>
+<p>ECS task Role :</p>
+<ul>
+<li>Allows each task to have a specific role</li>
+<li>Use different role for the different ECS service you run</li>
+<li>Task role is defined in the task definition</li>
+</ul>
+</li>
+</ul>
+<h3 id="ecs---load-balancer-integrations">ECS - Load Balancer Integrations</h3>
+<ul>
+<li><strong>Application Load Balancer</strong> supported and works for most of the cases</li>
+<li><strong>Network Load Balancer</strong> recommended only for high throughput / high performance cases , or to pair it with aws Private link</li>
+<li><strong>Classic Load Balancer</strong> you can use but (not recommended , no advance feature - no fargate)</li>
+</ul>
+<h3 id="ecs---data-volumes-efs">ECS - Data Volumes (EFS)</h3>
+<ul>
+<li>
+<p>Mount EFS file system in ECS tasks</p>
+</li>
+<li>
+<p>Work with both EC2 and fargate launch type</p>
+</li>
+<li>
+<p>Tasks running in any AZ will share the same data in EFS file system</p>
+</li>
+<li>
+<p>Fargate+EFS = serverless</p>
+</li>
+<li>
+<p>Use Case : persistent shared storage in Multi-AZ for your containers</p>
+</li>
+</ul>
+<h3 id="ecs---service-auto-scaling">ECS - Service Auto Scaling</h3>
+<ul>
+<li>
+<p>Automatically increase/decrease the desired number of ECS tasks</p>
+</li>
+<li>
+<p>Amazon ecs auto scaling uses <strong>AWS Application Auto Scaling</strong></p>
+<ul>
+<li>ECS service Average CPU utilization</li>
+<li>ECS service Average Memory utilization - Scale on RAM</li>
+<li>ALB request count per target - metric coming from ALB</li>
+</ul>
+</li>
+<li>
+<p><strong>Target Tracking -</strong> Scale based on target value for a specfic cloudwatch metric</p>
+</li>
+<li>
+<p><strong>Step Scaling -</strong> scale based on specifed cloudwatch alarm</p>
+</li>
+<li>
+<p><strong>Scheduled  Scaling -</strong> scale based on specifed data/time (preditable change)</p>
+</li>
+<li>
+<p>ECS Service auto scaling (task level) != EC2 auto scaling(ec2 instance level)</p>
+</li>
+<li>
+<p>Fragate auto scaling is much easier to setup(serverless)</p>
+</li>
+</ul>
+<h4 id="ec2-launch-type---auto-scaling-ec2-instances">EC2 Launch type - Auto Scaling Ec2 Instances</h4>
+<ul>
+<li>
+<p>Accomodate ECS service scaling by adding underlying Ec2 instances</p>
+</li>
+<li>
+<p><strong>Auto Scaling Group Scaling</strong></p>
+<ul>
+<li>Scale your ASG based on CPU utilization</li>
+<li>Add EC2 instances over time</li>
+</ul>
+</li>
+<li>
+<p><strong>ECS Cluster Capacity Provider</strong></p>
+<ul>
+<li>Used to automatically provision and scale the infrastructure for your ECS tasks</li>
+<li>Capacity provider paired with an Auto Scaling Group</li>
+<li>Add Ec2 instance when you&rsquo;re missing capacity(CPU,RAM&hellip;)</li>
+</ul>
+</li>
+</ul>
+<h3 id="ecs---rolling-update">ECS - Rolling Update</h3>
+<ul>
+<li>When updating from v1 to v2 we can control how many tasks can be started and stopped, and in which order
+![[Pasted image 20240916145712.png]]</li>
+</ul>
+<h3 id="ecs---task-definitions">ECS - Task Definitions</h3>
+<ul>
+<li>
+<p>Task definitions are metadata in Json from to tell ECS how to run Docker container</p>
+</li>
+<li>
+<p>It contains crucial information, such as:</p>
+<ul>
+<li>Image name</li>
+<li>port binding for Container and host</li>
+<li>Memory and Cpu required</li>
+<li>Environemnt variables</li>
+<li>Networking information</li>
+<li>Iam Role</li>
+<li>Logging configuration (ex CloudWatch)</li>
+</ul>
+</li>
+<li>
+<p>Can define up to 10 containers in task definitions</p>
+</li>
+</ul>
+<h4 id="ecs---load-balancingec2-launch-type">ECS - Load Balancing(EC2 launch type)</h4>
+<ul>
+<li>
+<p>We get a Dynamic Host Port Mapping if you define only the container port in the task definition</p>
+</li>
+<li>
+<p>The ALB finds the right port for your Ec2 instance</p>
+<p>![[Pasted image 20240917005240.png]]</p>
+</li>
+<li>
+<p><strong>Must allow any port in ec2&rsquo;s security group to allow any port from ALB&rsquo;s security group</strong></p>
+</li>
+</ul>
+<h4 id="ecs---load-balancingfargate-launch-type">ECS - Load Balancing(Fargate launch type)</h4>
+<ul>
+<li>
+<p>Each task the <strong>Unique Private IP</strong></p>
+</li>
+<li>
+<p>Only define the container port ( host port is not applicable)</p>
+<p>![[Pasted image 20240917203225.png]]</p>
+</li>
+</ul>
+<h4 id="ecs---one-iam-roles-per-task-definitions">ECS - One IAM roles per task Definitions</h4>
+<p>![[Pasted image 20240917203631.png]]</p>
+<h4 id="ecs---environment-variables">ECS - Environment Variables</h4>
+<ul>
+<li>
+<p>ENV :-</p>
+<ul>
+<li>HardCoded e.g, URLs</li>
+<li>SSM Parameter Store - sensitive variables (e.g, API keys, shared configs)</li>
+<li>Secrets Manager - sensitive variables (e.g, passwords)</li>
+</ul>
+</li>
+<li>
+<p>Environment Files(bulk) - S3</p>
+</li>
+</ul>
+<h4 id="ecs---data-volumes-bind-mounts">ECS - Data Volumes (Bind Mounts)</h4>
+<ul>
+<li>
+<p>Share data between multiple containers in the same task definitions</p>
+</li>
+<li>
+<p>Work for both EC2 and fargate tasks</p>
+</li>
+<li>
+<p>EC2 tasks - Using Ec2 instance storage</p>
+<ul>
+<li>Data are tied to the lifecycle of  the ec2 instance</li>
+</ul>
+</li>
+<li>
+<p>Fargate tasks - using ephermeral storage</p>
+<ul>
+<li>Data are tied to the containers using them</li>
+<li>20 GiB to 200 Gib (default 20 Gib)</li>
+</ul>
+<p>![[Pasted image 20240917205941.png]]</p>
+</li>
+</ul>
+<h3 id="ecs---tasks-placements">ECS - Tasks Placements</h3>
+<ul>
+<li>
+<p>When a task of type EC2 launched, ECS must determine where to place it, with the constraints of CPU memory, and available ports</p>
+</li>
+<li>
+<p>Similarly, when a service scales in Ecs needs to determine which tasks to terminate.</p>
+</li>
+<li>
+<p>To assist it with this, you can define a <strong>task placement strategy</strong> and <strong>task placemnts constraints</strong></p>
+</li>
+<li>
+<p>Note- only for ec2 not for fargate launch type</p>
+</li>
+</ul>
+<h4 id="ecs---task-placement-process">ECS - Task placement process</h4>
+<ul>
+<li>When amazon ECS places tasks , it uses the following process to select container instances :
+<ol>
+<li>Identify the instances that satisfy the cpu,memory and port requirements in the task definitions</li>
+<li>Identify the instances that satisfy the task placement constraints</li>
+<li>Identify the instances that satisfy the task placement strategies</li>
+<li>Select the instaces for task placement</li>
+</ol>
+</li>
+</ul>
+<h4 id="ecs---task-placement-strategies">ECS - Task placement strategies</h4>
+<ul>
+<li>
+<p>Binpack</p>
+<ul>
+<li>Places tasks based on the least available amount of CPU or memory</li>
+<li>This minimizes the number of instances in use</li>
+</ul>
+</li>
+<li>
+<p>Random</p>
+<ul>
+<li>Place the task randomly</li>
+</ul>
+</li>
+<li>
+<p>Spread</p>
+<ul>
+<li>Places the tasks evenly based on the specified value</li>
+<li>Example: instanceId,attribute:ecs-availability-zone</li>
+</ul>
+</li>
+</ul>
+<h4 id="ecs---task-placement-constraints">ECS - Task placement Constraints</h4>
+<ul>
+<li>distincetInstance: place each task on a different container instance</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;placementConstraints&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>[
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#960050;background-color:#1e0010">type:</span> <span style="color:#f92672">&#34;distinctInstance&#34;</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><ul>
+<li>memberOf: places tasks on instance that satisfy an expression
+<ul>
+<li>Uses the Cluster Query Language(advanced)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;placementConstraints&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>[
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#960050;background-color:#1e0010">expression:</span><span style="color:#f92672">&#34;attribute:ecs.instance-type =~t2.*&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#960050;background-color:#1e0010">type:</span> <span style="color:#f92672">&#34;distinctInstance&#34;</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h2 id="amazon-ecr">Amazon ECR</h2>
+<ul>
+<li>ECR - Elastic Container Registery</li>
+<li>Store and manages docker images on AWS</li>
+<li>Private and Public Repository</li>
+<li>Full integrated with ECS, backed by s3</li>
+<li>Access is controlled through IAM ( permission errors=&gt;policy)</li>
+<li>Supports image vulnerability scanning,versioning,image tags,image lifecycle&hellip;</li>
+</ul>
+<h2 id="aws-copilot">AWS Copilot</h2>
+<p>![[Pasted image 20240919172741.png]]</p>
+<hr>
+<h2 id="links">Links</h2>
+<p>[[aws]]
+[[AWS - Container]]</p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>

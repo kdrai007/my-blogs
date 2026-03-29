@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34481&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>customize_prompt | My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tag: #linux #prompt
+Customizing the Prompt
+Like so many in linux, Prompt is highly configurable.
+
+We can configure pretty much, the way we want
+And it&rsquo;s give some sense of familarity because we can customize it the way we want
+
+Anatomy of a prompt
+[user@distro ~]$
+
+
+Generally, without any config this is how our prompt look
+
+
+Notice, the prompt contain username, hostname and our current directory, You may ask why it look this way?">
+    <meta name="generator" content="Hugo 0.158.0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+
+    <link rel="canonical" href="http://localhost:34481/posts/productive/linux/linux_cmd/part-two/customize_prompt/">
+
+    
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="http://localhost:34481/" class="site-logo">My Blog</a>
+        <ul class="nav-links">
+          <li><a href="http://localhost:34481/">Home</a></li>
+          <li><a href="/posts/">All Posts</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="article-section-label">
+      <a href="/posts/productive/linux/linux_cmd/part-two/">Part Two</a>
+    </div>
+    <h1>customize_prompt</h1>
+    <div class="article-meta">
+      
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 min read
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        550 words
+      </span>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Tag: #linux #prompt</p>
+<h1 id="customizing-the-prompt">Customizing the Prompt</h1>
+<p>Like so many in linux, Prompt is highly configurable.</p>
+<ul>
+<li>We can configure pretty much, the way we want</li>
+<li>And it&rsquo;s give some sense of familarity because we can customize it the way we want</li>
+</ul>
+<h2 id="anatomy-of-a-prompt">Anatomy of a prompt</h2>
+<p><code>[user@distro ~]$</code></p>
+<ul>
+<li>
+<p>Generally, without any config this is how our prompt look</p>
+</li>
+<li>
+<p>Notice, the prompt contain <code>username</code>, <code>hostname</code> and our <code>current directory</code>, You may ask why it look this way?</p>
+<ul>
+<li>The Prompt is defined by <code>env</code>  variable named <code>PS1</code> (prompt string 1)</li>
+<li>We can view the content of ps1 with <code>echo</code> command,</li>
+</ul>
+<p><code>$ echo $PS1</code>
+<code>output: [\u@\h \W]\$</code></p>
+<ul>
+<li>From the result we can understand something like, <code>@</code> sign <code>$</code> sign the square brackets <code>[]</code> else is mystery</li>
+</ul>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Sequence</th>
+          <th>Value Displayed</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\a</td>
+          <td>ASCII bell. This makes the computer beep when it is encountered.</td>
+      </tr>
+      <tr>
+          <td>\d</td>
+          <td>Current date in day, month, date format. For example, “Mon May 26.”</td>
+      </tr>
+      <tr>
+          <td>\h</td>
+          <td>Hostname of the local machine minus the trailing domain name.</td>
+      </tr>
+      <tr>
+          <td>\H</td>
+          <td>Full hostname.</td>
+      </tr>
+      <tr>
+          <td>\j</td>
+          <td>Number of jobs running in the current shell session.</td>
+      </tr>
+      <tr>
+          <td>\l</td>
+          <td>Name of the current terminal device.</td>
+      </tr>
+      <tr>
+          <td>\n</td>
+          <td>A newline character.</td>
+      </tr>
+      <tr>
+          <td>\r</td>
+          <td>A carriage return.</td>
+      </tr>
+      <tr>
+          <td>\s</td>
+          <td>Name of the shell program.</td>
+      </tr>
+      <tr>
+          <td>\t</td>
+          <td>Current time in 24-hour hours:minutes:seconds format.</td>
+      </tr>
+      <tr>
+          <td>\T</td>
+          <td>Current time in 12-hour format.</td>
+      </tr>
+      <tr>
+          <td>@</td>
+          <td>Current time in 12-hour AM/PM format.</td>
+      </tr>
+      <tr>
+          <td>\A</td>
+          <td>Current time in 24-hour hours:minutes format.</td>
+      </tr>
+      <tr>
+          <td>\u</td>
+          <td>Username of the current user.</td>
+      </tr>
+      <tr>
+          <td>\v</td>
+          <td>Version number of the shell.</td>
+      </tr>
+      <tr>
+          <td>\V</td>
+          <td>Version and release numbers of the shell.</td>
+      </tr>
+      <tr>
+          <td>\w</td>
+          <td>Name of the current working directory.</td>
+      </tr>
+      <tr>
+          <td>\W</td>
+          <td>Last part of the current working directory name.</td>
+      </tr>
+      <tr>
+          <td>!</td>
+          <td>History number of the current command.</td>
+      </tr>
+      <tr>
+          <td>#</td>
+          <td>Number of commands entered during this shell session.</td>
+      </tr>
+      <tr>
+          <td>$</td>
+          <td>Displays a “$” character unless we have superuser privileges. Then it displays a “#” instead.</td>
+      </tr>
+      <tr>
+          <td>[</td>
+          <td>Signals the start of a series of one or more non-printing characters, used for embedding control characters like text colors.</td>
+      </tr>
+      <tr>
+          <td>]</td>
+          <td>Signals the end of a non-printing character sequence.</td>
+      </tr>
+  </tbody>
+</table>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>17:37 linuxbox $ PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;\u@\h \W&gt;\$ &#34;</span>
+</span></span><span style="display:flex;"><span>&lt;me@linuxbox ~&gt;$
+</span></span></code></pre></div><ul>
+<li>Now, we can play with prompt</li>
+</ul>
+<h3 id="adding-color">Adding color</h3>
+<p>Withtout color, it looks dull so now we are gonna learn how to add color to prompt</p>
+<p>here are some colors code to use,</p>
+<table>
+  <thead>
+      <tr>
+          <th>Sequence</th>
+          <th>Text</th>
+          <th>Color Sequence Text</th>
+          <th>Color</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\033[0;30m</td>
+          <td>Black</td>
+          <td>\033[1;30m</td>
+          <td>Dark gray</td>
+      </tr>
+      <tr>
+          <td>\033[0;31m</td>
+          <td>Red</td>
+          <td>\033[1;31m</td>
+          <td>Light red</td>
+      </tr>
+      <tr>
+          <td>\033[0;32m</td>
+          <td>Green</td>
+          <td>\033[1;32m</td>
+          <td>Light green</td>
+      </tr>
+      <tr>
+          <td>\033[0;33m</td>
+          <td>Brown</td>
+          <td>\033[1;33m</td>
+          <td>Yellow</td>
+      </tr>
+      <tr>
+          <td>\033[0;34m</td>
+          <td>Blue</td>
+          <td>\033[1;34m</td>
+          <td>Light blue</td>
+      </tr>
+      <tr>
+          <td>\033[0;35m</td>
+          <td>Purple</td>
+          <td>\033[1;35m</td>
+          <td>Light purple</td>
+      </tr>
+      <tr>
+          <td>\033[0;36m</td>
+          <td>Cyan</td>
+          <td>\033[1;36m</td>
+          <td>Light cyan</td>
+      </tr>
+      <tr>
+          <td>\033[0;37m</td>
+          <td>Light gray</td>
+          <td>\033[1;37m</td>
+          <td>White</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>these are <code>ANSI</code> escape code</li>
+</ul>
+<p>for example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>&lt;me@linuxbox ~&gt;$PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\[\033[0;31m\]&lt;\u@\h \W&gt;\$\[\033[0m\]&#34;</span>  
+</span></span><span style="display:flex;"><span>&lt;me@linuxbox ~&gt;$
+</span></span></code></pre></div><ul>
+<li>The new shell prompt will look red after using this command</li>
+<li>The escape sequence <code>\033[0;31m</code> is for red color so, the prompt will look red</li>
+</ul>
+<h3 id="moving-the-cursor">Moving the cursor</h3>
+<p>Escapes codes can be used to position the cursor.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Escape Code</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\033[l;cH</td>
+          <td>Move the cursor to line <code>l</code> and column <code>c</code></td>
+      </tr>
+      <tr>
+          <td>\033[nA</td>
+          <td>Move the cursor up <code>n</code> lines</td>
+      </tr>
+      <tr>
+          <td>\033[nB</td>
+          <td>Move the cursor down <code>n</code> lines</td>
+      </tr>
+      <tr>
+          <td>\033[nC</td>
+          <td>Move the cursor forward <code>n</code> characters</td>
+      </tr>
+      <tr>
+          <td>\033[nD</td>
+          <td>Move the cursor backward <code>n</code> characters</td>
+      </tr>
+      <tr>
+          <td>\033[2J</td>
+          <td>Clear the screen and move the cursor to the upper-left corner</td>
+      </tr>
+      <tr>
+          <td>\033[K</td>
+          <td>Clear from the cursor position to the end of the current line</td>
+      </tr>
+      <tr>
+          <td>\033[s</td>
+          <td>Store the current cursor position</td>
+      </tr>
+      <tr>
+          <td>\033[u</td>
+          <td>Recall the stored cursor position</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>With the use these escape sequence we can positions cursor anywhere we want.</li>
+</ul>
+<p>example,</p>
+<p><code>PS1=&quot;\[\033[s\033[0;0H\033[0;41m\033[K\033[1;33m\t\033[0m\033[u\]&lt;\u@\h \W&gt;\$ &quot;</code></p>
+
+  </div>
+
+  
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    </footer>
+  </body>
+</html>
