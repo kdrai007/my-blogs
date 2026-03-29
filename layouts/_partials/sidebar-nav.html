@@ -2,8 +2,12 @@
 <aside class="sidebar-nav" id="sidebar-nav">
   <div class="sidebar-nav-inner">
 
-    {{/* Logo / Home link at top */}}
-    <a href="{{ .Site.Home.Permalink }}" class="sidebar-brand">{{ .Site.Title }}</a>
+    {{/* Close button */}}
+    <div class="sidebar-close-btn">
+      <button id="sidebar-close" aria-label="Close sidebar" title="Close sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="9 6 3 12 9 18"/></svg>
+      </button>
+    </div>
 
     {{/* Build section tree from the "posts" section */}}
     {{ $postsSection := .Site.GetPage "/posts" }}
@@ -15,6 +19,11 @@
 
   </div>
 </aside>
+
+{{/* Floating re-open button (visible when sidebar is collapsed) */}}
+<button class="sidebar-open-btn" id="sidebar-open" aria-label="Open sidebar" title="Open sidebar">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="15 6 21 12 15 18"/></svg>
+</button>
 
 {{/* Recursive section tree template */}}
 {{ define "section-tree" }}

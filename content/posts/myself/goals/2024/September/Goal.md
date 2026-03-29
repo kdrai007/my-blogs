@@ -1,5 +1,0 @@
----
-title: "Goal"
-draft: false
----
-

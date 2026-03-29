@@ -36,6 +36,10 @@
           <li><a href="/posts/">All Posts</a></li>
           
         </ul>
+        
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </nav>
     </header>
 
@@ -59,26 +63,6 @@
   
     <div class="post-grid">
       
-      
-        <a href="/posts/productive/system-design/07-load-balancer/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">System Design</span>
-  
-
-  <h2>07-load-balancer</h2>
-
-  
-    <p class="post-card-excerpt">Tags: #system-design #load-balancers #lb
-Load Balancers</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>1 min read</span>
-  </div>
-</div>
-</a>
       
         <a href="/posts/thoughts/12-april25/" class="post-card-link">
 <div class="post-card">
@@ -255,6 +239,28 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
 </div>
 </a>
       
+        <a href="/posts/certificateion-course/aws-c02/amazon-s3---security/" class="post-card-link">
+<div class="post-card">
+  
+    <span class="post-card-section">Aws C02</span>
+  
+
+  <h2>Amazon s3 - Security</h2>
+
+  
+    <p class="post-card-excerpt">Amazon s3 - Object Encryption for more info:-
+You can encrypt object in s3 using one of the 4 methods
+Server Side Encryption (SSE)
+SSE with Amazon-s3 …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>3 min read</span>
+  </div>
+</div>
+</a>
+      
     </div>
 
     
@@ -332,43 +338,22 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
   
     
     
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
       <span class="disabled">…</span>
     
   
     
     
-      <a href="/page/26/">26</a>
+      <a href="/page/19/">19</a>
     
   
     
     
-      <a href="/page/27/">27</a>
+      <a href="/page/20/">20</a>
     
   
     
     
-      <a href="/page/28/">28</a>
+      <a href="/page/21/">21</a>
     
   
 
@@ -387,5 +372,41 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
     <footer class="site-footer">
       <p>&copy; 2026 My Blog. Built with Hugo.</p>
     </footer>
+
+    
+    <script>
+    (function() {
+      var sidebar = document.getElementById('sidebar-nav');
+      var closeBtn = document.getElementById('sidebar-close');
+      var openBtn = document.getElementById('sidebar-open');
+      var mobileToggle = document.getElementById('sidebar-toggle');
+      var docsLayout = sidebar ? sidebar.closest('.docs-layout') : null;
+
+      function closeSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.add('sidebar-collapsed');
+        sidebar.classList.remove('sidebar-open');
+        if (openBtn) openBtn.classList.add('visible');
+        if (docsLayout) docsLayout.classList.add('sidebar-is-collapsed');
+      }
+
+      function openSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.remove('sidebar-collapsed');
+        if (openBtn) openBtn.classList.remove('visible');
+        if (docsLayout) docsLayout.classList.remove('sidebar-is-collapsed');
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (openBtn) openBtn.addEventListener('click', openSidebar);
+
+      
+      if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('sidebar-open');
+        });
+      }
+    })();
+    </script>
   </body>
 </html>

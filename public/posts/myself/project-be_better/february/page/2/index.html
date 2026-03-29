@@ -36,6 +36,10 @@
           <li><a href="/posts/">All Posts</a></li>
           
         </ul>
+        
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </nav>
     </header>
 
@@ -303,5 +307,41 @@ a little break 17:30 -
     <footer class="site-footer">
       <p>&copy; 2026 My Blog. Built with Hugo.</p>
     </footer>
+
+    
+    <script>
+    (function() {
+      var sidebar = document.getElementById('sidebar-nav');
+      var closeBtn = document.getElementById('sidebar-close');
+      var openBtn = document.getElementById('sidebar-open');
+      var mobileToggle = document.getElementById('sidebar-toggle');
+      var docsLayout = sidebar ? sidebar.closest('.docs-layout') : null;
+
+      function closeSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.add('sidebar-collapsed');
+        sidebar.classList.remove('sidebar-open');
+        if (openBtn) openBtn.classList.add('visible');
+        if (docsLayout) docsLayout.classList.add('sidebar-is-collapsed');
+      }
+
+      function openSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.remove('sidebar-collapsed');
+        if (openBtn) openBtn.classList.remove('visible');
+        if (docsLayout) docsLayout.classList.remove('sidebar-is-collapsed');
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (openBtn) openBtn.addEventListener('click', openSidebar);
+
+      
+      if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('sidebar-open');
+        });
+      }
+    })();
+    </script>
   </body>
 </html>

@@ -36,6 +36,10 @@
           <li><a href="/posts/">All Posts</a></li>
           
         </ul>
+        
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </nav>
     </header>
 
@@ -59,26 +63,6 @@
   
     <div class="post-grid">
       
-      
-        <a href="/posts/productive/finance/study-materials/corporate-structure-and-governance/business-structure/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Corporate Structure And Governance</span>
-  
-
-  <h2>business structure</h2>
-
-  
-    <p class="post-card-excerpt">Tags: #finance
-Business Structure The Most Common Type of Business Organization The functions of most executive management teams are very similar the …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>4 min read</span>
-  </div>
-</div>
-</a>
       
         <a href="/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/" class="post-card-link">
 <div class="post-card">
@@ -256,6 +240,25 @@ We can configure pretty much, the way we want And …</p>
 </div>
 </a>
       
+        <a href="/posts/productive/linux/basics/d-bus/" class="post-card-link">
+<div class="post-card">
+  
+    <span class="post-card-section">Basics</span>
+  
+
+  <h2>d-bus</h2>
+
+  
+    <p class="post-card-excerpt">D-Bus (Desktop Bus) At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>2 min read</span>
+  </div>
+</div>
+</a>
+      
     </div>
 
     
@@ -335,43 +338,22 @@ We can configure pretty much, the way we want And …</p>
   
     
     
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
       <span class="disabled">…</span>
     
   
     
     
-      <a href="/page/26/">26</a>
+      <a href="/page/19/">19</a>
     
   
     
     
-      <a href="/page/27/">27</a>
+      <a href="/page/20/">20</a>
     
   
     
     
-      <a href="/page/28/">28</a>
+      <a href="/page/21/">21</a>
     
   
 
@@ -390,5 +372,41 @@ We can configure pretty much, the way we want And …</p>
     <footer class="site-footer">
       <p>&copy; 2026 My Blog. Built with Hugo.</p>
     </footer>
+
+    
+    <script>
+    (function() {
+      var sidebar = document.getElementById('sidebar-nav');
+      var closeBtn = document.getElementById('sidebar-close');
+      var openBtn = document.getElementById('sidebar-open');
+      var mobileToggle = document.getElementById('sidebar-toggle');
+      var docsLayout = sidebar ? sidebar.closest('.docs-layout') : null;
+
+      function closeSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.add('sidebar-collapsed');
+        sidebar.classList.remove('sidebar-open');
+        if (openBtn) openBtn.classList.add('visible');
+        if (docsLayout) docsLayout.classList.add('sidebar-is-collapsed');
+      }
+
+      function openSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.remove('sidebar-collapsed');
+        if (openBtn) openBtn.classList.remove('visible');
+        if (docsLayout) docsLayout.classList.remove('sidebar-is-collapsed');
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (openBtn) openBtn.addEventListener('click', openSidebar);
+
+      
+      if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('sidebar-open');
+        });
+      }
+    })();
+    </script>
   </body>
 </html>
