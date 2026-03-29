@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Latex on My Blog</title>
-    <link>http://localhost:34481/posts/productive/programming-language/latex/</link>
+    <link>http://localhost:1313/posts/productive/programming-language/latex/</link>
     <description>Recent content in Latex on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:34481/posts/productive/programming-language/latex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/programming-language/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>basic</title>
-      <link>http://localhost:34481/posts/productive/programming-language/latex/basic/</link>
+      <link>http://localhost:1313/posts/productive/programming-language/latex/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/productive/programming-language/latex/basic/</guid>
+      <guid>http://localhost:1313/posts/productive/programming-language/latex/basic/</guid>
       <description>&lt;p&gt;#latex&lt;/p&gt;&#xA;&lt;h1 id=&#34;latex&#34;&gt;Latex&lt;/h1&gt;&#xA;&lt;p&gt;Latex is used for creating complex Notes for subjects like mathmatics( with lots of formulas), research paper or use can it for simple notes. Once done you can convert &lt;code&gt;.tex&lt;/code&gt; file to pdf(Portable Document Format).&lt;/p&gt;&#xA;&lt;h3 id=&#34;basic-layout&#34;&gt;Basic Layout&lt;/h3&gt;&#xA;&lt;p&gt;Creating document with &lt;code&gt;latex&lt;/code&gt; is simple. In contrast to word, you start off with the plain text file(tex file) which contains latex code and the actual content. LaTeX uses control statement, which specifies how your content should be formatted. After that you can use latex compiler to compile .tex file to .pdf file.&lt;/p&gt;</description>
     </item>
   </channel>

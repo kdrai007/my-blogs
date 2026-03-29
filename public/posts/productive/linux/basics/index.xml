@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basics on My Blog</title>
-    <link>http://localhost:34481/posts/productive/linux/basics/</link>
+    <link>http://localhost:1313/posts/productive/linux/basics/</link>
     <description>Recent content in Basics on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:34481/posts/productive/linux/basics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/linux/basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>d-bus</title>
-      <link>http://localhost:34481/posts/productive/linux/basics/d-bus/</link>
+      <link>http://localhost:1313/posts/productive/linux/basics/d-bus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/productive/linux/basics/d-bus/</guid>
+      <guid>http://localhost:1313/posts/productive/linux/basics/d-bus/</guid>
       <description>&lt;h1 id=&#34;d-bus-desktop-bus&#34;&gt;D-Bus (Desktop Bus)&lt;/h1&gt;&#xA;&lt;p&gt;At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard &lt;strong&gt;Inter-Process Communication (IPC)&lt;/strong&gt; mechnism used in linux and unix based systems.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-do-we-need-d-bus&#34;&gt;Why do we need D-Bus.&lt;/h3&gt;&#xA;&lt;p&gt;Before D-Bus, if a music player wanted to pause when you receive VoIP call, the developers of the music player and VoIP app would have to agree on a specific, custom way to talk with each other. This way messy and unscaleable.&lt;/p&gt;</description>
     </item>
   </channel>

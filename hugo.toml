@@ -14,4 +14,9 @@ paginate = 12
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 4
+  ordered = false
+
 ignoreLogs = ['warning-goldmark-raw-html']

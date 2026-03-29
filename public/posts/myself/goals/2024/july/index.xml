@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>July on My Blog</title>
-    <link>http://localhost:34481/posts/myself/goals/2024/july/</link>
+    <link>http://localhost:1313/posts/myself/goals/2024/july/</link>
     <description>Recent content in July on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:34481/posts/myself/goals/2024/july/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/myself/goals/2024/july/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;2024-07-07&#34;</title>
-      <link>http://localhost:34481/posts/myself/goals/2024/july/week-1/</link>
+      <link>http://localhost:1313/posts/myself/goals/2024/july/week-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/myself/goals/2024/july/week-1/</guid>
+      <guid>http://localhost:1313/posts/myself/goals/2024/july/week-1/</guid>
       <description>&lt;h2 id=&#34;goal---master-websocket-create-project---quiz-app&#34;&gt;Goal - Master Websocket, Create project - quiz app&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 1&lt;/strong&gt; - 6july&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Start the project with nodejs for backend and react for frontend.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Start Creating Server for handling realtime quiz data from the client.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 2&lt;/strong&gt; - 7 july&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash; Note  you can follow any video for reference for learning about websocket and how to handle quiz app in realtime.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create runable nodejs backend for  client where basic functionalities should work.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Learn or work around so i could know exactly how should i approach this problem.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 3&lt;/strong&gt; - 8 july&lt;/p&gt;</description>
     </item>
     <item>
       <title>Goal</title>
-      <link>http://localhost:34481/posts/myself/goals/2024/july/goal/</link>
+      <link>http://localhost:1313/posts/myself/goals/2024/july/goal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/myself/goals/2024/july/goal/</guid>
+      <guid>http://localhost:1313/posts/myself/goals/2024/july/goal/</guid>
       <description>&lt;p&gt;I should I have clear understanding and clear goal what I want to do.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Do I want to pursue programming&lt;/li&gt;&#xA;&lt;li&gt;If yes,then how exactly should i continue my journey&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So &lt;strong&gt;My goal for this month is&lt;/strong&gt; I should have atleast basic knowledge of how websockets work and how to implment it in backend to have realtime exchange of data through backend to frontend with the help of websocket.&lt;/p&gt;</description>
     </item>
     <item>
       <title>week 4</title>
-      <link>http://localhost:34481/posts/myself/goals/2024/july/week-4/</link>
+      <link>http://localhost:1313/posts/myself/goals/2024/july/week-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/myself/goals/2024/july/week-4/</guid>
+      <guid>http://localhost:1313/posts/myself/goals/2024/july/week-4/</guid>
       <description>&lt;h2 id=&#34;goal---master-basics-of-websockts-and-complete-my-quiz-app&#34;&gt;Goal - Master basics of websockts and complete my quiz-app&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 1&lt;/strong&gt; - 27 july&lt;/p&gt;&#xA;&lt;p&gt;==Goal== - Create a normal waitingbox where new user can join room with roomId  where in waitingroom, it display username of joined user&lt;/p&gt;&#xA;&lt;p&gt;Backend :-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Frontend :-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write implementation code to show users in waitingbox in more convenient way.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 2&lt;/strong&gt; - 28 july&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 3&lt;/strong&gt; - 29 july&lt;/p&gt;</description>
     </item>
   </channel>

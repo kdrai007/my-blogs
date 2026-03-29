@@ -2,170 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws C02 on My Blog</title>
-    <link>http://localhost:34481/posts/certificateion-course/aws-c02/</link>
+    <link>http://localhost:1313/posts/certificateion-course/aws-c02/</link>
     <description>Recent content in Aws C02 on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:34481/posts/certificateion-course/aws-c02/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/certificateion-course/aws-c02/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon EFS</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-efs/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-efs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-efs/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-efs/</guid>
       <description>&lt;h2 id=&#34;amazon-efs---elastic-file-system&#34;&gt;Amazon EFS - Elastic File System&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Managed NFS (network file system) that can be mounted on many EC2&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;EFs works with ec2 instances in multi AZ&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Highly available ,scalable, expensive (3xgp2), pay per use&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240729194905.png]]&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Use Cases :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Content Management , Data sharing , Web Serving Wordpress etc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Uses NFSv4.1 protocol&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ebs-vs-efs&#34;&gt;EBS vs EFS&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Elastic Block Store&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240730132757.png]]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Elastic File System&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240730133040.png]]&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;p&gt;[[aws]]&#xA;[[EC2- Instance Storage]]&#xA;[[EC2]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Amazon S3</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3/</guid>
       <description>&lt;h1 id=&#34;amazon-s3&#34;&gt;Amazon s3&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Amazon s3 is one of the main building blocks of AWS&lt;/li&gt;&#xA;&lt;li&gt;It&amp;rsquo;s advertised &amp;lsquo;infinitly scaling&amp;rsquo; storage&lt;/li&gt;&#xA;&lt;li&gt;Many website use s3 as there&amp;rsquo;s backbone&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Uses Cases&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Backup and stroage&lt;/li&gt;&#xA;&lt;li&gt;Diaster recovery&lt;/li&gt;&#xA;&lt;li&gt;Archieve&lt;/li&gt;&#xA;&lt;li&gt;Hybrid Cloud hosting&lt;/li&gt;&#xA;&lt;li&gt;Application hosting&lt;/li&gt;&#xA;&lt;li&gt;Media hosting&lt;/li&gt;&#xA;&lt;li&gt;Data lakes &amp;amp; big data analytics&lt;/li&gt;&#xA;&lt;li&gt;Software delivery&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;amazon-s3---buckets&#34;&gt;Amazon s3 - Buckets&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Amazon s3 allows people to store objects (files) in &amp;ldquo;buckets&amp;rdquo; (directories)&lt;/li&gt;&#xA;&lt;li&gt;Buckets must have globally unique name (across all regions all accounts)&lt;/li&gt;&#xA;&lt;li&gt;Buckets are defined at region level&lt;/li&gt;&#xA;&lt;li&gt;s3 looks like global service but buckets are created in a region.&lt;/li&gt;&#xA;&lt;li&gt;Naming convention&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No underscore, No uppercase&lt;/li&gt;&#xA;&lt;li&gt;3-63 characters long&lt;/li&gt;&#xA;&lt;li&gt;Not an IP&lt;/li&gt;&#xA;&lt;li&gt;Must start with lowercase letter or number&lt;/li&gt;&#xA;&lt;li&gt;Must not start with prefix xn&amp;ndash;&lt;/li&gt;&#xA;&lt;li&gt;Must not end with suffix &amp;ndash;alias&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;amazon-s3---objects&#34;&gt;Amazon s3 - Objects&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Objects (files) have a key&lt;/p&gt;</description>
     </item>
     <item>
       <title>Amazon s3 - Security</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3---security/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3---security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/amazon-s3---security/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3---security/</guid>
       <description>&lt;h2 id=&#34;amazon-s3---object-encryption&#34;&gt;Amazon s3 - Object Encryption&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/userguide/security.html&#34;&gt;for more info:-&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;You can encrypt object in s3 using one of the 4 methods&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Server Side Encryption (SSE)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SSE with Amazon-s3 managed keys (SSE=S3) - Enabled by default&lt;/li&gt;&#xA;&lt;li&gt;SSE with KMS keys stored in AWS KMS (SSE-KMS)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Levrage aws key management service to manage encryption keys&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;SSE with customer provided keys (SSE-C)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;When you want to manage your encryption keys&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Client Side Encryption (CSE)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Amzon - ECS</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/amzon---ecs/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/amzon---ecs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/amzon---ecs/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/amzon---ecs/</guid>
       <description>&lt;p&gt;tag: #aws #aws-copilot  #aws-ECR&lt;/p&gt;&#xA;&lt;h1 id=&#34;ecs---elastic-container-service&#34;&gt;ECS - Elastic Container Service&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Amazon Elastic Container Service (ECS) is a fully managed container orchestration service that helps you to more efficiently deploy, manage, and scale containerized applications.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ecs----launch-type&#34;&gt;ECS  - Launch Type&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ec2-launch-type&#34;&gt;EC2 Launch Type&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Launch docker container on AWS = Launch &lt;strong&gt;ECS tasks&lt;/strong&gt; on ECS clusters&lt;/li&gt;&#xA;&lt;li&gt;Ec2 Launch Type : you must provision and maintain the  infrastructure ( the EC2 Instances)&lt;/li&gt;&#xA;&lt;li&gt;Each EC2 instance must run the ECS agent to register in the ECS cluster&lt;/li&gt;&#xA;&lt;li&gt;Aws takes care of starting / stopping containers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;fargate-launch-type&#34;&gt;Fargate Launch Type&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Launch docker container in AWS&lt;/li&gt;&#xA;&lt;li&gt;You do not provision the infrastructure (no EC2 instance to manage)&lt;/li&gt;&#xA;&lt;li&gt;It&amp;rsquo;s all serverless&lt;/li&gt;&#xA;&lt;li&gt;You just create task definitions&lt;/li&gt;&#xA;&lt;li&gt;To scale , juse increase number of tasks . Simple - no more ec2 instance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ecs---iam-roles&#34;&gt;ECS - Iam Roles&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;EC2 Instance profile ( EC2 launch type only):&lt;/p&gt;</description>
     </item>
     <item>
       <title>Auto Scaling Group</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/auto-scaling-group/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/auto-scaling-group/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/auto-scaling-group/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/auto-scaling-group/</guid>
       <description>&lt;h2 id=&#34;auto-scaling-group&#34;&gt;Auto Scaling Group&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition -&lt;/strong&gt;&lt;br&gt;&#xA;An Amazon EC2 Auto Scaling group (ASG) contains a collection of EC2 instances that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;In real-life , the load on your application  &amp;amp; website can change&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;In the cloud , you can create and get rid of server very easily&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The goal of Auto Scaling Group (ASG) is to :&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS - CloudFormation</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws---cloudformation/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudformation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws---cloudformation/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudformation/</guid>
       <description>&lt;h3 id=&#34;cludformation&#34;&gt;CludFormation&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Writing Cloudformation Templates&lt;/li&gt;&#xA;&lt;li&gt;Stack creating and updates&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>AWS - CloudFront</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws---cloudfront/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudfront/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws---cloudfront/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudfront/</guid>
       <description>&lt;h2 id=&#34;cloudfront&#34;&gt;CloudFront&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.htmlhttps://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CloudFront is a Content Delivery Network(CDN)&lt;/li&gt;&#xA;&lt;li&gt;Improved read performance, content is cached at the edge&lt;/li&gt;&#xA;&lt;li&gt;Improves User Experience&lt;/li&gt;&#xA;&lt;li&gt;216 points of presence globally ( edge locations)&lt;/li&gt;&#xA;&lt;li&gt;DDos protection, integration with shield, Aws Web Application Firewall&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;cloudfront---origin&#34;&gt;Cloudfront - Origin&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;S3 Bucket :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For distrubuting files and caching them at the edge&lt;/li&gt;&#xA;&lt;li&gt;Enhanced security with CloudFront Origin Access Control(OAC)&lt;/li&gt;&#xA;&lt;li&gt;OAC is replacing Origin Access Identity (OAI)&lt;/li&gt;&#xA;&lt;li&gt;Cloudfont can be used as Ingress ( to upload files to s3)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Custom Origin (HTTP) :&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS - Container</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws---container/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws---container/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws---container/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws---container/</guid>
       <description>&lt;h1 id=&#34;containers&#34;&gt;Containers&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Docker is software development platform to deploy apps&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Apps are packaged in &lt;strong&gt;containers&lt;/strong&gt; that can be run on any OS&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Apps run the same regardless of where they run&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Any Machine&lt;/li&gt;&#xA;&lt;li&gt;No compatibility issue&lt;/li&gt;&#xA;&lt;li&gt;Predictable behavior&lt;/li&gt;&#xA;&lt;li&gt;Less work&lt;/li&gt;&#xA;&lt;li&gt;Easier to maintain and deploy&lt;/li&gt;&#xA;&lt;li&gt;Work with any language, any OS, any technology&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Use cases : Microservices architecture , lift and shift apps from on-premises to aws cloud &amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS - Imp Concepts</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws---imp-concepts/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws---imp-concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws---imp-concepts/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws---imp-concepts/</guid>
       <description>&lt;h2 id=&#34;ec2-instance-metadata&#34;&gt;EC2 Instance Metadata&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html&#34;&gt;for more info&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS EC2 Instance Metadata (IMDS) is powerful but one of the least known features to developers&lt;/li&gt;&#xA;&lt;li&gt;It allows AWS EC2 instances to &amp;ldquo;learn about themselves&amp;rdquo; without using IAM roles for that purpose&lt;/li&gt;&#xA;&lt;li&gt;The url is &lt;code&gt; http://169.254.169.254/latest/meta-data&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;You can retrieve the IAM Role name from the metadata , But you CANNOT retrieve the IAM policy&lt;/li&gt;&#xA;&lt;li&gt;Metadata - Information about EC2 Instance&lt;/li&gt;&#xA;&lt;li&gt;Userdata - Launch script of the EC2 Instance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;mfa-with-cli&#34;&gt;MFA with CLI&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;To use MFA with cli you must create temporary session&lt;/li&gt;&#xA;&lt;li&gt;To do so, you must run the &amp;ldquo;STS getsession api&amp;rdquo; call&#xA;![[Pasted image 20240903164710.png]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;aws-sdk&#34;&gt;AWS SDK&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If you want to perform action to aws with using code to perform multiple actions you should try aws sdk(software development kit)&lt;/li&gt;&#xA;&lt;li&gt;Some SDK are..&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Java&lt;/li&gt;&#xA;&lt;li&gt;Python (named boto3 or botocore)&lt;/li&gt;&#xA;&lt;li&gt;c++ and some more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;What you can create with aws sdk..&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ex- aws cli createted with python using aws sdk(boto3)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;aws-limits-quotas&#34;&gt;AWS Limits (Quotas)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;API Rate Limits&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS s3 - Advanced</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws-s3---advanced/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws-s3---advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws-s3---advanced/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws-s3---advanced/</guid>
       <description>&lt;h2 id=&#34;amazon-s3---moving-between--storage-classes&#34;&gt;Amazon s3 - moving between  Storage Classes&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can trnasition object with storage classes.&lt;/li&gt;&#xA;&lt;li&gt;For infrequently accessed object move them to Standard IA&lt;/li&gt;&#xA;&lt;li&gt;For archieve object that you don&amp;rsquo;t need fast access to move them to &lt;strong&gt;Glacier&lt;/strong&gt; or &lt;strong&gt;Glacier deep archieve&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;amazon-s3---lifecycle-rules&#34;&gt;Amazon s3 - Lifecycle Rules&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Transition Actions&lt;/strong&gt; - configure  objects to transition to another stroage class&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Move objects to Standard IA class after 60 day creation&lt;/li&gt;&#xA;&lt;li&gt;Move glacier for archiving after 6 months&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Expiration Actions&lt;/strong&gt; - Confgire objects to expire (delete) after some time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS- Beanstalk</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws--beanstalk/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws--beanstalk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws--beanstalk/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws--beanstalk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;  : 2024-09-21&#xA;&lt;strong&gt;Links&lt;/strong&gt; :&lt;/p&gt;&#xA;&lt;h1 id=&#34;beanstalk&#34;&gt;Beanstalk&lt;/h1&gt;&#xA;&lt;h4 id=&#34;overview&#34;&gt;Overview&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Elastic Beanstalk is a developer centric view of deploying an application on AWS&lt;/li&gt;&#xA;&lt;li&gt;It uses all the component&amp;rsquo;s we&amp;rsquo;ve seen before: EC2,ASG,ELB,RDS&amp;hellip;&lt;/li&gt;&#xA;&lt;li&gt;Managed Service&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Automatically handles capacity provisioning ,load balanceing, scaling, application health monitoring, instance configuration&amp;hellip;&lt;/li&gt;&#xA;&lt;li&gt;Just the application code is the responsbility of developer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;You still have full control over configuration&lt;/li&gt;&#xA;&lt;li&gt;Beanstalk is free but you pay for underlying instances&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;aws-beanstalk---components&#34;&gt;AWS Beanstalk - Components&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Application&lt;/strong&gt; : collection of Elastic Beanstalk components (enviroments, versions, configurations&amp;hellip;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS- CloudWatch</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/aws--cloudwatch/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/aws--cloudwatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/aws--cloudwatch/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/aws--cloudwatch/</guid>
       <description>&lt;h3 id=&#34;cloudwatch&#34;&gt;CloudWatch&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Creating Alarms and DashBoards&lt;/li&gt;&#xA;&lt;li&gt;CloudWatch Logs and Metrics&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>DB - Relational Database &amp; Aurora</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/db---relational-database--aurora/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/db---relational-database--aurora/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/db---relational-database--aurora/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/db---relational-database--aurora/</guid>
       <description>&lt;h2 id=&#34;rds---relational-database-service&#34;&gt;RDS - Relational Database Service&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash; Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;it&amp;rsquo;s managed DB service for DB use sql as a query language&lt;/li&gt;&#xA;&lt;li&gt;It allows to create database on cloud managed by amazon&#xA;ex -&#xA;&lt;ul&gt;&#xA;&lt;li&gt;postgres, Mysql , mariaDB, Oracle , Microsoft Sql Server&lt;/li&gt;&#xA;&lt;li&gt;Aurora (AWS proprietary database)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;advantage-of-deploying-rds-on-aws&#34;&gt;Advantage of deploying RDS on AWS&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;RDS is a managed service :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Automated provisioning , OS patching&lt;/li&gt;&#xA;&lt;li&gt;Continous backup and restore to specific timestamp (Point in time restore).&lt;/li&gt;&#xA;&lt;li&gt;Monitoring dashboards&lt;/li&gt;&#xA;&lt;li&gt;Read replica for improved read performance&lt;/li&gt;&#xA;&lt;li&gt;Multi AZ setup for DR (Damage Recovery)&lt;/li&gt;&#xA;&lt;li&gt;Maintenance  windows for upgrades&lt;/li&gt;&#xA;&lt;li&gt;Scaling capablity (both horizontal and vertical)&lt;/li&gt;&#xA;&lt;li&gt;Storage backed by EBS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;You can&amp;rsquo;t ssh into your instances&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;amazon-rds-proxy&#34;&gt;Amazon RDS Proxy&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fully managed database proxy for RDS&lt;/li&gt;&#xA;&lt;li&gt;Allows apps to pool and share DB connections established with the database&lt;/li&gt;&#xA;&lt;li&gt;Improving database efficiency by reducing stress from database resources ( e.g, RAM,CPU) and minimize open connnections (and timeouts)&lt;/li&gt;&#xA;&lt;li&gt;Serverless , autoscaleing , highly available (multi AZ)&lt;/li&gt;&#xA;&lt;li&gt;Reduced failover time by up-to 66% of RDS &amp;amp;  Aurora&lt;/li&gt;&#xA;&lt;li&gt;Supports RDS (Mysql,Postgres,MariaDB,MS-SQL server) and Aurora(mySql, Postgres) DB&lt;/li&gt;&#xA;&lt;li&gt;No code changes required for most apps&lt;/li&gt;&#xA;&lt;li&gt;Enforce IAM Authentication for DB , and securely store credentials in AWS Secrets Manager&lt;/li&gt;&#xA;&lt;li&gt;RDS proxy is never publicly avaialble (must be accessed through VPC)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;rds-read-replica--vs-multi-az&#34;&gt;RDS Read Replica  vs Multi-AZ&lt;/h3&gt;&#xA;&lt;p&gt;&amp;ndash; Amazon RDS Multi-AZ and Read Replicas maintain a copy of database but they are different in nature. Use Multi-AZ deployments for High Availability / Fail-over and Read Replicas for read scalability.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EC2</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/ec2/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/ec2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/ec2/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/ec2/</guid>
       <description>&lt;h2 id=&#34;amazon-ec2&#34;&gt;Amazon EC2&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Amazon elastic compute cloud(Amazon EC2) offers the deepest and boradest compute platform,with over 720 instances and choice over latest processor,storage,os and networking system&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Run cloud-native and enterprises applications.&lt;/li&gt;&#xA;&lt;li&gt;Train and deploy ML applications.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;EC2 sizing and configuration options&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240725105109.png]]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;EC2 User Data&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It is possible to bootstrap our instances using user data script.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Bootstrapping&lt;/em&gt; means running some commands when instance start.&lt;/li&gt;&#xA;&lt;li&gt;That script only runs once at the instance first start.&lt;/li&gt;&#xA;&lt;li&gt;EC2 user data is used to automate boots task such as:&#xA;- Installing Updates&#xA;- Installing software&#xA;- Download common files from internet.&#xA;- Anything you can think off.&lt;/li&gt;&#xA;&lt;li&gt;The EC2 user data runs with root user.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;EC2 Instance type: Example&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>EC2- Instance Storage</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/ec2--instance-storage/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/ec2--instance-storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/ec2--instance-storage/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/ec2--instance-storage/</guid>
       <description>&lt;h2 id=&#34;ebs---elastic-block-store&#34;&gt;EBS - Elastic Block Store&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An Ebs Volume is network drive you can attach to your instances while they run.&lt;/li&gt;&#xA;&lt;li&gt;It allows your instances to persist data ever after the termination of your instance.&lt;/li&gt;&#xA;&lt;li&gt;They can be mounted to only to instance (at CCP level).&lt;/li&gt;&#xA;&lt;li&gt;They are bound to the specific  availability zones.&lt;/li&gt;&#xA;&lt;li&gt;Analogy:Think  of them as a &amp;ldquo;network  USB  stick&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;EBS Volume&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240726114353.png]]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;EBS - Delete on Termination attribute&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ElasticCache</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/elasticcache/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/elasticcache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/elasticcache/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/elasticcache/</guid>
       <description>&lt;h2 id=&#34;amazon-elasticcache&#34;&gt;Amazon ElasticCache&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/elasticache-use-cases.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;AWS ElastiCache&lt;/strong&gt; is a managed in-memory caching service that supports both Redis and Memcached. It’s used to improve the performance of web applications by retrieving data from a fast, managed in-memory cache, instead of relying entirely on slower disk-based databases.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The same way RDS get maganed Relational Databaseses&amp;hellip;&lt;/li&gt;&#xA;&lt;li&gt;ElastiCache  is to get managed Redis or Memcached&lt;/li&gt;&#xA;&lt;li&gt;Caches are in-memory databases with really high performance , low latency&lt;/li&gt;&#xA;&lt;li&gt;Helps reduce loads of databases for read intensive workloads&lt;/li&gt;&#xA;&lt;li&gt;Helps make your application stateless&lt;/li&gt;&#xA;&lt;li&gt;AWS takes care of OS maintenance / patching , optimizations , configuration , monitoring , failure recovery and backups&lt;/li&gt;&#xA;&lt;li&gt;Using Elasticache can be pain in the a** because you have to do heavy code changes to make your application work&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;solution-architecture----db-cache&#34;&gt;Solution Architecture  - DB Cache&lt;/h3&gt;&#xA;&lt;p&gt;![[Pasted image 20240810204043.png]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>ELB - Elastic Load Blancer</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</guid>
       <description>&lt;h1 id=&#34;elb---elastic-load-balancer&#34;&gt;ELB - Elastic Load Balancer&lt;/h1&gt;&#xA;&lt;h3 id=&#34;scalability&#34;&gt;Scalability&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Scaliablity means that an application / system can handle greater loads by adapting&lt;/li&gt;&#xA;&lt;li&gt;There are two kinds of scalability :&#xA;1. Vertical Scalability&#xA;2. Horizonal Scalability (= elasticity)&lt;/li&gt;&#xA;&lt;li&gt;Scalability is linked but different to high availabilty.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Scalability - Vertical Scalability&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Vertical Scalability means scaling the size of the instance.&lt;/li&gt;&#xA;&lt;li&gt;For example, your application is running on t2.micro Scaling that machine vertically means upgrading t2.micro into t2.large&lt;/li&gt;&#xA;&lt;li&gt;VS is very common for non-distributed system like Database.&lt;/li&gt;&#xA;&lt;li&gt;RDS, elastic cache are services that can scale vertically.&lt;/li&gt;&#xA;&lt;li&gt;There&amp;rsquo;s usually limit on how much you can vertically scale (hardware limit)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Horizontal Scalability&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>functionlities - load balancer</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/functionlities---load-balancer/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/functionlities---load-balancer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/functionlities---load-balancer/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/functionlities---load-balancer/</guid>
       <description>&lt;h2 id=&#34;functionlities-of-load-balancer&#34;&gt;Functionlities of Load Balancer&lt;/h2&gt;&#xA;&lt;h3 id=&#34;sticky-sessions---cookie-names&#34;&gt;Sticky Sessions - Cookie Names&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Application based cookies&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Custom cookie :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Generated by the target&lt;/li&gt;&#xA;&lt;li&gt;Can include any custom attributes required by the application&lt;/li&gt;&#xA;&lt;li&gt;Cookie name must be specified individually for every target groups&lt;/li&gt;&#xA;&lt;li&gt;Don&amp;rsquo;t use AWSALB , AWSALBAPP or AWSALGTG ( reserved for use for  ELB)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Application cookie :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Generated by the load balancer&lt;/li&gt;&#xA;&lt;li&gt;Cookie name is AWSALBAPP&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duration based Cookie&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cookie generated by the load balancer&lt;/li&gt;&#xA;&lt;li&gt;Cookie name is AWSALB for ALB and AWSELB for CLB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;cross-zone-load-balancing&#34;&gt;Cross Zone Load Balancing&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;With Cross zone lB Each load balancer instance distribute traffic evenly between all instances in all AZ&lt;/p&gt;</description>
     </item>
     <item>
       <title>IAM</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/iam/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/iam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/iam/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/iam/</guid>
       <description>&lt;h2 id=&#34;iam--users--groups&#34;&gt;IAM : Users &amp;amp; Groups&lt;/h2&gt;&#xA;&lt;p&gt;iam - Identity and access management ,Global service&#xA;root create by default shouldn&amp;rsquo;t be shared&#xA;Users are people within your organization and can be grouped&#xA;Groups can only contain user not others groups.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM : Permissions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;. Users or Groups can be assigned Json documents called policies.&#xA;. These policies define the permissions of the users.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM Policies structure&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Consists of:&#xA;. Version: policy language versoin.&#xA;. Id: an idetifier for the policy(optional)&#xA;. Statement: One or more individual statement(required)&lt;/li&gt;&#xA;&lt;li&gt;Statement Consists of:&#xA;. Sid: an identifer for the statement (opt)&#xA;. Effect: whether the statement allwos of denies access(allow or deny)&#xA;. Principle: account/user/role to which the policy is applied to.&#xA;. Action: list of actions this policies allows or denies&#xA;. Resource: list of resources to which the actions applied for.&#xA;. Condition: conditions for when the policy is in effect(optional)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM Roles for Services&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>LB -  Load balancer</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/lb----load-balancer/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/lb----load-balancer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/lb----load-balancer/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/lb----load-balancer/</guid>
       <description>&lt;h2 id=&#34;application-load-balancer&#34;&gt;Application Load Balancer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Application load balancers is layer 7 (HTTP)&lt;/li&gt;&#xA;&lt;li&gt;Load balancing to multiple HTTP applications across machines (target groups)&lt;/li&gt;&#xA;&lt;li&gt;Load balancing to multiple application on the same machine (ex containers)&lt;/li&gt;&#xA;&lt;li&gt;Support HTTP/2 and WebSocket&lt;/li&gt;&#xA;&lt;li&gt;Routing Tables to different Target groups:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Routing based on path in URL (example.com / ==users== &amp;amp;  example.com / ==auth==)&lt;/li&gt;&#xA;&lt;li&gt;Routing based on hostname in URL (==user==.example.com &amp;amp; ==auth==.example.com)&lt;/li&gt;&#xA;&lt;li&gt;Routing based on query strings, headers  (example.com/ users?i==d=1234&amp;amp;order=false==)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;ALB are a great fit for micro services and container based applications (example : Docker &amp;amp; Amazon ECS)&lt;/li&gt;&#xA;&lt;li&gt;Has a port mapping feature to redirect to dynamic port in ECS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;http-based-traffic&#34;&gt;HTTP based traffic&lt;/h3&gt;&#xA;&lt;p&gt;![[Pasted image 20240801144129.png]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Route-53</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/route-53/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/route-53/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/route-53/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/route-53/</guid>
       <description>&lt;h2 id=&#34;route-53&#34;&gt;Route 53&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A highly scalable , fully managed authoriative  DNS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Authoriative = the customer (you) can update the DNS records&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Route 53 is also a domain registrar&lt;/li&gt;&#xA;&lt;li&gt;Ability to check health of your resources&lt;/li&gt;&#xA;&lt;li&gt;The only AWS service which provides 100% availablity SLA&lt;/li&gt;&#xA;&lt;li&gt;53 is reference to traditional DNS port&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;route-53---records&#34;&gt;Route 53 - Records&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;How you want to route traffic to a domain&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Each records contain :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Domain/sub-domain&lt;/strong&gt; name - e.g , example.com&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Record Type -&lt;/strong&gt; e.g , A or AAAA&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Value -&lt;/strong&gt; e.g, 12.74.23.198&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Routing policy -&lt;/strong&gt; how route 53 responds to queries&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;TTl&lt;/strong&gt; - amout of time the records cached in DNS Resolvers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Route 53 supports the following DNS record types :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Route-53 - Routing Policy</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/route-53---routing-policy/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/route-53---routing-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/route-53---routing-policy/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/route-53---routing-policy/</guid>
       <description>&lt;h2 id=&#34;route-53---routing-policy&#34;&gt;Route 53 - Routing Policy&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Define how route 53 responds to DNS query&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t get confused by the word Routing&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It&amp;rsquo;s not same as load Balancer routing which routes the traffic&lt;/li&gt;&#xA;&lt;li&gt;DNS does not route any traffic it only responds to the DNS queries&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Route 53 supports the following policies:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Simple&lt;/li&gt;&#xA;&lt;li&gt;Weighted&lt;/li&gt;&#xA;&lt;li&gt;Failover&lt;/li&gt;&#xA;&lt;li&gt;Latency Based&lt;/li&gt;&#xA;&lt;li&gt;Geolocation&lt;/li&gt;&#xA;&lt;li&gt;Multi-Value Anser&lt;/li&gt;&#xA;&lt;li&gt;Geo-promixity ( Using route 53 traffic flow feature)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;routing-policy---simple&#34;&gt;Routing Policy - Simple&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Typically, route traffic to a single resource&lt;/li&gt;&#xA;&lt;li&gt;Can specify multiple values in same record&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;If multiple values are returned, a random one will chosen by the client.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;When Alias are enabled, specify only one resource&lt;/li&gt;&#xA;&lt;li&gt;Can&amp;rsquo;t be associated with health checks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;routing-policy---weighted&#34;&gt;Routing Policy - Weighted&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Control the % of the requests that goes to each specific resource.&lt;/p&gt;</description>
     </item>
     <item>
       <title>VPC - Fundamentals</title>
-      <link>http://localhost:34481/posts/certificateion-course/aws-c02/vpc---fundamentals/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/vpc---fundamentals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:34481/posts/certificateion-course/aws-c02/vpc---fundamentals/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/vpc---fundamentals/</guid>
       <description>&lt;h1 id=&#34;vpc&#34;&gt;VPC&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html&#34;&gt;checkout&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically isolated virtual network that you&amp;rsquo;ve defined.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;VPC&lt;/strong&gt; : private network to deploy your resources (regional resource)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Subnets&lt;/strong&gt; allows you to partition your network insdie your VPC (Availbility zone resource)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A &lt;strong&gt;public subnet&lt;/strong&gt; is subnet that is accessible through public internet&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A &lt;strong&gt;private subnets&lt;/strong&gt; is subnet that is not accessible through internet&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;To define access through internet and between subnets, we use &lt;strong&gt;Route Tables&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
