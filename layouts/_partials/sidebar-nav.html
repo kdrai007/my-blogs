@@ -1,15 +1,13 @@
-{{/* Left sidebar navigation — shows all sections recursively */}}
+{{/* Left sidebar — terminal-style section navigation */}}
 <aside class="sidebar-nav" id="sidebar-nav">
   <div class="sidebar-nav-inner">
 
-    {{/* Close button */}}
     <div class="sidebar-close-btn">
       <button id="sidebar-close" aria-label="Close sidebar" title="Close sidebar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="9 6 3 12 9 18"/></svg>
+        [&lt;]
       </button>
     </div>
 
-    {{/* Build section tree from the "posts" section */}}
     {{ $postsSection := .Site.GetPage "/posts" }}
     {{ if $postsSection }}
       <nav class="sidebar-sections">
@@ -20,26 +18,22 @@
   </div>
 </aside>
 
-{{/* Floating re-open button (visible when sidebar is collapsed) */}}
 <button class="sidebar-open-btn" id="sidebar-open" aria-label="Open sidebar" title="Open sidebar">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="15 6 21 12 15 18"/></svg>
+  [&gt;]
 </button>
 
-{{/* Recursive section tree template */}}
 {{ define "section-tree" }}
   {{ $section := .Section }}
   {{ $currentPage := .CurrentPage }}
   {{ $depth := .Depth }}
 
   <ul class="nav-tree{{ if eq $depth 0 }} nav-tree-root{{ end }}">
-    {{/* Show child sections first */}}
     {{ range $section.Sections }}
       {{ $isAncestor := $currentPage.IsDescendant . }}
       {{ $isActive := eq $currentPage.CurrentSection . }}
       <li class="nav-section{{ if or $isAncestor $isActive }} nav-open{{ end }}">
         <button class="nav-section-toggle{{ if or $isAncestor $isActive }} active{{ end }}" onclick="this.parentElement.classList.toggle('nav-open')">
-          <span class="nav-section-label">{{ .Title }}</span>
-          <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="nav-section-label">{{ if or $isAncestor $isActive }}[-]{{ else }}[+]{{ end }} {{ upper .Title }}</span>
         </button>
         <div class="nav-section-children">
           {{ template "section-tree" (dict "Section" . "CurrentPage" $currentPage "Depth" (add $depth 1)) }}
@@ -47,12 +41,11 @@
       </li>
     {{ end }}
 
-    {{/* Then show pages in this section */}}
     {{ range $section.RegularPages }}
       {{ $isCurrentPage := eq $currentPage.RelPermalink .RelPermalink }}
       <li class="nav-page">
         <a href="{{ .RelPermalink }}" class="nav-page-link{{ if $isCurrentPage }} nav-current{{ end }}">
-          {{ .Title | default .LinkTitle | default "Untitled" }}
+          {{ if $isCurrentPage }}<span class="prompt">&gt;</span> {{ end }}{{ .Title | default .LinkTitle | default "Untitled" }}
         </a>
       </li>
     {{ end }}

@@ -10,10 +10,10 @@
     content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
   {{ hugo.Generator }}
 
-  {{/* Google Fonts - Inter */}}
+  {{/* Monospace fonts — JetBrains Mono + Fira Code */}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   {{/* Custom CSS */}}
   <link rel="stylesheet" href="{{ relURL "css/custom.css" }}">
@@ -25,7 +25,6 @@
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
-
   {{ block "head" . }}{{ end }}
 </head>
 
@@ -33,22 +32,16 @@
   {{/* Top header bar */}}
   <header class="site-header">
     <nav class="site-nav">
-      <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
+      <a href="{{ .Site.Home.Permalink }}" class="site-logo"><span class="prompt">&gt;</span> {{ .Site.Title }}</a>
       <ul class="nav-links">
-        <li><a href="{{ .Site.Home.Permalink }}">Home</a></li>
-        <li><a href="{{ relURL "posts/" }}">All Posts</a></li>
+        <li><a href="{{ .Site.Home.Permalink }}">[ HOME ]</a></li>
+        <li><a href="{{ relURL "posts/" }}">[ POSTS ]</a></li>
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}">[ {{ upper .Name }} ]</a></li>
         {{ end }}
       </ul>
-      {{/* Mobile sidebar toggle */}}
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -58,7 +51,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; {{ now.Format "2006" }} {{ .Site.Title }} <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   {{/* Sidebar toggle scripts */}}
@@ -88,7 +85,6 @@
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      // Mobile hamburger
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

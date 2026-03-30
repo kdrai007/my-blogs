@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/tags/excalidraw/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -63,76 +56,24 @@
     
       <a href="/posts/productive/system-design/01-intro/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">System Design</span>
-  
-
-  <h2>01-intro</h2>
-
-  
-    <p class="post-card-excerpt">System Design System design is the process of defining the architecture,interface and data for system that satisfies specific requirement. A good …</p>
-  
-
-  <div class="post-card-meta">
+  <div class="post-card-header">
     
-    <span>3 min read</span>
+      <span class="post-card-section">[ SYSTEM DESIGN ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
   </div>
-</div>
-</a>
-    
-      <a href="/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
 
-  <h2>Data Intense Part One.Excalidraw</h2>
+  <h2><span class="prompt">&gt;</span> 01-intro</h2>
 
   
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
+    <p class="post-card-excerpt">// System Design System design is the process of defining the architecture,interface and data for system that satisfies …</p>
   
 
   <div class="post-card-meta">
     
-    <span>9 min read</span>
-  </div>
-</div>
-</a>
-    
-      <a href="/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
-
-  <h2>Data Intense.Excalidraw</h2>
-
-  
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>7 min read</span>
-  </div>
-</div>
-</a>
-    
-      <a href="/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
-
-  <h2>Drawing 2025 03 29 18.33.55.Excalidraw</h2>
-
-  
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>1 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>525w</span>
   </div>
 </div>
 </a>
@@ -147,7 +88,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -177,7 +122,6 @@
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

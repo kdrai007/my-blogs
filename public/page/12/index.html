@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -57,10 +50,13 @@
   
   <section class="hero">
     <div class="hero-content">
-      <h1>My Blog</h1>
+      <div class="scanline-overlay"></div>
+      <p class="hero-status">[ STATUS: READY ]</p>
+      <h1><span class="prompt">&gt;</span> My Blog</h1>
       
-        <p>A collection of notes, thoughts, and learnings.</p>
+        <p class="hero-desc">// A collection of notes, thoughts, and learnings.</p>
       
+      <span class="hero-separator">════════════════════════════════════════</span>
     </div>
   </section>
 
@@ -69,202 +65,255 @@
   
 
   
+    <h2 class="section-heading"># ALL_ENTRIES <span class="text-muted">(196)</span></h2>
     <div class="post-grid">
       
       
-        <a href="/posts/myself/project-be_better/january/day-9/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">January</span>
-  
-
-  <h2>day-9</h2>
-
-  
-    <p class="post-card-excerpt">Date: 30-01-2025 Goal: 5 hours 17:00 - 20:30pm
-Dinner break 21:30 - 12:00pm
-Sleep time </p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>1 min read</span>
-  </div>
-</div>
-</a>
-      
-        <a href="/posts/certificateion-course/aws-c02/db---relational-database--aurora/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
-
-  <h2>DB - Relational Database &amp; Aurora</h2>
-
-  
-    <p class="post-card-excerpt">RDS - Relational Database Service checkout
-&ndash; Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>4 min read</span>
-  </div>
-</div>
-</a>
-      
         <a href="/posts/movies/dog-movies/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Movies</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ MOVIES ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>dog-movies</h2>
+  <h2><span class="prompt">&gt;</span> dog-movies</h2>
 
   
-    <p class="post-card-excerpt">Movies based on dogs Hachi: A dog&rsquo;s tale Togo: the movie
+    <p class="post-card-excerpt">// Movies based on dogs Hachi: A dog&rsquo;s tale Togo: the movie
 Links [[Entertainment]]
 </p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
-  </div>
-</div>
-</a>
-      
-        <a href="/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
-
-  <h2>Drawing 2025 03 29 18.33.55.Excalidraw</h2>
-
-  
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>13w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/certificateion-course/aws-c02/ec2/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>EC2</h2>
+  <h2><span class="prompt">&gt;</span> EC2</h2>
 
   
-    <p class="post-card-excerpt">Amazon EC2 Amazon elastic compute cloud(Amazon EC2) offers the deepest and boradest compute platform,with over 720 instances and choice over latest …</p>
+    <p class="post-card-excerpt">// Amazon EC2 Amazon elastic compute cloud(Amazon EC2) offers the deepest and boradest compute platform,with over 720 …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>300w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/certificateion-course/aws-c02/ec2--instance-storage/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>EC2- Instance Storage</h2>
+  <h2><span class="prompt">&gt;</span> EC2- Instance Storage</h2>
 
   
-    <p class="post-card-excerpt">EBS - Elastic Block Store An Ebs Volume is network drive you can attach to your instances while they run. It allows your instances to persist data …</p>
+    <p class="post-card-excerpt">// EBS - Elastic Block Store An Ebs Volume is network drive you can attach to your instances while they run. It allows your …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>539w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Accounting Process</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ ACCOUNTING PROCESS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>economic_basis for accrual_accounting</h2>
+  <h2><span class="prompt">&gt;</span> economic_basis for accrual_accounting</h2>
 
   
-    <p class="post-card-excerpt">Economic Basis for Accrual Accounting Simple landscaping example can be used to discuss the elements of the income statement, which are revenues, …</p>
+    <p class="post-card-excerpt">// Economic Basis for Accrual Accounting Simple landscaping example can be used to discuss the elements of the income …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>417w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/certificateion-course/aws-c02/elasticcache/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>ElasticCache</h2>
+  <h2><span class="prompt">&gt;</span> ElasticCache</h2>
 
   
-    <p class="post-card-excerpt">Amazon ElasticCache checkout
-AWS ElastiCache is a managed in-memory caching service that supports both Redis and Memcached. It’s used to improve the …</p>
+    <p class="post-card-excerpt">// Amazon ElasticCache checkout
+AWS ElastiCache is a managed in-memory caching service that supports both Redis and …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>282w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>ELB - Elastic Load Blancer</h2>
+  <h2><span class="prompt">&gt;</span> ELB - Elastic Load Blancer</h2>
 
   
-    <p class="post-card-excerpt">ELB - Elastic Load Balancer Scalability Scaliablity means that an application / system can handle greater loads by adapting There are two kinds of …</p>
+    <p class="post-card-excerpt">// ELB - Elastic Load Balancer Scalability Scaliablity means that an application / system can handle greater loads by …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>607w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/linux/linux_cmd/part-one/exploring_system/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Part One</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PART ONE ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>exploring_system</h2>
+  <h2><span class="prompt">&gt;</span> exploring_system</h2>
 
   
-    <p class="post-card-excerpt">tag : #linux #navigation
-Exploring the system Commands ls - List direcotory content file - Determine file type less - View file content Having more …</p>
+    <p class="post-card-excerpt">// tag : #linux #navigation
+Exploring the system Commands ls - List direcotory content file - Determine file type less - …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>427w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/productive/finance/study-materials/finance/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ STUDY MATERIALS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> Finance</h2>
+
+  
+    <p class="post-card-excerpt">// Finance Tags: #finance
+source
+Finance is the study of management,movement, and raising of money. The …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>6min</span>
+    <span class="meta-divider">|</span>
+    <span>1199w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/productive/finance/study-materials/intro-to-finance/finance/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ INTRO TO FINANCE ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> Finance</h2>
+
+  
+    <p class="post-card-excerpt">// Finance Tags: #finance
+source
+Finance is the study of management,movement, and raising of money. The …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>6min</span>
+    <span class="meta-divider">|</span>
+    <span>1199w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/productive/finance/study-materials/financial_instruments/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ STUDY MATERIALS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> financial_instruments</h2>
+
+  
+    <p class="post-card-excerpt">// Tags: #finance
+Financial Instruments Financial Market and Instruments. The money market is the market for short-time, …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>6min</span>
+    <span class="meta-divider">|</span>
+    <span>1082w</span>
   </div>
 </div>
 </a>
@@ -377,7 +426,11 @@ Exploring the system Commands ls - List direcotory content file - Determine file
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -407,7 +460,6 @@ Exploring the system Commands ls - List direcotory content file - Determine file
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

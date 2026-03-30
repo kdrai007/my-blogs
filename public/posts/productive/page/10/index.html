@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/posts/productive/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -61,84 +54,26 @@
   <div class="post-grid">
     
     
-      <a href="/posts/productive/programming-language/go-lang/variables/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Go Lang</span>
-  
-
-  <h2>variables</h2>
-
-  
-    <p class="post-card-excerpt">Go - Variables Tag : #Go #go_lang #programming
-The var statement declears list of variables
-As in function argument list,the type is last A var …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>4 min read</span>
-  </div>
-</div>
-</a>
-    
-      <a href="/posts/productive/linux/vim/vim-tips_tricks/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Vim</span>
-  
-
-  <h2>vim tips_tricks</h2>
-
-  
-    <p class="post-card-excerpt">Vim Tips and Tricks Tags: #vim #motion
-Press x to delete word under the cursor.
-Press gu to lowercase words, press gU to uppercase words
-Press vit to …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>2 min read</span>
-  </div>
-</div>
-</a>
-    
-      <a href="/posts/productive/linux/linux_cmd/part-one/working_with_commands/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Part One</span>
-  
-
-  <h2>working_with_commands</h2>
-
-  
-    <p class="post-card-excerpt">Tag : #linux #commands
-Workings With Commands Used commands in this chapter type - Indicate how a command name is intepreted which - Display which …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>5 min read</span>
-  </div>
-</div>
-</a>
-    
       <a href="/posts/productive/zettelkastens-method/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Productive</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PRODUCTIVE ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Zettelkasten&#39;s method</h2>
+  <h2><span class="prompt">&gt;</span> Zettelkasten&#39;s method</h2>
 
   
-    <p class="post-card-excerpt">Intro A Zettelkasten is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to …</p>
+    <p class="post-card-excerpt">// Intro A Zettelkasten is a personal tool for thinking and writing. It has hypertextual features to make a web of thought …</p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>52w</span>
   </div>
 </div>
 </a>
@@ -218,7 +153,11 @@ Workings With Commands Used commands in this chapter type - Indicate how a comma
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -248,7 +187,6 @@ Workings With Commands Used commands in this chapter type - Indicate how a comma
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

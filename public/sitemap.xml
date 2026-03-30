@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/myself/books-to-read/</loc>
-    <lastmod>2026-03-27T10:47:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-27T10:47:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/myself/</loc>
-    <lastmod>2026-03-27T10:47:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-03-27T10:47:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/myself/remainder/</loc>
-  </url><url>
     <loc>http://localhost:1313/posts/productive/system-design/01-intro/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/system-design/02-consistency-patterns/</loc>
@@ -29,14 +15,6 @@
     <loc>http://localhost:1313/posts/productive/system-design/06-cdn/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/system-design/07-load-balancer/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/thoughts/12-april25/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/thoughts/22-may24/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/thoughts/23-may24/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/thoughts/29-may24/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/</loc>
   </url><url>
@@ -131,10 +109,6 @@
     <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-two/customize_prompt/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/linux/basics/d-bus/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/database/</loc>
   </url><url>
@@ -276,8 +250,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/movies/dog-movies/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/</loc>
-  </url><url>
     <loc>http://localhost:1313/posts/certificateion-course/aws-c02/ec2/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/certificateion-course/aws-c02/ec2--instance-storage/</loc>
@@ -307,8 +279,6 @@
     <loc>http://localhost:1313/posts/productive/finance/study-materials/financial_instruments/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/financial_instruments/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/myself/fixed-time-table/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/foreign-exchange-rates/</loc>
   </url><url>
@@ -388,7 +358,11 @@
   </url><url>
     <loc>http://localhost:1313/posts/movies/</loc>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
     <loc>http://localhost:1313/posts/myself/phlisophy/buddhism/my_understanding/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/myself/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/navigation/</loc>
   </url><url>
@@ -420,6 +394,8 @@
   </url><url>
     <loc>http://localhost:1313/posts/myself/projects/poll-app/</loc>
   </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+  </url><url>
     <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/processes/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/</loc>
@@ -431,10 +407,6 @@
     <loc>http://localhost:1313/posts/myself/project-be_better/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/myself/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/myself/promise/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/promise/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/database/sql/queries/</loc>
   </url><url>
@@ -496,10 +468,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/productive/books/the-richest-man-in-babylon/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/myself/thoughts/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/thoughts/</loc>
-  </url><url>
     <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/time-impact-on-saving-and-spending/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/finance/study-materials/time-impact-on-saving-and-spending/</loc>
@@ -509,8 +477,6 @@
     <loc>http://localhost:1313/posts/productive/programming-language/typescript/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/myself/projects/url-shortning/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/myself/thoughts/validation/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/productive/programming-language/go-lang/variables/</loc>
   </url><url>

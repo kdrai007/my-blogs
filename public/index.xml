@@ -57,34 +57,6 @@
       <description>&lt;p&gt;Tags: #system-design #load-balancers #lb&lt;/p&gt;&#xA;&lt;h1 id=&#34;load-balancers&#34;&gt;Load Balancers&lt;/h1&gt;</description>
     </item>
     <item>
-      <title>12 April,25</title>
-      <link>http://localhost:1313/posts/thoughts/12-april25/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/12-april25/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;While reading manga I thought, why don&amp;rsquo;t I write what I think frequently.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here &amp;rsquo;s overview of what I&amp;rsquo;m gonna write in these sections:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Whenever I think something good or bad.&lt;/li&gt;&#xA;&lt;li&gt;Any event good or bad, Write some bare minimum details about it.&lt;/li&gt;&#xA;&lt;li&gt;Any creative thoughts.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
-    </item>
-    <item>
-      <title>22 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/22-may24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/22-may24/</guid>
-      <description>&lt;h2 id=&#34;whats-happening-with-me&#34;&gt;What&amp;rsquo;s happening with me.&lt;/h2&gt;&#xA;&lt;p&gt;Lag rha hai sala mai pagal ho jaunga.&#xA;Apne adato k chalte kabhi kabhi aaisa lagta hai kuch kr lu apne sth just because I can&amp;rsquo;t control my habits&lt;/p&gt;&#xA;&lt;p&gt;Sala jb bhi Naya sikhne ya janne ki tayari krta hu tb tb sala me dimag aur meri adate middle fingure dikha deti hai&#xA;Mai kabhi kuch kr hi paya aur kabhi kabhi aaisa lagta hai me kr hi ni skta apne adato ko control me pata ni kyo pr aaisa hi hai.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>23 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/23-may24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/23-may24/</guid>
-      <description>&lt;h2 id=&#34;life-on-autopilot&#34;&gt;Life on autopilot&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;Ok,promise no more ranting&#xA;Just trying to have fun while I can&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>29 may,24</title>
-      <link>http://localhost:1313/posts/thoughts/29-may24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/thoughts/29-may24/</guid>
-      <description>&lt;h1 id=&#34;happiness&#34;&gt;Happiness&lt;/h1&gt;&#xA;&lt;p&gt;Why my happiness is dependent on someone else why i can&amp;rsquo;t celebrate my own success why i can&amp;rsquo;t I do something that I enjoy i feel happy about it why and why i&amp;rsquo;am always complaining.&#xA;I don&amp;rsquo;t know why but  I want to know I want to feel my own success my own goals that provide me happiness I should&amp;rsquo;nt depend on  others to give me happiness I should be the one who create those happiness&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>advanced_keyboard_tricks</title>
       <link>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/advanced_keyboard_tricks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -335,20 +307,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/productive/linux/basics/d-bus/</guid>
       <description>&lt;h1 id=&#34;d-bus-desktop-bus&#34;&gt;D-Bus (Desktop Bus)&lt;/h1&gt;&#xA;&lt;p&gt;At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard &lt;strong&gt;Inter-Process Communication (IPC)&lt;/strong&gt; mechnism used in linux and unix based systems.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-do-we-need-d-bus&#34;&gt;Why do we need D-Bus.&lt;/h3&gt;&#xA;&lt;p&gt;Before D-Bus, if a music player wanted to pause when you receive VoIP call, the developers of the music player and VoIP app would have to agree on a specific, custom way to talk with each other. This way messy and unscaleable.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Data Intense Part One.Excalidraw</title>
-      <link>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/</guid>
-      <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;excalidraw-data&#34;&gt;Excalidraw Data&lt;/h1&gt;&#xA;&lt;h2 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h2&gt;&#xA;&lt;p&gt;Topic - Data Design ^1xXe3JjN&lt;/p&gt;&#xA;&lt;p&gt;Some of the topic related to data ^Q4z6BDsO&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;NoSql -  ^XXDlTJrg&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Nosql is a type of database used for storing data&#xA;in not so fixed schema. Using Nosql you can save&#xA;data dynamically. ^ULpDDdwA&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Data Intense.Excalidraw</title>
-      <link>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/</guid>
-      <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;excalidraw-data&#34;&gt;Excalidraw Data&lt;/h1&gt;&#xA;&lt;h2 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h2&gt;&#xA;&lt;p&gt;Text from a book called Designing data intensive application ^Iwtwk1zW&lt;/p&gt;&#xA;&lt;p&gt;Topic - Data Design ^1xXe3JjN&lt;/p&gt;&#xA;&lt;p&gt;Some of the topic related to data ^Q4z6BDsO&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;NoSql -  ^XXDlTJrg&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Nosql is a type of database used for storing data&#xA;in not so fixed schema. Using Nosql you can save&#xA;data dynamically. ^ULpDDdwA&lt;/p&gt;</description>
     </item>
     <item>
       <title>day-1</title>
@@ -825,13 +783,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/movies/dog-movies/</guid>
       <description>&lt;h2 id=&#34;movies-based-on-dogs&#34;&gt;Movies based on dogs&lt;/h2&gt;&#xA;&lt;p&gt;Hachi: A dog&amp;rsquo;s tale&#xA;Togo: the movie&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;p&gt;[[Entertainment]]&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Drawing 2025 03 29 18.33.55.Excalidraw</title>
-      <link>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/</guid>
-      <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;excalidraw-data&#34;&gt;Excalidraw Data&lt;/h1&gt;&#xA;&lt;h2 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h2&gt;&#xA;&lt;h2 id=&#34;embedded-files&#34;&gt;Embedded Files&lt;/h2&gt;&#xA;&lt;p&gt;9bc92577ceae76e667d2bbf3811591742a73622c: [[Pasted Image 20250329183929_664.png]]&lt;/p&gt;&#xA;&lt;p&gt;%%&lt;/p&gt;&#xA;&lt;h2 id=&#34;drawing&#34;&gt;Drawing&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-compressed-json&#34; data-lang=&#34;compressed-json&#34;&gt;N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZQUebQBObR4aOiCEfQQOKGZuAG1wMFAwYogSbggeAFEAOQBGatwAJQAtAA5NaoAzSoBpIQApAEc2AAYAayR+EthEcsJ9aMmCyExu&#xA;&#xA;ZwBWAHZNpK2AFh59w82DqcgYNYBmeJHtTZ4ANnWHw7OIChJ1blbWxPXavatf6A4FAt6SBCEZTSbiXEatO6XWrxdatTYvH4PB5vazKYLcEZvZhQUhsCYAYTY+DYpHKJOszDguECWRSxUgmlw2DGylJQg4xEp1NpEnpHEZzMyUDZJU6hHw+AAyrB8RJBB4ZQISWSEAB1T6Sbh8ZYQYmkibKmCq9DqspvPnQjjhHJoWpvNhM7BqC6ukaEk284RwACSx&#xA;&#xA;BdqFyAF03p1yBlQ9wOEIFW9CAKsOVcCNNRA+QKncxw0mUyawghiNxar89liHjW9m9GCx2Fw0GCTU3WJxqpwxEaRg9NiN4rUTg2TYRmAARNJQcvcToEMJvTTCAWVYIZLJF5P4N5CODEXBziuuk6XQ6XTbxE7Xt5EDhjRO7+9sbnztCL/DL0tRKBCcMIEQAU02UHM5WCBMJHiTRsHiY5NjEXAEHRBAsU2YgeE0TROkuVpalqdYRxOHhcE2S4Xh4bAc&#xA;&#xA;2YdxxAjZYwDdRjamWaMTWwUk4GfBUCgAX3AdjIFwOA4GVY96KKSB1HSeiICPUgnymBhCAQCgACEuR5PNBSpGlygAYk6dZF06ToZQgbARBZKBgznfRlXNBAhX0iQDNqBAPI8iyrNIGy7PSTTuUDfldOFOlyHFJkbJ86ypQC/QADF5SVFU5NtCtlN8/z7McnV9WIL40GNEpsvi3LtQtNLygy2K/PK9JGmER1nUrLK4qyBKAHlPW9Ss/Xa+rOvsxLOC&#xA;&#xA;gRLcH0eUfVQdZBpy9JRqyRVCCMeieH9UqOts+yABUsCgABBIhlFbdBgk6aV5oahyolII6/LYCgIVwU9UGLPcCks7aEsqAVDse56QjeiBmVJKhruG9IAfB3b4DknSLNo0kFQADW+B4/mU5GqXwABNbgHivO5yL2K85q+ow2AMbgpMgegCCEejWOKPjIZ2xq12IAtAMR5TeRIFa1v7fnSEFuduLQCmSgF4gAFk2GIBA/twTRgjer8fxlsWwtc1A6Yg&#xA;&#xA;dSqRB0hlE5AAKWoHlaaheFqPheHWObUFudYAEoc0aBBlGTZlylNi3kQbXgeGDw5nddj3+PZvKJh6qAWx3EtZTjBAvfTMWODAtADcyVX1e4EkmbebAiEl1Ai4QN4OEm+jK/dIQoAfOvSCZ6OvrsAArBBsGyRUa7gBWlZVtWP1QTWq6+rkE8YXbqfwWmTRmdK0l7lscys4kDDh2Y0A+193w1pdJ/ZCB8FCI619n+eePwfjwDZugIPCWmBL4oA=&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;</description>
     </item>
     <item>
       <title>EC2</title>

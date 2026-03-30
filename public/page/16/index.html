@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -57,10 +50,13 @@
   
   <section class="hero">
     <div class="hero-content">
-      <h1>My Blog</h1>
+      <div class="scanline-overlay"></div>
+      <p class="hero-status">[ STATUS: READY ]</p>
+      <h1><span class="prompt">&gt;</span> My Blog</h1>
       
-        <p>A collection of notes, thoughts, and learnings.</p>
+        <p class="hero-desc">// A collection of notes, thoughts, and learnings.</p>
       
+      <span class="hero-separator">════════════════════════════════════════</span>
     </div>
   </section>
 
@@ -69,201 +65,250 @@
   
 
   
+    <h2 class="section-heading"># ALL_ENTRIES <span class="text-muted">(196)</span></h2>
     <div class="post-grid">
       
       
-        <a href="/posts/productive/finance/study-materials/economic-foundations/microeconomics/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Economic Foundations</span>
-  
-
-  <h2>microeconomics</h2>
-
-  
-    <p class="post-card-excerpt">Microeconomics Microeconomics studies individual economic agents and their decisions &amp; actions,within the economy. The interactions of the …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>4 min read</span>
-  </div>
-</div>
-</a>
-      
-        <a href="/posts/myself/phlisophy/buddhism/my_understanding/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Buddhism</span>
-  
-
-  <h2>my_understanding</h2>
-
-  
-    <p class="post-card-excerpt">Buddhism Here, I will just write my understandings of Buddhism after reading books and blogs
-According to Asanga, the great Buddhist philosopher of …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>2 min read</span>
-  </div>
-</div>
-</a>
-      
-        <a href="/posts/productive/linux/linux_cmd/part-one/navigation/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Part One</span>
-  
-
-  <h2>navigation</h2>
-
-  
-    <p class="post-card-excerpt">Tag : #linux #terminal #navigation
-Navigation in CLI Most basic thing to learn in linux cli is how to navigate between files
-Some navigation commands …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>2 min read</span>
-  </div>
-</div>
-</a>
-      
         <a href="/posts/productive/linux/linux_cmd/part-three/networking/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Part Three</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PART THREE ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Networking</h2>
+  <h2><span class="prompt">&gt;</span> Networking</h2>
 
   
-    <p class="post-card-excerpt">Networking When it comes to networking in linux there&rsquo;s nothing that can&rsquo;t be done, And this is not a overstatement it&rsquo;s …</p>
+    <p class="post-card-excerpt">// Networking When it comes to networking in linux there&rsquo;s nothing that can&rsquo;t be done, And this is not a …</p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>83w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/database/sql/normalization/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Sql</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ SQL ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>normalization</h2>
+  <h2><span class="prompt">&gt;</span> normalization</h2>
 
   
-    <p class="post-card-excerpt">tag: #sql #relationship #queries
-Table Relationships Relational database is powerful because it allows relations between tables. This relationships …</p>
+    <p class="post-card-excerpt">// tag: #sql #relationship #queries
+Table Relationships Relational database is powerful because it allows relations between …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>598w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/books/designing-data_intensive-applications/part-1/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ DESIGNING DATA INTENSIVE APPLICATIONS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>part-1</h2>
+  <h2><span class="prompt">&gt;</span> part-1</h2>
 
   
 
   <div class="post-card-meta">
     
-    <span>0 min read</span>
+    <span>0min</span>
+    <span class="meta-divider">|</span>
+    <span>0w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/books/designing-data_intensive-applications/part-2-data-models--query/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ DESIGNING DATA INTENSIVE APPLICATIONS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>part-2 Data Models &amp; Query</h2>
+  <h2><span class="prompt">&gt;</span> part-2 Data Models &amp; Query</h2>
 
   
-    <p class="post-card-excerpt">Tags: #data-intensive #data-model
-Data Models &amp; Query languages Data models are perhaps the most important part of developing software,because …</p>
+    <p class="post-card-excerpt">// Tags: #data-intensive #data-model
+Data Models &amp; Query languages Data models are perhaps the most important part of …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>282w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/grammer/parts-of-speech/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Grammer</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ GRAMMER ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Parts of speech</h2>
+  <h2><span class="prompt">&gt;</span> Parts of speech</h2>
 
   
-    <p class="post-card-excerpt">Parts of Speeech Words are divided into different kinds or classes, called Parts of Speech, accoding to their use.
-According to the work they do in a …</p>
+    <p class="post-card-excerpt">// Parts of Speeech Words are divided into different kinds or classes, called Parts of Speech, accoding to their use. …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>390w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/database/sql/performance/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Sql</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ SQL ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Performance</h2>
+  <h2><span class="prompt">&gt;</span> Performance</h2>
 
   
-    <p class="post-card-excerpt">Tags: #sql #queries #indexs #sql_injection
-Performace Index Indexes in Postgres is powerful mechanism that helps find data much faster on a large …</p>
+    <p class="post-card-excerpt">// Tags: #sql #queries #indexs #sql_injection
+Performace Index Indexes in Postgres is powerful mechanism that helps find …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>307w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/linux/linux_cmd/part-one/permissions/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Part One</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PART ONE ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>permissions</h2>
+  <h2><span class="prompt">&gt;</span> permissions</h2>
 
   
-    <p class="post-card-excerpt">Tag : #linux #permission #commands
-Permissions in linux Used Commands id - Display user identity chmod - Change&rsquo;s file mode umask - Set the …</p>
+    <p class="post-card-excerpt">// Tag : #linux #permission #commands
+Permissions in linux Used Commands id - Display user identity chmod - Change&rsquo;s …</p>
   
 
   <div class="post-card-meta">
     
-    <span>6 min read</span>
+    <span>6min</span>
+    <span class="meta-divider">|</span>
+    <span>1274w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/myself/projects/personal_blog/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PROJECTS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> personal_blog</h2>
+
+  
+    <p class="post-card-excerpt">// Personal Blog day-1 : Created minimal backend for blog curd operations
+Technology used: Gin for manages routes, Gorm for …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>79w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/being_poetic/phrase/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ BEING POETIC ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> Phrase</h2>
+
+  
+    <p class="post-card-excerpt">// Run-of-the-mill &ldquo;Run-of-the-mill&rdquo; is an idiomatic phrase used to describe something that is ordinary, …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>42w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/myself/projects/poll-app/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PROJECTS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> poll-app</h2>
+
+  
+    <p class="post-card-excerpt">// Plan A simple polling app where user can create poll and add different different users and ejoy polls in realtime
+Date - …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>92w</span>
   </div>
 </div>
 </a>
@@ -376,7 +421,11 @@ Permissions in linux Used Commands id - Display user identity chmod - Change&rsq
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -406,7 +455,6 @@ Permissions in linux Used Commands id - Display user identity chmod - Change&rsq
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

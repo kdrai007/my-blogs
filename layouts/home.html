@@ -1,12 +1,15 @@
 {{ define "main" }}
 
-  {{/* Hero Section */}}
+  {{/* Hero replaced with terminal-style header block */}}
   <section class="hero">
     <div class="hero-content">
-      <h1>{{ .Site.Title }}</h1>
+      <div class="scanline-overlay"></div>
+      <p class="hero-status">[ STATUS: READY ]</p>
+      <h1><span class="prompt">&gt;</span> {{ .Site.Title }}</h1>
       {{ with .Site.Params.description }}
-        <p>{{ . }}</p>
+        <p class="hero-desc">// {{ . }}</p>
       {{ end }}
+      <span class="hero-separator">════════════════════════════════════════</span>
     </div>
   </section>
 
@@ -15,6 +18,7 @@
   {{ $allPosts := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
 
   {{ if (gt (len $allPosts) 0) }}
+    <h2 class="section-heading"># ALL_ENTRIES <span class="text-muted">({{ len $allPosts }})</span></h2>
     <div class="post-grid">
       {{ $paginator := .Paginate $allPosts }}
       {{ range $paginator.Pages }}

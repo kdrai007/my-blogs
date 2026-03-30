@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -57,10 +50,13 @@
   
   <section class="hero">
     <div class="hero-content">
-      <h1>My Blog</h1>
+      <div class="scanline-overlay"></div>
+      <p class="hero-status">[ STATUS: READY ]</p>
+      <h1><span class="prompt">&gt;</span> My Blog</h1>
       
-        <p>A collection of notes, thoughts, and learnings.</p>
+        <p class="hero-desc">// A collection of notes, thoughts, and learnings.</p>
       
+      <span class="hero-separator">════════════════════════════════════════</span>
     </div>
   </section>
 
@@ -69,210 +65,262 @@
   
 
   
+    <h2 class="section-heading"># ALL_ENTRIES <span class="text-muted">(196)</span></h2>
     <div class="post-grid">
       
       
         <a href="/posts/productive/database/sql/crud/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Sql</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ SQL ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>crud</h2>
+  <h2><span class="prompt">&gt;</span> crud</h2>
 
   
-    <p class="post-card-excerpt">CRUD CRUD is a acronym that stands for Create,Read,Update and Delete. These four funtionalites are basic in every database language.
-Create To create …</p>
+    <p class="post-card-excerpt">// CRUD CRUD is a acronym that stands for Create,Read,Update and Delete. These four funtionalites are basic in every …</p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>95w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/linux/linux_cmd/part-two/customize_prompt/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Part Two</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PART TWO ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>customize_prompt</h2>
+  <h2><span class="prompt">&gt;</span> customize_prompt</h2>
 
   
-    <p class="post-card-excerpt">Tag: #linux #prompt
+    <p class="post-card-excerpt">// Tag: #linux #prompt
 Customizing the Prompt Like so many in linux, Prompt is highly configurable.
-We can configure pretty much, the way we want And …</p>
+We can configure pretty …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>550w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/productive/linux/basics/d-bus/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Basics</span>
-  
-
-  <h2>d-bus</h2>
-
-  
-    <p class="post-card-excerpt">D-Bus (Desktop Bus) At its core, d-bus is message bus system, a simple way to applications to communicate with each other. It is the standard …</p>
-  
-
-  <div class="post-card-meta">
+  <div class="post-card-header">
     
-    <span>2 min read</span>
+      <span class="post-card-section">[ BASICS ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
   </div>
-</div>
-</a>
-      
-        <a href="/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
 
-  <h2>Data Intense Part One.Excalidraw</h2>
+  <h2><span class="prompt">&gt;</span> d-bus</h2>
 
   
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
+    <p class="post-card-excerpt">// D-Bus (Desktop Bus) At its core, d-bus is message bus system, a simple way to applications to communicate with each …</p>
   
 
   <div class="post-card-meta">
     
-    <span>9 min read</span>
-  </div>
-</div>
-</a>
-      
-        <a href="/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/" class="post-card-link">
-<div class="post-card">
-  
-    <span class="post-card-section">Designing Data Intensive Applications</span>
-  
-
-  <h2>Data Intense.Excalidraw</h2>
-
-  
-    <p class="post-card-excerpt">==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: …</p>
-  
-
-  <div class="post-card-meta">
-    
-    <span>7 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>295w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/myself/project-be_better/day-1/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Project Be Better</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PROJECT BE BETTER ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>day-1</h2>
+  <h2><span class="prompt">&gt;</span> day-1</h2>
 
   
-    <p class="post-card-excerpt">Date - 22-01-2025 Goal - 5 hours Started - Ended = total time
+    <p class="post-card-excerpt">// Date - 22-01-2025 Goal - 5 hours Started - Ended = total time
 2:20pm - 20:39pm = 19min
-Emergency break 2:53pm - 4:25pm = 93min
-Session finished 6:12pm …</p>
+Emergency break 2:53pm - 4:25pm = …</p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>45w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/myself/project-be_better/january/day-1/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">January</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ JANUARY ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>day-1</h2>
+  <h2><span class="prompt">&gt;</span> day-1</h2>
 
   
-    <p class="post-card-excerpt">Date - 22-01-2025 Goal - 5 hours Started - Ended = total time
+    <p class="post-card-excerpt">// Date - 22-01-2025 Goal - 5 hours Started - Ended = total time
 2:20pm - 20:39pm = 19min
-Emergency break 2:53pm - 4:25pm = 93min
-Session finished 6:12pm …</p>
+Emergency break 2:53pm - 4:25pm = …</p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>45w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/myself/project-be_better/day-10/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Project Be Better</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PROJECT BE BETTER ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>day-10</h2>
+  <h2><span class="prompt">&gt;</span> day-10</h2>
 
   
-    <p class="post-card-excerpt">Date: 31-01-2025 Goal: 5 hours 19:55 - 20:30pm
+    <p class="post-card-excerpt">// Date: 31-01-2025 Goal: 5 hours 19:55 - 20:30pm
 dinner break 22:50 - 23:20pm
 sleep time </p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>15w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/myself/project-be_better/january/day-10/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">January</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ JANUARY ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>day-10</h2>
+  <h2><span class="prompt">&gt;</span> day-10</h2>
 
   
-    <p class="post-card-excerpt">Date: 31-01-2025 Goal: 5 hours 19:55 - 20:30pm
+    <p class="post-card-excerpt">// Date: 31-01-2025 Goal: 5 hours 19:55 - 20:30pm
 dinner break 22:50 - 23:20pm
 sleep time </p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>15w</span>
   </div>
 </div>
 </a>
       
         <a href="/posts/myself/project-be_better/day-11/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Project Be Better</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ PROJECT BE BETTER ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>day-11</h2>
+  <h2><span class="prompt">&gt;</span> day-11</h2>
 
   
-    <p class="post-card-excerpt">Date: 1-02-2025 Goal: 5 hours 19:00 - 20:30pm
+    <p class="post-card-excerpt">// Date: 1-02-2025 Goal: 5 hours 19:00 - 20:30pm
 dinner time 22:50 - 23:59pm
 sleep time </p>
   
 
   <div class="post-card-meta">
     
-    <span>1 min read</span>
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>15w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/myself/project-be_better/february/day-11/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ FEBRUARY ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> day-11</h2>
+
+  
+    <p class="post-card-excerpt">// Date: 1-02-2025 Goal: 5 hours 19:00 - 20:30pm
+dinner time 22:50 - 23:59pm
+sleep time </p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>15w</span>
+  </div>
+</div>
+</a>
+      
+        <a href="/posts/myself/project-be_better/february/day-12/" class="post-card-link">
+<div class="post-card">
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ FEBRUARY ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
+
+  <h2><span class="prompt">&gt;</span> day-12</h2>
+
+  
+    <p class="post-card-excerpt">// Date: 02-02-2025 Goal: 5 hours 12:30 - 13:00pm
+a little rest 16:30 - 18:00pm
+a little pakodas on the side. 19:10 - …</p>
+  
+
+  <div class="post-card-meta">
+    
+    <span>1min</span>
+    <span class="meta-divider">|</span>
+    <span>34w</span>
   </div>
 </div>
 </a>
@@ -385,7 +433,11 @@ sleep time </p>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -415,7 +467,6 @@ sleep time </p>
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');

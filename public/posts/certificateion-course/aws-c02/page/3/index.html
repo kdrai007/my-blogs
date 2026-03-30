@@ -13,7 +13,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   
   <link rel="stylesheet" href="/css/custom.css">
@@ -25,7 +25,6 @@
   
 
   <link rel="canonical" href="http://localhost:1313/posts/certificateion-course/aws-c02/">
-
   
 </head>
 
@@ -33,20 +32,14 @@
   
   <header class="site-header">
     <nav class="site-nav">
-      <a href="http://localhost:1313/" class="site-logo">My Blog</a>
+      <a href="http://localhost:1313/" class="site-logo"><span class="prompt">&gt;</span> My Blog</a>
       <ul class="nav-links">
-        <li><a href="http://localhost:1313/">Home</a></li>
-        <li><a href="/posts/">All Posts</a></li>
+        <li><a href="http://localhost:1313/">[ HOME ]</a></li>
+        <li><a href="/posts/">[ POSTS ]</a></li>
         
       </ul>
-      
       <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+        <span class="toggle-icon">[=]</span>
       </button>
     </nav>
   </header>
@@ -63,61 +56,75 @@
     
       <a href="/posts/certificateion-course/aws-c02/route-53/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Route-53</h2>
+  <h2><span class="prompt">&gt;</span> Route-53</h2>
 
   
-    <p class="post-card-excerpt">Route 53 checkout
-A highly scalable , fully managed authoriative DNS Authoriative = the customer (you) can update the DNS records Route 53 is also a …</p>
+    <p class="post-card-excerpt">// Route 53 checkout
+A highly scalable , fully managed authoriative DNS Authoriative = the customer (you) can update the …</p>
   
 
   <div class="post-card-meta">
     
-    <span>3 min read</span>
+    <span>3min</span>
+    <span class="meta-divider">|</span>
+    <span>544w</span>
   </div>
 </div>
 </a>
     
       <a href="/posts/certificateion-course/aws-c02/route-53---routing-policy/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>Route-53 - Routing Policy</h2>
+  <h2><span class="prompt">&gt;</span> Route-53 - Routing Policy</h2>
 
   
-    <p class="post-card-excerpt">Route 53 - Routing Policy Define how route 53 responds to DNS query
-Don&rsquo;t get confused by the word Routing
-It&rsquo;s not same as load Balancer …</p>
+    <p class="post-card-excerpt">// Route 53 - Routing Policy Define how route 53 responds to DNS query
+Don&rsquo;t get confused by the word Routing …</p>
   
 
   <div class="post-card-meta">
     
-    <span>4 min read</span>
+    <span>4min</span>
+    <span class="meta-divider">|</span>
+    <span>707w</span>
   </div>
 </div>
 </a>
     
       <a href="/posts/certificateion-course/aws-c02/vpc---fundamentals/" class="post-card-link">
 <div class="post-card">
-  
-    <span class="post-card-section">Aws C02</span>
-  
+  <div class="post-card-header">
+    
+      <span class="post-card-section">[ AWS C02 ]</span>
+    
+    <span class="post-card-status text-primary">●</span>
+  </div>
 
-  <h2>VPC - Fundamentals</h2>
+  <h2><span class="prompt">&gt;</span> VPC - Fundamentals</h2>
 
   
-    <p class="post-card-excerpt">VPC checkout
-With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically isolated virtual network that you&rsquo;ve …</p>
+    <p class="post-card-excerpt">// VPC checkout
+With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically isolated …</p>
   
 
   <div class="post-card-meta">
     
-    <span>2 min read</span>
+    <span>2min</span>
+    <span class="meta-divider">|</span>
+    <span>422w</span>
   </div>
 </div>
 </a>
@@ -166,7 +173,11 @@ With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in 
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog. Built with Hugo.</p>
+    <div class="footer-inner">
+      <span class="footer-line">========================================</span>
+      <p><span class="prompt">&gt;</span> &copy; 2026 My Blog <span class="text-muted">// built with hugo</span></p>
+      <span class="footer-status">[ STATUS: ONLINE ]</span>
+    </div>
   </footer>
 
   
@@ -196,7 +207,6 @@ With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in 
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
       if (openBtn) openBtn.addEventListener('click', openSidebar);
 
-      
       if (mobileToggle && sidebar) {
         mobileToggle.addEventListener('click', function () {
           sidebar.classList.toggle('sidebar-open');
