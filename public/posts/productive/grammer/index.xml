@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grammer on My Blog</title>
-    <link>http://localhost:45279/posts/productive/grammer/</link>
+    <link>http://localhost:1313/posts/productive/grammer/</link>
     <description>Recent content in Grammer on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/posts/productive/grammer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/grammer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Parts of speech</title>
-      <link>http://localhost:45279/posts/productive/grammer/parts-of-speech/</link>
+      <link>http://localhost:1313/posts/productive/grammer/parts-of-speech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/grammer/parts-of-speech/</guid>
+      <guid>http://localhost:1313/posts/productive/grammer/parts-of-speech/</guid>
       <description>&lt;h1 id=&#34;parts-of-speeech&#34;&gt;Parts of Speeech&lt;/h1&gt;&#xA;&lt;p&gt;Words are divided into different kinds or classes, called &lt;strong&gt;Parts of Speech&lt;/strong&gt;, accoding to their use.&lt;/p&gt;&#xA;&lt;p&gt;According to the work they do in a sentene. The parts of speech are eight in number.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;1. noun 2. Adjective 3. pronoun 4. verb&#xA;5. adverb 6. preposition 7. conjunction 8. interjection&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;A &lt;code&gt;Noun&lt;/code&gt; is a word used as the name of a person, place or thing&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The rose smells sweet.&lt;/li&gt;&#xA;&lt;li&gt;The sun shines bright.&lt;/li&gt;&#xA;&lt;li&gt;His courage won him honour.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note:  The word thing includes (i) all objects that we can see, hear, taste, touch, or smell ; and (ii) something that we can think of, but cannot perceive by senses.&lt;/p&gt;</description>
     </item>
     <item>
       <title>sentence</title>
-      <link>http://localhost:45279/posts/productive/grammer/sentence/</link>
+      <link>http://localhost:1313/posts/productive/grammer/sentence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/grammer/sentence/</guid>
+      <guid>http://localhost:1313/posts/productive/grammer/sentence/</guid>
       <description>&lt;h1 id=&#34;sentence&#34;&gt;Sentence&lt;/h1&gt;&#xA;&lt;p&gt;A group of words, which make complete sense is called &lt;code&gt;sentence&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;kind-of-sentences&#34;&gt;Kind of sentences&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sentences are of four kinds :-&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Those which make statements or assertions; as,&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;code&gt;Humpty Dumpty sat on a wall&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Those which ask questions; as&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;code&gt;Where do you live ?&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Those which express commands, requests, or entreaties; as,&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;code&gt;Be quiet.&lt;/code&gt;&#xA;&lt;code&gt;Have mercy on us.&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Those which express strong feelings; as,&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;code&gt;How cold the night is!&lt;/code&gt;&#xA;&lt;code&gt;What a shame!&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>subject and predicate</title>
-      <link>http://localhost:45279/posts/productive/grammer/subject-and-predicate/</link>
+      <link>http://localhost:1313/posts/productive/grammer/subject-and-predicate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/grammer/subject-and-predicate/</guid>
+      <guid>http://localhost:1313/posts/productive/grammer/subject-and-predicate/</guid>
       <description>&lt;h1 id=&#34;subject-and-predicate&#34;&gt;Subject and Predicate&lt;/h1&gt;&#xA;&lt;p&gt;When we make sentence:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;We say some &lt;em&gt;person&lt;/em&gt; or &lt;em&gt;thing&lt;/em&gt;; and&lt;/li&gt;&#xA;&lt;li&gt;Say something about that person or thing.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In other words, we must have a &lt;em&gt;subject&lt;/em&gt; to speak about and we must say or &lt;em&gt;predicate&lt;/em&gt; somethign about that subject.&#xA;Hence every sentence has two parts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The part which names the person or thing we are speaking about .&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This is called &lt;strong&gt;Subject&lt;/strong&gt; of the sentence.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The part which tells something about subject.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Phrase and The Clause</title>
-      <link>http://localhost:45279/posts/productive/grammer/the-phrase-and-the-clause/</link>
+      <link>http://localhost:1313/posts/productive/grammer/the-phrase-and-the-clause/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/grammer/the-phrase-and-the-clause/</guid>
+      <guid>http://localhost:1313/posts/productive/grammer/the-phrase-and-the-clause/</guid>
       <description>&lt;h1 id=&#34;the-phrase-and-the-clause&#34;&gt;The Phrase and The Clause&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;A group of words and make sense, but not complete sense is called &lt;code&gt;phrase&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Example,&lt;/p&gt;&#xA;&lt;p&gt;The sun rises &lt;code&gt;in the east&lt;/code&gt;.&#xA;There came a giant &lt;code&gt;to my door&lt;/code&gt;.&#xA;Show me &lt;code&gt;how to do it&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;A group of words that which forms part of a sentence, and contains a Subject and a Predicate, is called  a &lt;code&gt;Clause&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Example,&lt;/p&gt;&#xA;&lt;p&gt;People &lt;code&gt;who pay their debt&lt;/code&gt; are trusted.&#xA;We cannot start &lt;code&gt;while it is raining&lt;/code&gt;.&#xA;I think that &lt;code&gt;you have made a mistake&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

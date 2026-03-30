@@ -2,531 +2,528 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:45279/posts/myself/books-to-read/</loc>
+    <loc>http://localhost:1313/posts/myself/books-to-read/</loc>
     <lastmod>2026-03-27T10:47:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:45279/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-03-27T10:47:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/</loc>
+    <loc>http://localhost:1313/posts/myself/</loc>
     <lastmod>2026-03-27T10:47:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:45279/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-03-27T10:47:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:45279/posts/test-post/</loc>
-    <lastmod>2026-03-26T23:10:10+05:30</lastmod>
+    <loc>http://localhost:1313/posts/myself/remainder/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/remainder/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/01-intro/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/01-intro/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/02-consistency-patterns/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/02-consistency-patterns/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/03-ip/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/03-ip/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/04-availablity_patterns/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/04-availablity_patterns/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/05-background-jobs/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/05-background-jobs/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/06-cdn/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/06-cdn/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/07-load-balancer/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/07-load-balancer/</loc>
+    <loc>http://localhost:1313/posts/thoughts/12-april25/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/thoughts/12-april25/</loc>
+    <loc>http://localhost:1313/posts/thoughts/22-may24/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/thoughts/22-may24/</loc>
+    <loc>http://localhost:1313/posts/thoughts/23-may24/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/thoughts/23-may24/</loc>
+    <loc>http://localhost:1313/posts/thoughts/29-may24/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/thoughts/29-may24/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/advanced_keyboard_tricks/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/advanced_keyboard_tricks/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/agency_issues/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/agency_issues/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/aggregations/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/aggregations/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-efs/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/amazon-efs/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/amazon-s3/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/amazon-s3---security/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/amazon-s3---security/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/amzon---ecs/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/amzon---ecs/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/auto-scaling-group/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/auto-scaling-group/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/typescript/awaited/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/typescript/awaited/</loc>
+    <loc>http://localhost:1313/tags/aws/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/aws/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudformation/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws---cloudformation/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws---cloudfront/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws---cloudfront/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws---container/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws---container/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws---imp-concepts/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws---imp-concepts/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws-s3---advanced/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws-s3---advanced/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws--beanstalk/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws--beanstalk/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/aws--cloudwatch/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/aws--cloudwatch/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/basic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/basic/</loc>
+    <loc>http://localhost:1313/posts/productive/frontend/css/basic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/frontend/css/basic/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/basic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/basic/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/latex/basic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/latex/basic/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/basic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/basic/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/basics/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/basics/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/basics/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/basics/</loc>
+    <loc>http://localhost:1313/posts/being_poetic/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/being_poetic/</loc>
+    <loc>http://localhost:1313/posts/being-productive/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/being-productive/</loc>
+    <loc>http://localhost:1313/posts/productive/books/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/</loc>
+    <loc>http://localhost:1313/posts/myself/books_to_read/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/books_to_read/</loc>
+    <loc>http://localhost:1313/posts/myself/phlisophy/buddhism/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/phlisophy/buddhism/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/business-cycle__economic-activity/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/business-cycle__economic-activity/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/business-structure/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/business-structure/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/cash-vs-accrual_accounting/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:45279/categories/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/</loc>
+    <loc>http://localhost:1313/posts/productive/git/cheatsheet/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/git/cheatsheet/</loc>
+    <loc>http://localhost:1313/posts/myself/coc/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/coc/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/companies-in-domestic_global-market/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/companies-in-domestic_global-market/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-two/config_nd_env/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-two/config_nd_env/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/constraints/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/constraints/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/</loc>
+    <loc>http://localhost:1313/posts/counting-5500-to-5600/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/counting-5500-to-5600/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/crud/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/crud/</loc>
+    <loc>http://localhost:1313/posts/productive/frontend/css/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/frontend/css/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-two/customize_prompt/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-two/customize_prompt/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/basics/d-bus/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/basics/d-bus/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/data-intense_part-one.excalidraw/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/data-intense.excalidraw/</loc>
+    <loc>http://localhost:1313/posts/productive/database/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-1/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-1/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-1/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-1/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-10/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-10/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-10/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-10/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-11/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-11/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-11/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-11/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-12/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-12/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-13/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-13/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-14/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-14/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-15/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-15/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-16/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-16/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-17/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-17/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-18/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-18/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-19/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-19/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-2/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-2/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-2/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-2/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-20/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-20/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-21/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-21/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-22/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-22/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-23/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-23/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-27/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-27/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-28/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-28/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-29/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-29/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-3/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-3/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-3/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-3/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-30/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-30/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-31/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-31/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-32/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-32/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-33/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-33/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-34/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-34/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-35/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-35/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-36/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-36/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-37/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-37/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/day-38/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/day-38/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-39/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-39/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-4/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-4/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-4/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-4/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-40/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-40/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-41/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-41/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-42/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-42/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-43/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-43/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-44/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-44/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-45/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-45/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-46/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-46/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-47/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-47/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-48/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-48/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-49/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-49/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-5/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-5/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-5/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-5/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-50/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-50/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-51/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-51/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-52/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-52/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-53/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-53/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-54/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-54/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-55/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-55/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-56/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-56/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-57/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-57/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/day-58/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/day-58/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-6/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-6/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-6/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-6/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-7/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-7/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-7/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-7/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-8/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-8/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-8/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-8/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/day-9/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/day-9/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/day-9/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/day-9/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/db---relational-database--aurora/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/db---relational-database--aurora/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/</loc>
+    <loc>http://localhost:1313/posts/movies/dog-movies/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/movies/dog-movies/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/drawing-2025-03-29-18.33.55.excalidraw/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/ec2/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/ec2/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/ec2--instance-storage/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/ec2--instance-storage/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/economic_basis-for-accrual_accounting/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/elasticcache/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/elasticcache/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/elb---elastic-load-blancer/</loc>
+    <loc>http://localhost:1313/tags/entertainment/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/entertainment/</loc>
+    <loc>http://localhost:1313/tags/excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/excalidraw/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/exploring_system/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/exploring_system/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/february/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/february/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/finance/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/finance/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/financial_instruments/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/financial_instruments/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/financial_instruments/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/financial_instruments/</loc>
+    <loc>http://localhost:1313/posts/myself/fixed-time-table/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/fixed-time-table/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/foreign-exchange-rates/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/foreign-exchange-rates/</loc>
+    <loc>http://localhost:1313/posts/productive/frontend/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/frontend/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/functionlities---load-balancer/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/functionlities---load-balancer/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/functions/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/functions/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/typescript/generics/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/typescript/generics/</loc>
+    <loc>http://localhost:1313/posts/productive/git/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/git/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/go-lang/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/go-lang/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/go-lang/goroutines-and-channels/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/go-lang/goroutines-and-channels/</loc>
+    <loc>http://localhost:1313/posts/productive/grammer/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/grammer/</loc>
+    <loc>http://localhost:1313/posts/productive/habit-tracking/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/habit-tracking/</loc>
+    <loc>http://localhost:1313/posts/myself/hyprland_shortcuts/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/hyprland_shortcuts/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/iam/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/iam/</loc>
+    <loc>http://localhost:1313/posts/productive/books/the-richest-man-in-babylon/ideas/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/the-richest-man-in-babylon/ideas/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/importance-of-data/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/importance-of-data/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/importance-of-data/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/importance-of-data/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/vim/insert_mode/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/vim/insert_mode/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/interacting-with-investors/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/interacting-with-investors/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/interest_rates/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/interest_rates/</loc>
+    <loc>http://localhost:1313/posts/productive/books/the-richest-man-in-babylon/intro/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/the-richest-man-in-babylon/intro/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/investment/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/investment/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/january/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/january/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/javascript/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/joins/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/joins/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/latex/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/latex/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/lb----load-balancer/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/lb----load-balancer/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/go-lang/loop--conditions/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/go-lang/loop--conditions/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/macroeconomics/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/macroeconomics/</loc>
+    <loc>http://localhost:1313/posts/myself/projects/manage-backup/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/projects/manage-backup/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/manupulating_files/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/manupulating_files/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/march/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/march/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/markets-and-participants/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/markets-and-participants/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/markets-and-participants/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/markets-and-participants/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/micro-and-macro_matters/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/micro-and-macro_matters/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/micro-and-macro_matters/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/micro-and-macro_matters/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/microeconomics/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/microeconomics/</loc>
+    <loc>http://localhost:1313/posts/movies/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/movies/</loc>
+    <loc>http://localhost:1313/posts/myself/phlisophy/buddhism/my_understanding/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/phlisophy/buddhism/my_understanding/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/navigation/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/navigation/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-three/networking/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-three/networking/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/normalization/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/normalization/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-three/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-three/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-two/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-two/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/part-1/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/part-1/</loc>
+    <loc>http://localhost:1313/posts/productive/books/designing-data_intensive-applications/part-2-data-models--query/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/designing-data_intensive-applications/part-2-data-models--query/</loc>
+    <loc>http://localhost:1313/posts/productive/grammer/parts-of-speech/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/grammer/parts-of-speech/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/performance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/performance/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/permissions/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/permissions/</loc>
+    <loc>http://localhost:1313/posts/myself/projects/personal_blog/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/projects/personal_blog/</loc>
+    <loc>http://localhost:1313/posts/myself/phlisophy/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/phlisophy/</loc>
+    <loc>http://localhost:1313/posts/being_poetic/phrase/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/being_poetic/phrase/</loc>
+    <loc>http://localhost:1313/posts/myself/projects/poll-app/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/projects/poll-app/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/processes/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/processes/</loc>
+    <loc>http://localhost:1313/posts/productive/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/</loc>
+    <loc>http://localhost:1313/tags/productive/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/productive/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/</loc>
+    <loc>http://localhost:1313/posts/myself/project-be_better/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/project-be_better/</loc>
+    <loc>http://localhost:1313/posts/myself/projects/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/projects/</loc>
+    <loc>http://localhost:1313/posts/myself/promise/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/promise/</loc>
+    <loc>http://localhost:1313/tags/promise/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/promise/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/queries/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/queries/</loc>
+    <loc>http://localhost:1313/posts/productive/frontend/react-querty/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/frontend/react-querty/</loc>
+    <loc>http://localhost:1313/posts/productive/frontend/react-query/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/frontend/react-query/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/redirection/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/redirection/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/relationship-sh_cm/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/relationship-sh_cm/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/corporate-structure-and-governance/role-of-bod/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/corporate-structure-and-governance/role-of-bod/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/role-of-finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/role-of-finance/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/role-of-finance/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/role-of-finance/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/route-53/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/route-53/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/route-53---routing-policy/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/route-53---routing-policy/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/accounting-process/sale-or-revenue/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/sc_chapter-1/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/sc_chapter-1/</loc>
+    <loc>http://localhost:1313/posts/myself/self_limiting_beliefs/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/self_limiting_beliefs/</loc>
+    <loc>http://localhost:1313/posts/productive/grammer/sentence/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/grammer/sentence/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/shell_world/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/shell_world/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/shell-scripting/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/shell-scripting/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/economic-foundations/sources--characterisitcs-of-economic_data/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/economic-foundations/sources--characterisitcs-of-economic_data/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-three/storage_media/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-three/storage_media/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/structure/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/structure/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/</loc>
+    <loc>http://localhost:1313/posts/productive/grammer/subject-and-predicate/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/grammer/subject-and-predicate/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/subqueries/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/subqueries/</loc>
+    <loc>http://localhost:1313/posts/myself/sway_shortcuts/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/sway_shortcuts/</loc>
+    <loc>http://localhost:1313/posts/productive/system-design/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/system-design/</loc>
+    <loc>http://localhost:1313/posts/productive/database/sql/tables/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/database/sql/tables/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>http://localhost:45279/tags/</loc>
+    <loc>http://localhost:1313/posts/movies/the-boy-and-the-heron/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/movies/the-boy-and-the-heron/</loc>
+    <loc>http://localhost:1313/posts/productive/grammer/the-phrase-and-the-clause/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/grammer/the-phrase-and-the-clause/</loc>
+    <loc>http://localhost:1313/posts/productive/books/the-richest-man-in-babylon/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/books/the-richest-man-in-babylon/</loc>
+    <loc>http://localhost:1313/posts/myself/thoughts/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/thoughts/</loc>
+    <loc>http://localhost:1313/posts/thoughts/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/thoughts/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/intro-to-finance/time-impact-on-saving-and-spending/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/intro-to-finance/time-impact-on-saving-and-spending/</loc>
+    <loc>http://localhost:1313/posts/productive/finance/study-materials/time-impact-on-saving-and-spending/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/finance/study-materials/time-impact-on-saving-and-spending/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/typescript/types_object/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/typescript/types_object/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/typescript/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/typescript/</loc>
+    <loc>http://localhost:1313/posts/myself/projects/url-shortning/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/projects/url-shortning/</loc>
+    <loc>http://localhost:1313/posts/myself/thoughts/validation/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/myself/thoughts/validation/</loc>
+    <loc>http://localhost:1313/posts/productive/programming-language/go-lang/variables/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/programming-language/go-lang/variables/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/vim/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/vim/</loc>
+    <loc>http://localhost:1313/posts/vim-commands/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/vim-commands/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/vim/vim-tips_tricks/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/vim/vim-tips_tricks/</loc>
+    <loc>http://localhost:1313/posts/certificateion-course/aws-c02/vpc---fundamentals/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/certificateion-course/aws-c02/vpc---fundamentals/</loc>
+    <loc>http://localhost:1313/posts/productive/linux/linux_cmd/part-one/working_with_commands/</loc>
   </url><url>
-    <loc>http://localhost:45279/posts/productive/linux/linux_cmd/part-one/working_with_commands/</loc>
-  </url><url>
-    <loc>http://localhost:45279/posts/productive/zettelkastens-method/</loc>
+    <loc>http://localhost:1313/posts/productive/zettelkastens-method/</loc>
   </url>
 </urlset>

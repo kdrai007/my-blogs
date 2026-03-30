@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Blog</title>
-    <link>http://localhost:45279/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aws</title>
-      <link>http://localhost:45279/tags/aws/</link>
+      <link>http://localhost:1313/tags/aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/aws/</guid>
+      <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Entertainment</title>
-      <link>http://localhost:45279/tags/entertainment/</link>
+      <link>http://localhost:1313/tags/entertainment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/entertainment/</guid>
+      <guid>http://localhost:1313/tags/entertainment/</guid>
       <description></description>
     </item>
     <item>
       <title>Excalidraw</title>
-      <link>http://localhost:45279/tags/excalidraw/</link>
+      <link>http://localhost:1313/tags/excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/excalidraw/</guid>
+      <guid>http://localhost:1313/tags/excalidraw/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>http://localhost:45279/tags/javascript/</link>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Productive</title>
-      <link>http://localhost:45279/tags/productive/</link>
+      <link>http://localhost:1313/tags/productive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/productive/</guid>
+      <guid>http://localhost:1313/tags/productive/</guid>
       <description></description>
     </item>
     <item>
       <title>Promise</title>
-      <link>http://localhost:45279/tags/promise/</link>
+      <link>http://localhost:1313/tags/promise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/tags/promise/</guid>
+      <guid>http://localhost:1313/tags/promise/</guid>
       <description></description>
     </item>
   </channel>

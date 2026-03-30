@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productive on My Blog</title>
-    <link>http://localhost:45279/tags/productive/</link>
+    <link>http://localhost:1313/tags/productive/</link>
     <description>Recent content in Productive on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/tags/productive/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/productive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01-intro</title>
-      <link>http://localhost:45279/posts/productive/system-design/01-intro/</link>
+      <link>http://localhost:1313/posts/productive/system-design/01-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/01-intro/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/01-intro/</guid>
       <description>&lt;h2 id=&#34;system-design&#34;&gt;System Design&lt;/h2&gt;&#xA;&lt;p&gt;System design is the process of defining the architecture,interface and data for system that satisfies&#xA;specific requirement.&#xA;A good system design requires us to think about everything, from infrastructure all the way to how we store data.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-system-design&#34;&gt;How to: System Design&lt;/h2&gt;&#xA;&lt;p&gt;There are several step that can be taken while system design:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Understand the problem&lt;/strong&gt; - Gather information of the problem you are solving and the requirement of the system.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Identify the scope of the system&lt;/strong&gt; - According to accumulated data on the problem, create scope of the system for ex, for whom the system you are designing, what system will do and what not.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Research and analyze the existing system.&lt;/strong&gt; - Research all or some available system and analyze, what kind of system or resources you will need.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Create a high level design.&lt;/strong&gt; - Don&amp;rsquo;t leave anything unresearched,&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Refine the design&lt;/strong&gt; - Don&amp;rsquo;t run away to recheck your created design.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Document the design&lt;/strong&gt;. - Create well detailed document for future reference.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Continuously monitor and improve the system&lt;/strong&gt; - If you find anything missing improve and keep updating system until you get satisfactory  result.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-system-design-is-important&#34;&gt;Why system design is important?&lt;/h3&gt;&#xA;&lt;p&gt;System  design help us define a solution that  meets the business requirement.&#xA;Often it is essential to think from high level as these decisions are very difficult to correct later.&lt;/p&gt;</description>
     </item>
     <item>
       <title>23 may,24</title>
-      <link>http://localhost:45279/posts/thoughts/23-may24/</link>
+      <link>http://localhost:1313/posts/thoughts/23-may24/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/thoughts/23-may24/</guid>
+      <guid>http://localhost:1313/posts/thoughts/23-may24/</guid>
       <description>&lt;h2 id=&#34;life-on-autopilot&#34;&gt;Life on autopilot&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;Ok,promise no more ranting&#xA;Just trying to have fun while I can&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>

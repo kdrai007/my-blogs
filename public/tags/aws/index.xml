@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on My Blog</title>
-    <link>http://localhost:45279/tags/aws/</link>
+    <link>http://localhost:1313/tags/aws/</link>
     <description>Recent content in Aws on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IAM</title>
-      <link>http://localhost:45279/posts/certificateion-course/aws-c02/iam/</link>
+      <link>http://localhost:1313/posts/certificateion-course/aws-c02/iam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/certificateion-course/aws-c02/iam/</guid>
+      <guid>http://localhost:1313/posts/certificateion-course/aws-c02/iam/</guid>
       <description>&lt;h2 id=&#34;iam--users--groups&#34;&gt;IAM : Users &amp;amp; Groups&lt;/h2&gt;&#xA;&lt;p&gt;iam - Identity and access management ,Global service&#xA;root create by default shouldn&amp;rsquo;t be shared&#xA;Users are people within your organization and can be grouped&#xA;Groups can only contain user not others groups.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM : Permissions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;. Users or Groups can be assigned Json documents called policies.&#xA;. These policies define the permissions of the users.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM Policies structure&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Consists of:&#xA;. Version: policy language versoin.&#xA;. Id: an idetifier for the policy(optional)&#xA;. Statement: One or more individual statement(required)&lt;/li&gt;&#xA;&lt;li&gt;Statement Consists of:&#xA;. Sid: an identifer for the statement (opt)&#xA;. Effect: whether the statement allwos of denies access(allow or deny)&#xA;. Principle: account/user/role to which the policy is applied to.&#xA;. Action: list of actions this policies allows or denies&#xA;. Resource: list of resources to which the actions applied for.&#xA;. Condition: conditions for when the policy is in effect(optional)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;IAM Roles for Services&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

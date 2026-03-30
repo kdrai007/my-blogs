@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frontend on My Blog</title>
-    <link>http://localhost:45279/posts/productive/frontend/</link>
+    <link>http://localhost:1313/posts/productive/frontend/</link>
     <description>Recent content in Frontend on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/posts/productive/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react-querty</title>
-      <link>http://localhost:45279/posts/productive/frontend/react-querty/</link>
+      <link>http://localhost:1313/posts/productive/frontend/react-querty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/frontend/react-querty/</guid>
+      <guid>http://localhost:1313/posts/productive/frontend/react-querty/</guid>
       <description>&lt;h1 id=&#34;react-query&#34;&gt;React Query&lt;/h1&gt;&#xA;&lt;p&gt;React Query is a library that simplifies data fetching and management in React applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;p&gt;. Decerlative Data fetching&#xA;. Automatic Caching&#xA;. Automatic background data refetching&#xA;. Error handling and retry strategies&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-components&#34;&gt;Key components&lt;/h2&gt;&#xA;&lt;p&gt;1 - QueryClientProvider -&amp;gt; The top level component wraps our React application, providing our application a global context of the query client instance&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;import { QueryClientProvider } from &#39;react-query&#39;; function App() { return ( &amp;lt;QueryClientProvider&amp;gt; {/* Your application components */} &amp;lt;/QueryClientProvider&amp;gt; ); }&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>react-querty</title>
-      <link>http://localhost:45279/posts/productive/frontend/react-query/</link>
+      <link>http://localhost:1313/posts/productive/frontend/react-query/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/frontend/react-query/</guid>
+      <guid>http://localhost:1313/posts/productive/frontend/react-query/</guid>
       <description>&lt;h1 id=&#34;react-query&#34;&gt;React Query&lt;/h1&gt;&#xA;&lt;p&gt;React Query is a library that simplifies data fetching and management in React applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;p&gt;. Decerlative Data fetching&#xA;. Automatic Caching&#xA;. Automatic background data refetching&#xA;. Error handling and retry strategies&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-components&#34;&gt;Key components&lt;/h2&gt;&#xA;&lt;p&gt;1 - QueryClientProvider -&amp;gt; The top level component wraps our React application, providing our application a global context of the query client instance&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;import { QueryClientProvider } from &#39;react-query&#39;; function App() { return ( &amp;lt;QueryClientProvider&amp;gt; {/* Your application components */} &amp;lt;/QueryClientProvider&amp;gt; ); }&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>

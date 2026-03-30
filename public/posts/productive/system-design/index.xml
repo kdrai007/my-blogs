@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System Design on My Blog</title>
-    <link>http://localhost:45279/posts/productive/system-design/</link>
+    <link>http://localhost:1313/posts/productive/system-design/</link>
     <description>Recent content in System Design on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/posts/productive/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/system-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01-intro</title>
-      <link>http://localhost:45279/posts/productive/system-design/01-intro/</link>
+      <link>http://localhost:1313/posts/productive/system-design/01-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/01-intro/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/01-intro/</guid>
       <description>&lt;h2 id=&#34;system-design&#34;&gt;System Design&lt;/h2&gt;&#xA;&lt;p&gt;System design is the process of defining the architecture,interface and data for system that satisfies&#xA;specific requirement.&#xA;A good system design requires us to think about everything, from infrastructure all the way to how we store data.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-system-design&#34;&gt;How to: System Design&lt;/h2&gt;&#xA;&lt;p&gt;There are several step that can be taken while system design:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Understand the problem&lt;/strong&gt; - Gather information of the problem you are solving and the requirement of the system.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Identify the scope of the system&lt;/strong&gt; - According to accumulated data on the problem, create scope of the system for ex, for whom the system you are designing, what system will do and what not.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Research and analyze the existing system.&lt;/strong&gt; - Research all or some available system and analyze, what kind of system or resources you will need.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Create a high level design.&lt;/strong&gt; - Don&amp;rsquo;t leave anything unresearched,&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Refine the design&lt;/strong&gt; - Don&amp;rsquo;t run away to recheck your created design.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Document the design&lt;/strong&gt;. - Create well detailed document for future reference.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Continuously monitor and improve the system&lt;/strong&gt; - If you find anything missing improve and keep updating system until you get satisfactory  result.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-system-design-is-important&#34;&gt;Why system design is important?&lt;/h3&gt;&#xA;&lt;p&gt;System  design help us define a solution that  meets the business requirement.&#xA;Often it is essential to think from high level as these decisions are very difficult to correct later.&lt;/p&gt;</description>
     </item>
     <item>
       <title>02-consistency-patterns</title>
-      <link>http://localhost:45279/posts/productive/system-design/02-consistency-patterns/</link>
+      <link>http://localhost:1313/posts/productive/system-design/02-consistency-patterns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/02-consistency-patterns/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/02-consistency-patterns/</guid>
       <description>&lt;h1 id=&#34;consistency-patterns&#34;&gt;Consistency patterns&lt;/h1&gt;&#xA;&lt;p&gt;Consistency patterns refers to the ways in which data is stored and managed in a distributed system, and how the data is made available to the users and application. There are three main components of consistency patterns&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Strong consistency&lt;/li&gt;&#xA;&lt;li&gt;Weak consistency&lt;/li&gt;&#xA;&lt;li&gt;Eventual consistency&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Before we Learn more about consistency patterns we need to learn about, Exactly what is distributed system.&lt;/p&gt;&#xA;&lt;h4 id=&#34;distributed-system&#34;&gt;Distributed System&lt;/h4&gt;&#xA;&lt;p&gt;Distributed systems are those where for every major or important components actions there&amp;rsquo;s different networked system and they cordinate among them using by passing messages to each other.&lt;/p&gt;</description>
     </item>
     <item>
       <title>02-Ip</title>
-      <link>http://localhost:45279/posts/productive/system-design/03-ip/</link>
+      <link>http://localhost:1313/posts/productive/system-design/03-ip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/03-ip/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/03-ip/</guid>
       <description>&lt;h2 id=&#34;ip--internet-protocol&#34;&gt;IP- Internet protocol&lt;/h2&gt;&#xA;&lt;p&gt;An IP addresses is unique address which helps us  identify the device on the internet or local network.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In essence , IP addresses are the  identifier that allows information to be sent from one device to another on a network,&lt;/li&gt;&#xA;&lt;li&gt;they contain location information and make device accessible for communication.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;versions&#34;&gt;Versions&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;IPV4&lt;/strong&gt;&#xA;&lt;strong&gt;IPV6&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;p&gt;[[system-design]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>04-availablity_patterns</title>
-      <link>http://localhost:45279/posts/productive/system-design/04-availablity_patterns/</link>
+      <link>http://localhost:1313/posts/productive/system-design/04-availablity_patterns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/04-availablity_patterns/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/04-availablity_patterns/</guid>
       <description>&lt;p&gt;Tags: #system-design #AP&lt;/p&gt;&#xA;&lt;h1 id=&#34;availability-patterns&#34;&gt;Availability Patterns&lt;/h1&gt;&#xA;&lt;p&gt;Availability is measured as a percentage of uptime,and defines the propertion of time that a system is functional and working.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AP help design systems that remain operational even if there&amp;rsquo;s failover, Here are some patterns:-&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Failover - Switch to standby system when primary system fails&lt;/li&gt;&#xA;&lt;li&gt;Replication  - Maintain multiple copies of data in case of failure or any unexpected loss of data.&lt;/li&gt;&#xA;&lt;li&gt;Load balancing&lt;/li&gt;&#xA;&lt;li&gt;Auto-scaling&lt;/li&gt;&#xA;&lt;li&gt;Circuit breaker - Prevent Cascading failtures by stoping calls to failing services.&lt;/li&gt;&#xA;&lt;li&gt;Chaos engineering - Intentionally introduce failures to check if everything working correctly&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;availability-in-numbers&#34;&gt;Availability in numbers&lt;/h2&gt;&#xA;&lt;p&gt;Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.&lt;/p&gt;</description>
     </item>
     <item>
       <title>05-background-jobs</title>
-      <link>http://localhost:45279/posts/productive/system-design/05-background-jobs/</link>
+      <link>http://localhost:1313/posts/productive/system-design/05-background-jobs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/05-background-jobs/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/05-background-jobs/</guid>
       <description>&lt;p&gt;Tags: #system-design #background-jobs #bj&lt;/p&gt;&#xA;&lt;h1 id=&#34;background-jobs&#34;&gt;Background jobs&lt;/h1&gt;&#xA;&lt;p&gt;Background jobs in system refers to the jobs that are being executed in background, Independently of the main execution flow of the system. These tasks are initiated by system itself, rather than the user or another external agent.&lt;/p&gt;&#xA;&lt;p&gt;Background jobs can be used for variety of purposes like:-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Performing maintenance tasks: such as cleaning old data, generating reports, or backing up to the database.&lt;/li&gt;&#xA;&lt;li&gt;Processing large amount of data: such as, data import, data export or data transformation&lt;/li&gt;&#xA;&lt;li&gt;Sending notifications: sending push messages to users, or sending emails&lt;/li&gt;&#xA;&lt;li&gt;Performing long-running computations: like machine learning or data analysis.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Types of background jobs:-&lt;/p&gt;</description>
     </item>
     <item>
       <title>06-CDN</title>
-      <link>http://localhost:45279/posts/productive/system-design/06-cdn/</link>
+      <link>http://localhost:1313/posts/productive/system-design/06-cdn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/06-cdn/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/06-cdn/</guid>
       <description>&lt;p&gt;Tags: #system-design #cdn&lt;/p&gt;&#xA;&lt;h1 id=&#34;cdn---content-delivery-networks&#34;&gt;CDN - Content Delivery Networks&lt;/h1&gt;&#xA;&lt;p&gt;A cdn is a globally distributed of proxies servers, serving content to users from nearest data center. Generally static files like html/css/js,photos and videos are serverd  from CDNs.&lt;/p&gt;&#xA;&lt;p&gt;Serving content from CDN, improve website performace two ways:-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Users receive content from data center nearest to them.&lt;/li&gt;&#xA;&lt;li&gt;Your servers do not have to serve requests that the CDN fulfills.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;pull-cdn&#34;&gt;Pull CDN&lt;/h3&gt;&#xA;&lt;p&gt;Pull CDNs grab new content from your server when the first user requests for content.You leave the server and rewrite url to point to the CDNs. This results  are slower until the contents are cached on the CDNs&lt;/p&gt;</description>
     </item>
     <item>
       <title>07-load-balancer</title>
-      <link>http://localhost:45279/posts/productive/system-design/07-load-balancer/</link>
+      <link>http://localhost:1313/posts/productive/system-design/07-load-balancer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/system-design/07-load-balancer/</guid>
+      <guid>http://localhost:1313/posts/productive/system-design/07-load-balancer/</guid>
       <description>&lt;p&gt;Tags: #system-design #load-balancers #lb&lt;/p&gt;&#xA;&lt;h1 id=&#34;load-balancers&#34;&gt;Load Balancers&lt;/h1&gt;</description>
     </item>
   </channel>

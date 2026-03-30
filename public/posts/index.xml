@@ -2,38 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My Blog</title>
-    <link>http://localhost:45279/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Mar 2026 23:10:10 +0530</lastBuildDate>
-    <atom:link href="http://localhost:45279/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test Post</title>
-      <link>http://localhost:45279/posts/test-post/</link>
-      <pubDate>Thu, 26 Mar 2026 23:10:10 +0530</pubDate>
-      <guid>http://localhost:45279/posts/test-post/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Being Productive</title>
-      <link>http://localhost:45279/posts/being-productive/</link>
+      <link>http://localhost:1313/posts/being-productive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/being-productive/</guid>
+      <guid>http://localhost:1313/posts/being-productive/</guid>
       <description>&lt;h2 id=&#34;being-productive&#34;&gt;Being productive&lt;/h2&gt;</description>
     </item>
     <item>
       <title>counting 5500 to 5600</title>
-      <link>http://localhost:45279/posts/counting-5500-to-5600/</link>
+      <link>http://localhost:1313/posts/counting-5500-to-5600/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/counting-5500-to-5600/</guid>
+      <guid>http://localhost:1313/posts/counting-5500-to-5600/</guid>
       <description>&lt;p&gt;5501&#xA;5502&#xA;5503&#xA;5504&#xA;5505&#xA;5506&#xA;5507&#xA;5508&#xA;5509&#xA;5510&#xA;5511&#xA;5512&#xA;5513&#xA;5514&#xA;5515&#xA;5516&#xA;5517&#xA;5518&#xA;5519&#xA;5520&#xA;5521&#xA;5522&#xA;5523&#xA;5524&#xA;5525&#xA;5526&#xA;5527&#xA;5528&#xA;5529&#xA;5530&#xA;5531&#xA;5532&#xA;5533&#xA;5534&#xA;5535&#xA;5536&#xA;5537&#xA;5538&#xA;5539&#xA;5540&#xA;5541&#xA;5542&#xA;5543&#xA;5544&#xA;5545&#xA;5546&#xA;5547&#xA;5548&#xA;5549&#xA;5550&#xA;5551&#xA;5552&#xA;5553&#xA;5554&#xA;5555&#xA;5556&#xA;5557&#xA;5558&#xA;5559&#xA;5560&#xA;5561&#xA;5562&#xA;5563&#xA;5564&#xA;5565&#xA;5566&#xA;5567&#xA;5568&#xA;5569&#xA;5570&#xA;5571&#xA;5572&#xA;5573&#xA;5574&#xA;5575&#xA;5576&#xA;5577&#xA;5578&#xA;5579&#xA;5580&#xA;5581&#xA;5582&#xA;5583&#xA;5584&#xA;5585&#xA;5586&#xA;5587&#xA;5588&#xA;5589&#xA;5590&#xA;5591&#xA;5592&#xA;5593&#xA;5594&#xA;5595&#xA;5596&#xA;5597&#xA;5598&#xA;5599&#xA;5600&lt;/p&gt;</description>
     </item>
     <item>
       <title>vim commands</title>
-      <link>http://localhost:45279/posts/vim-commands/</link>
+      <link>http://localhost:1313/posts/vim-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/vim-commands/</guid>
+      <guid>http://localhost:1313/posts/vim-commands/</guid>
       <description>&lt;h2 id=&#34;captalize-words-in-vim-i&#34;&gt;Captalize words in vim i&lt;/h2&gt;&#xA;&lt;p&gt;gUU -&amp;gt; whole line&#xA;gU3w -&amp;gt; first 3 words&#xA;gUG -&amp;gt; from cursor to whole line&lt;/p&gt;&#xA;&lt;h2 id=&#34;some-random-important-command&#34;&gt;Some random important command&lt;/h2&gt;&#xA;&lt;p&gt;gf -&amp;gt; jump to the filename&#xA;^ -&amp;gt; move back to original file&#xA;gv -&amp;gt; jump back to previously selected word&#xA;J -&amp;gt; join words downwards.&lt;/p&gt;&#xA;&lt;h2 id=&#34;basic-vim-commands&#34;&gt;Basic Vim Commands&lt;/h2&gt;&#xA;&lt;p&gt;ZQ -&amp;gt; quite vim without saving any changes&#xA;ZZ -&amp;gt; exit vim with saving changes&#xA;A  -&amp;gt; go directly in last of the  santance  in insert mode.&#xA;I  -&amp;gt; go back to very beginning of the line in insert mode.&lt;/p&gt;</description>
     </item>
   </channel>

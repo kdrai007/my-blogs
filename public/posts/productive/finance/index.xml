@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Finance on My Blog</title>
-    <link>http://localhost:45279/posts/productive/finance/</link>
+    <link>http://localhost:1313/posts/productive/finance/</link>
     <description>Recent content in Finance on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/posts/productive/finance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/productive/finance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic</title>
-      <link>http://localhost:45279/posts/productive/finance/basic/</link>
+      <link>http://localhost:1313/posts/productive/finance/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/productive/finance/basic/</guid>
+      <guid>http://localhost:1313/posts/productive/finance/basic/</guid>
       <description>&lt;p&gt;Tags: #finance&lt;/p&gt;&#xA;&lt;h1 id=&#34;finance&#34;&gt;Finance&lt;/h1&gt;&#xA;&lt;p&gt;Finance is the study of management,movement, and raising of money. The &amp;lsquo;Finance&amp;rsquo; can be used as a &lt;em&gt;verb&lt;/em&gt;, such as First National Bank agrees to finance your home mortage loan. At its essence, the study of finance is about understanding the uses and sources of cash.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It can be also be used as a noun referring to an entire industry.&lt;/li&gt;&#xA;&lt;li&gt;Finance can also be a tool to make us better at decision making.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;basic-area-in-finance&#34;&gt;Basic Area in Finance&lt;/h2&gt;&#xA;&lt;p&gt;Finance is divided into three primary areas in the domestic market :-&lt;/p&gt;</description>
     </item>
   </channel>

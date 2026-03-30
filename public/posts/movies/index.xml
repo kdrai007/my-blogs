@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Movies on My Blog</title>
-    <link>http://localhost:45279/posts/movies/</link>
+    <link>http://localhost:1313/posts/movies/</link>
     <description>Recent content in Movies on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:45279/posts/movies/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/movies/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dog-movies</title>
-      <link>http://localhost:45279/posts/movies/dog-movies/</link>
+      <link>http://localhost:1313/posts/movies/dog-movies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/movies/dog-movies/</guid>
+      <guid>http://localhost:1313/posts/movies/dog-movies/</guid>
       <description>&lt;h2 id=&#34;movies-based-on-dogs&#34;&gt;Movies based on dogs&lt;/h2&gt;&#xA;&lt;p&gt;Hachi: A dog&amp;rsquo;s tale&#xA;Togo: the movie&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;p&gt;[[Entertainment]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>the boy and the heron</title>
-      <link>http://localhost:45279/posts/movies/the-boy-and-the-heron/</link>
+      <link>http://localhost:1313/posts/movies/the-boy-and-the-heron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45279/posts/movies/the-boy-and-the-heron/</guid>
+      <guid>http://localhost:1313/posts/movies/the-boy-and-the-heron/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The boy and the heron by &lt;em&gt;Hayao Miyazaki&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;plot&#34;&gt;plot&lt;/h2&gt;&#xA;&lt;p&gt;The character named &lt;em&gt;Mahito Maki&lt;/em&gt; is our main protagonist, last year his mother died due to fire outbreak in hospital and he got deeply traumatized by this event.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;[[Entertainment]]&lt;/p&gt;</description>
     </item>
   </channel>
