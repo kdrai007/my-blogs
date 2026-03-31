@@ -1,0 +1,101 @@
+/* ===== The Command Line Editorial — Design Tokens & Reset ===== */
+
+/* --- CSS Custom Properties: The Phosphor Palette --- */
+:root {
+  --color-primary: #00E639;
+  --color-primary-dim: #00B82E;
+  --color-primary-container: #00FF41;
+  --color-on-primary: #003907;
+  --color-secondary: #FFBA43;
+  --color-error: #FFB4AB;
+
+  --surface-dim: #131313;
+  --surface: #0E0E0E;
+  --surface-container: #201F1F;
+  --surface-container-high: #2B2A2A;
+  --surface-container-highest: #353534;
+  --surface-bright: #3A3939;
+
+  --color-text: #D4D4D4;
+  --color-text-muted: #6B6B6B;
+  --color-text-bright: #EEEEEE;
+  --outline: #84967E;
+  --outline-variant: #3B4B37;
+
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  --max-width: 1200px;
+  --content-width: 760px;
+  --spacing-unit: 0.9rem;
+  --transition: 0s;
+  /* Brutalist: instant transitions */
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: auto;
+  /* No smooth scrolling */
+}
+
+body {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+  background: var(--surface);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-container);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+  filter: contrast(1.1) saturate(0.8);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* --- Utility Classes --- */
+.prompt {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.meta-divider {
+  color: var(--color-text-muted);
+  margin: 0 0.3rem;
+}

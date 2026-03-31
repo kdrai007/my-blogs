@@ -1,16 +1,53 @@
 {{ define "main" }}
 
-  <h1 class="section-heading">{{ .Title }}</h1>
+  <h1 class="section-heading">// {{ .Title }} <span class="text-muted">({{ len .RegularPagesRecursive }})</span></h1>
 
   {{ .Content }}
 
-  <div class="post-grid">
-    {{ $paginator := .Paginate .RegularPagesRecursive }}
-    {{ range $paginator.Pages }}
-      {{ .Render "summary" }}
-    {{ end }}
-  </div>
+  {{/* Flat scrollable list grouped by section — no pagination */}}
+  {{ $pages := .RegularPagesRecursive | default $.Site.RegularPages }}
 
-  {{ partial "pagination.html" . }}
+  {{/* Group by top-level section */}}
+  {{ range $section := .Sections }}
+    {{ $sectionPages := $section.RegularPagesRecursive }}
+    {{ if gt (len $sectionPages) 0 }}
+      <div class="post-list-group">
+        <h2 class="post-list-group-title">
+          <span class="text-secondary">[+]</span>
+          <a href="{{ $section.RelPermalink }}">{{ upper $section.Title }}</a>
+          <span class="text-muted">// {{ len $sectionPages }}</span>
+        </h2>
+        <ul class="post-list">
+          {{ range $sectionPages }}
+            <li class="post-list-item">
+              <a href="{{ .RelPermalink }}" class="post-list-link">
+                <span class="post-list-title">
+                  <span class="prompt">&gt;</span> {{ .Title | default .LinkTitle | default "Untitled" }}
+                </span>
+                <span class="post-list-meta">
+                  {{ if not .Date.IsZero }}{{ .Date | time.Format "2006-01-02" }} <span class="meta-divider">|</span> {{ end }}{{ .ReadingTime }}min
+                </span>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{/* Fallback: ungrouped pages that aren't in any subsection */}}
+  {{ $rootPages := .RegularPages }}
+  {{ if gt (len $rootPages) 0 }}
+    <ul class="post-list">
+      {{ range $rootPages }}
+        <li class="post-list-item">
+          <a href="{{ .RelPermalink }}" class="post-list-link">
+            <span class="post-list-title"><span class="prompt">&gt;</span> {{ .Title | default .LinkTitle | default "Untitled" }}</span>
+            <span class="post-list-meta">{{ if not .Date.IsZero }}{{ .Date | time.Format "2006-01-02" }} <span class="meta-divider">|</span> {{ end }}{{ .ReadingTime }}min</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
 
 {{ end }}

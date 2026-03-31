@@ -1,0 +1,62 @@
+{{- $pages := slice -}}
+
+{{/* All regular pages (blog posts) */}}
+{{- range .Site.RegularPages -}}
+  {{- $pages = $pages | append (dict
+    "title" (.Title | default .LinkTitle | default "Untitled")
+    "url" .RelPermalink
+    "section" (.CurrentSection.Title | default "")
+    "content" (.Plain | truncate 300)
+    "date" (.Date.Format "2006-01-02")
+    "type" "page"
+    "readingTime" .ReadingTime
+    "wordCount" .WordCount
+  ) -}}
+{{- end -}}
+
+{{/* All sections (folders) — recursive collection */}}
+{{- $sections := slice -}}
+{{- range .Site.Sections -}}
+  {{- $sections = $sections | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "type" "section"
+    "parent" ""
+    "pageCount" (len .RegularPagesRecursive)
+  ) -}}
+  {{- range .Sections -}}
+    {{- $parentTitle := "" -}}
+    {{- with .Parent -}}{{ $parentTitle = .Title }}{{- end -}}
+    {{- $sections = $sections | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "parent" $parentTitle
+      "type" "section"
+      "pageCount" (len .RegularPagesRecursive)
+    ) -}}
+    {{- range .Sections -}}
+      {{- $parentTitle2 := "" -}}
+      {{- with .Parent -}}{{ $parentTitle2 = .Title }}{{- end -}}
+      {{- $sections = $sections | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "parent" $parentTitle2
+        "type" "section"
+        "pageCount" (len .RegularPagesRecursive)
+      ) -}}
+      {{- range .Sections -}}
+        {{- $parentTitle3 := "" -}}
+        {{- with .Parent -}}{{ $parentTitle3 = .Title }}{{- end -}}
+        {{- $sections = $sections | append (dict
+          "title" .Title
+          "url" .RelPermalink
+          "parent" $parentTitle3
+          "type" "section"
+          "pageCount" (len .RegularPagesRecursive)
+        ) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- (dict "pages" $pages "sections" $sections) | jsonify -}}

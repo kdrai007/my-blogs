@@ -20,3 +20,6 @@ paginate = 12
   ordered = false
 
 ignoreLogs = ['warning-goldmark-raw-html']
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']

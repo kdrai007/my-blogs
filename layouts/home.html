@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  {{/* Hero replaced with terminal-style header block */}}
+  {{/* Hero */}}
   <section class="hero">
     <div class="hero-content">
       <div class="scanline-overlay"></div>
@@ -13,20 +13,21 @@
     </div>
   </section>
 
-  {{/* Post Listing */}}
+  {{/* 10 random posts — no pagination */}}
   {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "posts") }}
   {{ $allPosts := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
 
   {{ if (gt (len $allPosts) 0) }}
-    <h2 class="section-heading"># ALL_ENTRIES <span class="text-muted">({{ len $allPosts }})</span></h2>
+    {{ $featured := $allPosts | shuffle | first 10 }}
+    <h2 class="section-heading"># FEATURED <span class="text-muted">// 10 random picks</span></h2>
     <div class="post-grid">
-      {{ $paginator := .Paginate $allPosts }}
-      {{ range $paginator.Pages }}
+      {{ range $featured }}
         {{ .Render "summary" }}
       {{ end }}
     </div>
-
-    {{ partial "pagination.html" . }}
+    <div class="home-cta">
+      <a href="{{ relURL "posts/" }}" class="cta-btn">&gt; browse all {{ len $allPosts }} posts _</a>
+    </div>
   {{ end }}
 
 {{ end }}
