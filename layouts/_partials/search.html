@@ -30,10 +30,12 @@
     var searchData = null;
     var selectedIndex = -1;
 
+    var SEARCH_INDEX_URL = '{{ "index.json" | absURL }}';
+
     // Load search index
     function loadIndex() {
       if (searchData) return Promise.resolve(searchData);
-      return fetch('/index.json')
+      return fetch(SEARCH_INDEX_URL)
         .then(function (r) { return r.json(); })
         .then(function (data) {
           searchData = data;
