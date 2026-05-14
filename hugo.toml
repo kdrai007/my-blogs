@@ -5,6 +5,7 @@ theme = 'ananke'
 paginate = 12
 
 [params]
+  favicon = 'images/favicon.svg'
   mainSections = ['posts']
   description = 'A collection of notes, thoughts, and learnings.'
 

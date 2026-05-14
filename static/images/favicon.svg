@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <style>
+      .icon-main { fill: none; stroke: #3b82f6; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-accent { fill: #3b82f6; }
+      
+      @media (prefers-color-scheme: dark) {
+        .icon-main { stroke: #60a5fa; }
+        .icon-accent { fill: #60a5fa; }
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Prompt / Bracket -->
+  <path class="icon-main" d="M 25 25 L 55 50 L 25 75" />
+  
+  <!-- Cursor / Connected Node -->
+  <line class="icon-main" x1="70" y1="75" x2="90" y2="75" />
+  <circle class="icon-accent" cx="90" cy="75" r="6" />
+  
+  <!-- Network / Zettelkasten dots -->
+  <circle class="icon-accent" cx="70" cy="35" r="5" />
+  <circle class="icon-accent" cx="90" cy="25" r="8" />
+</svg>
